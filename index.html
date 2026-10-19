@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sujok Homeo Clinic | Homeopathy in Brampton, Ontario</title>
+  <meta name="description" content="Sujok Homeo Clinic offers personalized homeopathic care for you and your family, in clinic in Brampton and online across Canada.">
+  <link rel="icon" href="assets/images/sujok-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Icon sprite (stroke icons, inherit currentColor) -->
+  <svg width="0" height="0" class="visually-hidden" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21 7H6"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></symbol>
+      <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+      <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5Z"/></symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15"/><path d="M5 19 13 11"/></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6M15 14.3c3.2-.6 6 1.6 6 5.2"/></symbol>
+      <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12C12 8 9 5 4 5c0 4.5 3 7 8 7Z"/><path d="M12 12c0-3.5 2.6-6 7.5-6 0 4-2.6 6-7.5 6Z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6.3-8 11-8 11Z"/></symbol>
+      <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M2 9.5 12 5l10 4.5-10 4.5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5M22 9.5V15"/></symbol>
+      <symbol id="i-hand-sprout" viewBox="0 0 24 24"><path d="M12 13V8"/><path d="M12 8c0-2.5-1.8-4-4.5-4 0 2.5 1.8 4 4.5 4ZM12 9c0-2.5 1.8-4 4.5-4 0 2.5-1.8 4-4.5 4Z"/><path d="M3 15c2.5 0 4 1 5.5 2H13a1.5 1.5 0 0 0 0-3h-2.5M3 20h10l7.5-4.5a1.6 1.6 0 0 0-2-2.5L14 15"/></symbol>
+      <symbol id="i-family" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><circle cx="6" cy="11" r="2"/><circle cx="18" cy="11" r="2"/><path d="M9 10.5c0-1.7 1.3-3 3-3s3 1.3 3 3M3 21v-3.5C3 15.6 4.3 14 6 14s3 1.6 3 3.5V21M15 21v-3.5c0-1.9 1.3-3.5 3-3.5s3 1.6 3 3.5V21"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="9.3" r="2"/><path d="M8.5 14.5c.5-1.6 1.8-2.6 3.5-2.6s3 1 3.5 2.6"/></symbol>
+      <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 19c-2.5-2-3.5-4.5-3.5-7S10 6.5 12 5c2 1.5 3.5 4.5 3.5 7S14.5 17 12 19Z"/><path d="M12 19c-4 0-7-2.5-8-6.5 2.5-.2 4.5.3 5.6 1.2M12 19c4 0 7-2.5 8-6.5-2.5-.2-4.5.3-5.6 1.2"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-4.5a2 2 0 0 1 4 0V20"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2.2 1.4a11 11 0 0 0 4.8 4.8L14 12l4 1.5V17a2 2 0 0 1-2 2A13 13 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M4.5 19.5 6 16a8 8 0 1 1 3 2.9Z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8Z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ========== Header ========== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Sujok Homeo Clinic — home">
+        <img src="assets/images/sujok-logo.png" alt="Sujok Homeo Clinic" width="221" height="167">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        <span class="visually-hidden">Open menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#top" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#services">Treatments</a></li>
+          <li><a class="nav-link" href="#services">Conditions</a></li>
+          <li><a class="nav-link" href="#about">Our Team</a></li>
+          <li><a class="nav-link" href="#footer-resources">Resources</a></li>
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="shop-menu">
+              Shop Online
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+            </button>
+            <!-- TODO: replace "#" with the live e-store URLs -->
+            <ul class="dropdown" id="shop-menu">
+              <li><a href="#">E-Store</a></li>
+              <li><a href="#">Order Online</a></li>
+              <li><a href="#">Re-order Form</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn" type="button" aria-label="Search">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          </button>
+          <!-- TODO: link Login and Cart to the e-store account and cart pages -->
+          <a class="nav-login" href="#">
+            <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+            <span>Login</span>
+          </a>
+          <a class="icon-btn cart-link" href="#" aria-label="Cart, 0 items">
+            <svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg>
+            <span class="cart-count" aria-hidden="true">0</span>
+          </a>
+          <a class="btn btn-primary btn-sm" href="#booking">Book a Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== Hero ========== -->
+    <!--
+      Carousel: slides sit side by side in .hero-track and script.js moves the track.
+      Without JS only slide 1 shows (slides 2–3 are inert) and the controls stay hidden.
+      To change a slide photo, replace its <img> src; all text and buttons are HTML.
+    -->
+    <section class="hero hero-carousel" aria-roledescription="carousel" aria-label="Sujok Homeo Clinic highlights">
+      <div class="hero-viewport">
+        <div class="hero-track" id="hero-track" aria-live="off">
+
+          <div class="hero-slide is-active" id="hero-slide-1" role="group" aria-roledescription="slide" aria-label="1 of 3">
+            <div class="hero-media" aria-hidden="true">
+              <img src="assets/images/hero-clinic.jpg" alt="" width="984" height="619" fetchpriority="high">
+            </div>
+            <div class="container hero-content">
+              <p class="hero-kicker">Gentle <span aria-hidden="true">•</span> Natural <span aria-hidden="true">•</span> Personalized Care</p>
+              <h1 class="hero-title">Homeopathy for <span class="text-green">Lasting Wellbeing</span></h1>
+              <p class="hero-lead">Personalized homeopathic care for you and your family. We focus on the root cause, support your body’s natural healing, and walk with you toward better health.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary btn-lg" href="#booking">
+                  <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+                  Book a Consultation
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+                <a class="btn btn-outline btn-lg" href="#about">
+                  Learn More
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slide" id="hero-slide-2" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true" inert>
+            <div class="hero-media" aria-hidden="true">
+              <img src="assets/images/hero-slide-remedies.jpg" alt="" width="1120" height="668">
+            </div>
+            <div class="container hero-content">
+              <p class="hero-kicker">Natural <span aria-hidden="true">•</span> Gentle <span aria-hidden="true">•</span> Individualized</p>
+              <h2 class="hero-title">Natural Remedies, <span class="text-green">Gently Chosen</span></h2>
+              <p class="hero-lead">Gentle, natural and individualized homeopathic care for you and your family. We take time to understand your health concerns and support your body’s natural ability to heal.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary btn-lg" href="#booking">
+                  <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+                  Book a Consultation
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+                <!-- TODO: replace "#" with the live online-ordering URL (same as the "Order Online" links in the Shop Online menu and footer) -->
+                <a class="btn btn-outline btn-lg" href="#">
+                  Order Online
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slide hero-slide--family" id="hero-slide-3" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true" inert>
+            <div class="hero-media" aria-hidden="true">
+              <img src="assets/images/hero-slide-family.jpg" alt="" width="1043" height="793">
+            </div>
+            <div class="container hero-content">
+              <p class="hero-kicker hero-kicker--rule">Children <span aria-hidden="true">•</span> Adults <span aria-hidden="true">•</span> Seniors</p>
+              <h2 class="hero-title">Gentle Care for <span class="text-green">Your Whole Family</span></h2>
+              <p class="hero-lead">Safe and gentle homeopathic care for every stage of life, with treatment plans tailored to each member of your family.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary btn-lg" href="#booking">
+                  <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+                  Book a Consultation
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+                <a class="btn btn-outline btn-lg" href="#services">
+                  Our Services
+                  <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container hero-controls-wrap">
+          <div class="hero-controls" hidden>
+            <button class="hero-arrow" type="button" data-hero-prev aria-controls="hero-track">
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg>
+              <span class="visually-hidden">Previous slide</span>
+            </button>
+            <div class="hero-dots">
+              <button class="hero-dot" type="button" aria-controls="hero-slide-1" aria-current="true"><span class="visually-hidden">Show slide 1: Homeopathy for Lasting Wellbeing</span></button>
+              <button class="hero-dot" type="button" aria-controls="hero-slide-2"><span class="visually-hidden">Show slide 2: Natural Remedies, Gently Chosen</span></button>
+              <button class="hero-dot" type="button" aria-controls="hero-slide-3"><span class="visually-hidden">Show slide 3: Gentle Care for Your Whole Family</span></button>
+            </div>
+            <button class="hero-arrow" type="button" data-hero-next aria-controls="hero-track">
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+              <span class="visually-hidden">Next slide</span>
+            </button>
+            <button class="hero-arrow hero-pause" type="button" data-hero-pause aria-pressed="false">
+              <svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg>
+              <span class="visually-hidden">Pause slideshow</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="feature-bar">
+          <li class="feature-bar-item">
+            <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <span>Individualized<br>Treatment Plans</span>
+          </li>
+          <li class="feature-bar-item">
+            <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg></span>
+            <span>Care for All Ages<br>Children to Seniors</span>
+          </li>
+          <li class="feature-bar-item">
+            <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg></span>
+            <span>Root-Cause Approach<br>Not Symptom Suppression</span>
+          </li>
+          <li class="feature-bar-item">
+            <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <span>Safe, Gentle &amp; Natural<br>Homeopathic Care</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Why Choose Us ========== -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="why-head">
+          <div>
+            <p class="eyebrow">Why Choose Us</p>
+            <h2 class="section-title" id="why-title">Why Choose Our <span class="text-green">Homeopathy Clinic</span></h2>
+          </div>
+          <p class="section-lead">At Sujok Homeo Clinic, we combine classical homeopathy, personalized care and a compassionate approach to help you and your family achieve better health naturally.</p>
+        </div>
+
+        <div class="why-grid">
+          <figure class="why-media media-frame">
+            <img src="assets/images/why-remedies.jpg" alt="Amber homeopathic remedy bottles with white pills, fresh herbs and chamomile flowers beside a marble mortar" width="544" height="638" loading="lazy">
+          </figure>
+
+          <div class="why-body">
+            <ul class="why-cards">
+              <li class="feature-card">
+                <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-graduation"/></svg></span>
+                <div>
+                  <h3 class="card-title">25+ Years of Experience</h3>
+                  <p>Trusted experience in classical homeopathy and natural healing.</p>
+                </div>
+              </li>
+              <li class="feature-card">
+                <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg></span>
+                <div>
+                  <h3 class="card-title">Personalized Consultations</h3>
+                  <p>We take time to understand your health concerns and provide individualized care.</p>
+                </div>
+              </li>
+              <li class="feature-card">
+                <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-hand-sprout"/></svg></span>
+                <div>
+                  <h3 class="card-title">Root-Cause Treatment</h3>
+                  <p>We focus on treating the underlying cause, not just suppressing symptoms.</p>
+                </div>
+              </li>
+              <li class="feature-card">
+                <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-family"/></svg></span>
+                <div>
+                  <h3 class="card-title">Safe for All Ages</h3>
+                  <p>Gentle and effective care for children, adults and seniors.</p>
+                </div>
+              </li>
+              <li class="feature-card">
+                <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg></span>
+                <div>
+                  <h3 class="card-title">In-Person &amp; Online Consultations</h3>
+                  <p>Convenient consultations available across Canada.</p>
+                </div>
+              </li>
+              <li class="feature-card">
+                <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-lotus"/></svg></span>
+                <div>
+                  <h3 class="card-title">Holistic Care for Overall Wellbeing</h3>
+                  <p>We support your physical, mental and emotional health naturally.</p>
+                </div>
+              </li>
+            </ul>
+            <a class="btn btn-primary btn-lg" href="#about">
+              More About Us
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== About Sujok ========== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <figure class="about-media media-frame">
+          <img src="assets/images/about-clinic.jpg" alt="A smiling homeopathic practitioner in a white coat at a desk in the Sujok Homeo Clinic consultation room" width="724" height="862" loading="lazy">
+        </figure>
+
+        <div class="about-body">
+          <p class="eyebrow">About Sujok</p>
+          <h2 class="section-title" id="about-title">A More Personal <span class="text-green">Approach to Care</span></h2>
+          <p class="section-lead">Sujok Homeo Clinic is dedicated to providing gentle, natural and individualized homeopathic care for you and your family. We take time to understand your health concerns, look at the bigger picture and support your body’s natural ability to heal.</p>
+
+          <ul class="about-list">
+            <li class="about-item">
+              <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+              <div>
+                <h3 class="card-title text-green">Individualized Care</h3>
+                <p>Every person is unique. We take time to understand your complete health history and lifestyle before recommending treatment.</p>
+              </div>
+            </li>
+            <li class="about-item">
+              <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-family"/></svg></span>
+              <div>
+                <h3 class="card-title text-green">Support for the Whole Family</h3>
+                <p>We provide safe and gentle homeopathic care for children, adults and seniors.</p>
+              </div>
+            </li>
+            <li class="about-item">
+              <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-lotus"/></svg></span>
+              <div>
+                <h3 class="card-title text-green">A Holistic Approach</h3>
+                <p>We focus on the root cause and support your physical, mental and emotional wellbeing naturally.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="btn-row">
+            <a class="btn btn-primary btn-lg" href="#booking">
+              Meet Our Clinic
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Our Services ========== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head-center">
+          <p class="eyebrow">Our Services</p>
+          <h2 class="section-title" id="services-title">Natural Care for <span class="text-accent">You and Your Family</span></h2>
+          <p class="section-lead">At Sujok Homeo Clinic, we offer a range of holistic healthcare services to support your physical, mental and emotional wellbeing naturally.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <img class="service-img" src="assets/images/service-booking.jpg" alt="A smiling practitioner in a white coat seated in the clinic" width="504" height="254" loading="lazy">
+            <div class="service-body">
+              <h3 class="service-title">Book Consultation</h3>
+              <p>If you know what type of consultation you are looking for or have any queries, please phone <a href="tel:+16478562516">647-856-2516</a> or use the booking form. We will be in contact to confirm your appointment.</p>
+              <ul class="tag-list" aria-label="Highlights">
+                <li class="tag">Easy Booking</li>
+                <li class="tag">Phone or Online</li>
+                <li class="tag">Prompt Response</li>
+              </ul>
+              <div class="service-foot">
+                <span class="duration"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>5–10 mins</span>
+                <a class="link-arrow" href="#booking">Learn More<span class="visually-hidden"> about booking a consultation</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-img" src="assets/images/service-kids.jpg" alt="A practitioner talking with a smiling young girl" width="468" height="254" loading="lazy">
+            <div class="service-body">
+              <h3 class="service-title">Kids Health</h3>
+              <p>Our children are our most valuable asset. It’s incredibly important the social, mental and physical well-being of our children remain intact and healthy.</p>
+              <ul class="tag-list" aria-label="Highlights">
+                <li class="tag">Child Development</li>
+                <li class="tag">Common Childhood Ailments</li>
+                <li class="tag">Natural Care</li>
+              </ul>
+              <div class="service-foot">
+                <span class="duration"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>30–45 mins</span>
+                <a class="link-arrow" href="#booking">Learn More<span class="visually-hidden"> about kids health</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-img" src="assets/images/service-insurance.jpg" alt="A practitioner filling in a form on a clipboard" width="502" height="254" loading="lazy">
+            <div class="service-body">
+              <h3 class="service-title">Insurance</h3>
+              <p>Many extended health insurance plans cover homoeopathy and many more continue to add this type of treatment to their coverage annually.</p>
+              <ul class="tag-list" aria-label="Highlights">
+                <li class="tag">Extended Health Plans</li>
+                <li class="tag">Coverage Information</li>
+                <li class="tag">Direct Billing Options</li>
+              </ul>
+              <div class="service-foot">
+                <span class="duration"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>5–10 mins</span>
+                <a class="link-arrow" href="#booking">Learn More<span class="visually-hidden"> about insurance</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-img" src="assets/images/service-homeopathy.jpg" alt="A white mortar and pestle with amber remedy bottles, pills and daisies" width="502" height="250" loading="lazy">
+            <div class="service-body">
+              <h3 class="service-title">Homeopathy</h3>
+              <p>Homeopathy is a well-described, scientifically based system of approaching health and disease, focusing on natural healing and the body’s ability to restore balance.</p>
+              <ul class="tag-list" aria-label="Highlights">
+                <li class="tag">Natural Healing</li>
+                <li class="tag">Personalized Care</li>
+                <li class="tag">Whole Family</li>
+              </ul>
+              <div class="service-foot">
+                <span class="duration"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>15–30 mins</span>
+                <a class="link-arrow" href="#booking">Learn More<span class="visually-hidden"> about homeopathy</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-img" src="assets/images/service-pain.jpg" alt="A practitioner examining a patient’s knee" width="468" height="250" loading="lazy">
+            <div class="service-body">
+              <h3 class="service-title">Pain Management</h3>
+              <p>Comprehensive care for chronic and acute pain due to injury, illness, aging or lifestyle factors, using safe and natural homeopathic treatment approaches.</p>
+              <ul class="tag-list" aria-label="Highlights">
+                <li class="tag">Joint Pain</li>
+                <li class="tag">Muscle Pain</li>
+                <li class="tag">Chronic Pain</li>
+              </ul>
+              <div class="service-foot">
+                <span class="duration"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>30–45 mins</span>
+                <a class="link-arrow" href="#booking">Learn More<span class="visually-hidden"> about pain management</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-img" src="assets/images/service-shop.jpg" alt="Remedy bottles and a small shopping cart in front of a laptop showing an online store" width="502" height="250" loading="lazy">
+            <div class="service-body">
+              <h3 class="service-title">Shop Online</h3>
+              <p>Our online homeopathy store provides genuine and high-quality homeopathic medicines, including German homeopathic products, at affordable prices.</p>
+              <ul class="tag-list" aria-label="Highlights">
+                <li class="tag">German Medicines</li>
+                <li class="tag">Wide Range</li>
+                <li class="tag">Secure Ordering</li>
+              </ul>
+              <div class="service-foot">
+                <span class="duration"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>5–10 mins</span>
+                <!-- TODO: link to the e-store -->
+                <a class="link-arrow" href="#">Learn More<span class="visually-hidden"> about the online shop</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Book a Consultation ========== -->
+    <section class="section booking" id="booking" aria-labelledby="booking-title">
+      <div class="container">
+        <div class="booking-card">
+          <div class="booking-media">
+            <img src="assets/images/booking-consult.jpg" alt="A practitioner smiling during a consultation with a patient" width="676" height="652" loading="lazy">
+            <ul class="booking-badges">
+              <li><span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg></span>Experienced Practitioners</li>
+              <li><span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>Clinic &amp; Online Consultations</li>
+              <li><span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>Personalized Treatment Plans</li>
+            </ul>
+          </div>
+
+          <div class="booking-body">
+            <span class="icon-circle icon-circle-xl"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <h2 class="section-title" id="booking-title">Book Your <span class="text-green">Homeopathy Consultation</span></h2>
+            <p class="section-lead">Begin personalized homeopathy treatment with our experienced practitioners. Consultations are available in clinic and online across Canada.</p>
+
+            <!--
+              This form is not connected to a booking service yet.
+              To enable it, set data-endpoint to your form service URL (e.g. Formspree, a clinic API).
+              Until then, script.js validates the fields and tells the visitor how to book by phone/email.
+            -->
+            <form class="booking-form" id="booking-form" data-endpoint="" novalidate>
+              <div class="field field-full">
+                <label class="visually-hidden" for="bf-name">Your name (required)</label>
+                <svg class="icon field-icon" aria-hidden="true"><use href="#i-user"/></svg>
+                <input class="input" id="bf-name" name="name" type="text" autocomplete="name" placeholder="Your Name *" required>
+              </div>
+              <div class="field">
+                <label class="visually-hidden" for="bf-phone">Your phone (required)</label>
+                <svg class="icon field-icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                <input class="input" id="bf-phone" name="phone" type="tel" autocomplete="tel" placeholder="Your Phone *" required pattern="[0-9+\(\)\-\s.]{7,}">
+              </div>
+              <div class="field">
+                <label class="visually-hidden" for="bf-email">Your email (required)</label>
+                <svg class="icon field-icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <input class="input" id="bf-email" name="email" type="email" autocomplete="email" placeholder="Your Email *" required>
+              </div>
+              <div class="field field-full">
+                <label class="visually-hidden" for="bf-service">Choose a service (required)</label>
+                <svg class="icon field-icon" aria-hidden="true"><use href="#i-list"/></svg>
+                <select class="input select" id="bf-service" name="service" required>
+                  <option value="" selected disabled>Choose a Service *</option>
+                  <option>Homeopathy</option>
+                  <option>Pain Management</option>
+                  <option>Kids Health</option>
+                  <option>General Consultation</option>
+                  <option>Insurance Enquiry</option>
+                  <option>Shop Online / Order Enquiry</option>
+                </select>
+                <svg class="icon icon-sm select-chevron" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              </div>
+              <div class="field field-full">
+                <label class="visually-hidden" for="bf-message">Your message or comments (optional)</label>
+                <svg class="icon field-icon field-icon-top" aria-hidden="true"><use href="#i-message"/></svg>
+                <textarea class="input textarea" id="bf-message" name="message" rows="4" placeholder="Your Message / Comments (Optional)"></textarea>
+              </div>
+
+              <div class="form-foot field-full">
+                <button class="btn btn-primary btn-lg" type="submit">
+                  Book Consultation
+                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+                </button>
+                <p class="secure-note">
+                  <span class="icon-circle icon-circle-sm"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-lock"/></svg></span>
+                  Your information is secure and confidential.
+                </p>
+              </div>
+              <p class="form-status field-full" id="form-status" role="status" aria-live="polite" hidden></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo" href="#top" aria-label="Sujok Homeo Clinic — back to top">
+          <img src="assets/images/sujok-logo.png" alt="Sujok Homeo Clinic" width="221" height="167" loading="lazy">
+        </a>
+        <p>Homeopathic and chiropractic care in Brampton, Ontario.</p>
+        <!-- TODO: add the clinic's social profile URLs -->
+        <ul class="social-list">
+          <li><a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="#" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="footer-clinic">
+        <h2 class="footer-heading" id="footer-clinic">Clinic</h2>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">Our Practitioners</a></li>
+          <li><a href="#contact">Location</a></li>
+          <li><a href="#booking">Book a Consultation</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" id="footer-resources" aria-labelledby="footer-resources-title">
+        <h2 class="footer-heading" id="footer-resources-title">Resources</h2>
+        <ul>
+          <li><a href="#services">Homeopathy</a></li>
+          <li><a href="#services">Kids Health</a></li>
+          <li><a href="#services">Pain Management</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#services">Insurance</a></li>
+          <li><a href="#">Talk Shows</a></li>
+          <li><a href="#">Materia Medica <svg class="icon icon-xs" aria-hidden="true"><use href="#i-external"/></svg></a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="footer-store">
+        <h2 class="footer-heading" id="footer-store">Online Store</h2>
+        <ul>
+          <li><a href="#">E-Store</a></li>
+          <li><a href="#">Order Online</a></li>
+          <li><a href="#">Re-order Form</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col" id="contact">
+        <h2 class="footer-heading">Contact</h2>
+        <address>
+          <ul class="contact-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>145 Clarence Street, Unit 26<br>Brampton, Ontario L6W 1T2</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+16478562516">647-856-2516</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@sujokhomeoclinic.com">info@sujokhomeoclinic.com</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon–Sun, 10:00 AM – 6:00 PM</span></li>
+          </ul>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year">2026</span> Sujok Homeo Clinic. All rights reserved.</p>
+        <ul class="legal-links">
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
