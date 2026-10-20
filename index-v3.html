@@ -126,8 +126,12 @@
         <div class="hero-track" id="hero-track" aria-live="off">
 
           <div class="hero-slide is-active" id="hero-slide-1" role="group" aria-roledescription="slide" aria-label="1 of 3">
-            <div class="hero-media" aria-hidden="true">
-              <img src="assets/images/hero-clinic.jpg" alt="" width="984" height="619" fetchpriority="high">
+            <!-- v3: silent background video; the poster (its first frame) shows while loading or if the video can't play -->
+            <div class="hero-media hero-media--video" aria-hidden="true">
+              <video class="hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture
+                     poster="assets/images/sujok-hero-poster.jpg" width="1916" height="1080">
+                <source src="assets/images/sujok-hero.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="container hero-content">
               <p class="hero-kicker">Gentle <span aria-hidden="true">•</span> Natural <span aria-hidden="true">•</span> Personalized Care</p>
