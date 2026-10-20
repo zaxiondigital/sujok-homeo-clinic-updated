@@ -324,6 +324,14 @@ h1, h2, h3 { margin: 0; font-family: var(--font-serif); font-weight: 400; color:
 
 .hero-media { position: absolute; inset: 0 0 0 auto; width: 60%; z-index: -1; }
 .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 15%; }
+
+/* v3: slide 1 plays a silent video in the same frame as the photo it replaces.
+   The poster also sits behind it as a background, so the frame is never empty: while
+   the video loads, in the carousel's looping copy of slide 1, and with reduced motion. */
+.hero-media--video { background: url("assets/images/sujok-hero-poster.jpg") 50% 30% / cover no-repeat; }
+.hero-video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.hero-slide--clone .hero-video { display: none; }
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
 .hero-media::before {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(90deg, #f3f8f2 0%, rgba(243, 248, 242, .82) 16%, rgba(243, 248, 242, 0) 42%);
