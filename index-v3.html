@@ -462,7 +462,12 @@
 
           <!-- Chiropractic Care -->
           <article class="v2-panel" role="tabpanel" id="panel-chiropractic" aria-labelledby="tab-chiropractic" tabindex="0" hidden>
-            <img class="v2-panel-img" src="assets/images/v2/service-chiropractic.jpg" alt="A chiropractor placing his hands on a seated patient’s shoulder and lower back" width="806" height="444" loading="lazy">
+            <!-- v3: silent looping video; the original photo is the poster (shown while loading or if the video can't play) -->
+            <video class="v2-panel-img" autoplay muted loop playsinline preload="metadata"
+                   poster="assets/images/v2/service-chiropractic.jpg" width="1112" height="834"
+                   aria-label="Video: a practitioner gently assessing a patient’s posture with hands on the upper back and shoulders">
+              <source src="assets/images/Chiropractic-Care-video.mp4" type="video/mp4">
+            </video>
             <div class="v2-panel-body">
               <div class="v2-panel-head">
                 <span class="icon-circle icon-circle-lg"><svg class="icon" aria-hidden="true"><use href="#i-spine"/></svg></span>
