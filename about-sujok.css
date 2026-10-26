@@ -1,0 +1,148 @@
+/* =========================================================
+   Sujok Homeo Clinic — About Us page (Frame 4)
+   Loaded after style-v3.css, which provides the header, footer, tokens,
+   buttons, eyebrow and icon styles. Every rule here is scoped to .about-page
+   so the homepage is unaffected.
+   ========================================================= */
+
+.about-page {
+  --ab-gap: clamp(64px, 7vw, 104px);       /* vertical space between sections */
+  --ab-radius: 24px;                        /* photo corners, as in Frame 4 */
+  --ab-tint: #eef5ec;                       /* pale green blocks and bands */
+}
+.about-page .section-title {
+  font-size: var(--fs-h2); line-height: var(--lh-h2); letter-spacing: var(--ls-h2);
+  color: var(--ink-900); text-wrap: balance;
+}
+.about-page .section-title .text-green { display: block; }
+.about-page .section-lead { font-size: var(--fs-lead); line-height: var(--lh-lead); color: var(--ink-500); }
+.about-page .eyebrow { margin-bottom: 14px; }
+
+.ab-section { padding-block: var(--ab-gap) 0; }
+.ab-section:last-child { padding-bottom: var(--ab-gap); }
+
+/* Shared: text column + photo column */
+.ab-split {
+  display: grid; grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
+  column-gap: clamp(40px, 5.5vw, 84px); align-items: center;
+}
+.ab-media { margin: 0; overflow: hidden; border-radius: var(--ab-radius); box-shadow: 0 14px 34px rgba(20, 50, 34, .10), 0 1px 3px rgba(20, 32, 58, .05); }
+.ab-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- 1. Banner ----------
+   Same treatment as the Our Team hero (team.css): the photo is shown full width in its own 3:1
+   shape, and the title sits in a white label centred on its bottom edge (over the desk). */
+.ab-banner { position: relative; z-index: 1; }   /* keeps the label above the section below */
+.ab-banner-img {
+  display: block; width: 100%; aspect-ratio: 2000 / 668; max-height: 600px;
+  object-fit: cover; object-position: 50% 30%;
+}
+.ab-banner-title {
+  position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%);
+  padding: 14px clamp(28px, 4vw, 48px); white-space: nowrap;
+  background: #ffffff; border-radius: 999px; box-shadow: 0 12px 30px rgba(23, 61, 43, .14);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.1; color: var(--ink-900);
+}
+
+/* ---------- 2. Welcome ---------- */
+.ab-intro-body .section-title { margin-bottom: 22px; }
+.ab-intro-body .section-lead { max-width: 40rem; margin-bottom: 32px; }
+.ab-actions { gap: 16px 28px; margin-bottom: 48px; }
+.ab-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ab-features li { padding-inline: clamp(12px, 1.5vw, 22px); }
+.ab-features li:first-child { padding-left: 0; }
+.ab-features li + li { border-left: 1px solid var(--line); }
+.ab-features .icon-circle { width: 64px; height: 64px; margin-bottom: 18px; }
+.ab-features .icon-circle .icon { width: 28px; height: 28px; }
+.ab-feature-title { margin-bottom: 6px; font-family: var(--font-sans); font-size: 1.08rem; font-weight: 600; line-height: 1.3; color: var(--ink-900); }
+.ab-features p { font-size: var(--fs-body-sm); line-height: 1.55; }
+.ab-intro-media { aspect-ratio: 754 / 734; }
+
+/* ---------- 3. Our Approach ---------- */
+.ab-split--media-first { grid-template-columns: minmax(0, 48fr) minmax(0, 52fr); }
+.ab-approach-media { position: relative; isolation: isolate; overflow: visible; aspect-ratio: 801 / 711; border-radius: 0; box-shadow: none; }
+.ab-approach-media img { position: relative; border-radius: var(--ab-radius); box-shadow: 0 14px 34px rgba(20, 50, 34, .10), 0 1px 3px rgba(20, 32, 58, .05); }
+.ab-approach-media::before,
+.ab-approach-media::after {  /* pale blocks offset behind the photo, as in Frame 4 */
+  content: ""; position: absolute; z-index: -1; border-radius: var(--ab-radius); background: var(--ab-tint);
+}
+.ab-approach-media::before { top: -28px; left: -28px; width: 46%; height: 52%; }
+.ab-approach-media::after { right: -32px; bottom: -32px; width: 44%; height: 44%; }
+.ab-approach-body .section-title { margin-bottom: 20px; }
+.ab-approach-body .section-lead { margin-bottom: 36px; }
+.ab-approach-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px clamp(20px, 2.6vw, 40px); }
+.ab-approach-list li { display: flex; align-items: flex-start; gap: 18px; }
+.ab-approach-list .icon-circle { width: 64px; height: 64px; }
+.ab-approach-list .icon-circle .icon { width: 28px; height: 28px; }
+.ab-approach-list .ab-feature-title { margin: 4px 0 6px; }
+.ab-approach-list p { font-size: var(--fs-small); line-height: 1.55; }
+
+/* ---------- 4. Our Journey ---------- */
+.ab-journey { background: linear-gradient(180deg, #ffffff 55%, #f3f8f1 100%); }
+.ab-journey-head {
+  display: grid; grid-template-columns: minmax(0, 64fr) minmax(0, 36fr); column-gap: clamp(32px, 4vw, 56px);
+  align-items: end; margin-bottom: clamp(36px, 4vw, 52px);
+}
+.ab-journey-head .section-lead { padding-bottom: 6px; }
+.ab-journey-list { --ab-card-gap: clamp(20px, 3vw, 44px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--ab-card-gap); }
+.ab-milestone {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  padding: 12px 12px 28px; text-align: center;
+  background: #ffffff; border-radius: 18px; box-shadow: 0 10px 30px rgba(23, 61, 43, .07), 0 1px 3px rgba(20, 32, 58, .04);
+}
+.ab-milestone-media { position: relative; align-self: stretch; margin: 0; }
+.ab-milestone-media img { display: block; width: 100%; aspect-ratio: 323 / 228; object-fit: cover; border-radius: 14px; }
+/* connector between cards: a short line with a dot, level with the icons */
+.ab-milestone:not(:last-child) .ab-milestone-media::after {
+  content: ""; position: absolute; bottom: -6px; right: calc(-12px - var(--ab-card-gap));
+  width: var(--ab-card-gap); height: 12px;
+  background:
+    radial-gradient(circle, var(--text-green) 0 3px, #ffffff 3.5px 5px, var(--text-green) 5.5px 6px, transparent 6.5px) center / 12px 12px no-repeat,
+    linear-gradient(var(--text-green), var(--text-green)) center / 100% 1.5px no-repeat;
+}
+.ab-milestone-icon {
+  width: 76px; height: 76px; margin-top: -38px; margin-bottom: 18px; position: relative;
+  background: var(--green-100); border: 5px solid #ffffff; box-shadow: 0 4px 12px rgba(23, 61, 43, .08);
+}
+.ab-milestone-icon .icon { width: 30px; height: 30px; stroke-width: 1.6; }
+.ab-milestone-title { margin-bottom: 10px; font-family: var(--font-sans); font-size: 1.2rem; font-weight: 600; line-height: 1.3; color: var(--text-green); }
+.ab-milestone p { max-width: 17rem; font-size: var(--fs-body-sm); line-height: 1.6; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1080px) {
+  .about-page { --ab-gap: 72px; }
+  .ab-journey-list { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
+  .ab-milestone:nth-child(2n) .ab-milestone-media::after { display: none; }
+  .ab-approach-list { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+
+@media (max-width: 900px) {
+  .ab-split, .ab-split--media-first, .ab-journey-head { grid-template-columns: minmax(0, 1fr); row-gap: 40px; }
+  .ab-journey-head { row-gap: 14px; }
+  .ab-intro-media { max-width: 620px; }
+  .ab-approach-media { max-width: 620px; margin-left: 28px; margin-right: 32px; }
+  .ab-approach-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  /* Phones: taller than 3:1 so the face stays a readable size (as on the Our Team hero);
+     trims the outer edges a little, keeping the wall logo and the woman */
+  .ab-banner-img { aspect-ratio: 2.3 / 1; object-position: 60% 30%; }
+  .ab-banner-title { padding: 10px 28px; }
+}
+
+@media (max-width: 680px) {
+  .about-page { --ab-gap: 56px; --ab-radius: 18px; }
+  .ab-features { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .ab-features li { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: center; padding: 0; }
+  .ab-features li + li { border-left: 0; }
+  .ab-features .icon-circle { grid-row: span 2; margin-bottom: 0; width: 56px; height: 56px; }
+  .ab-features .ab-feature-title { align-self: end; }
+  .ab-features p { align-self: start; }
+  .ab-approach-list { grid-template-columns: minmax(0, 1fr); }
+  .ab-approach-media { margin-left: 16px; margin-right: 18px; }
+  .ab-approach-media::before { top: -16px; left: -16px; }
+  .ab-approach-media::after { right: -18px; bottom: -18px; }
+  .ab-journey-list { grid-template-columns: minmax(0, 1fr); }
+  .ab-milestone .ab-milestone-media::after { display: none; }
+}

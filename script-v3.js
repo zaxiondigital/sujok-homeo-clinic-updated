@@ -73,6 +73,7 @@
     // Several links share a target (e.g. Treatments/Conditions); highlight only the first.
     const setActive = (hash) => {
       const target = navLinks.find((l) => l.getAttribute('href') === hash);
+      if (!target) return;   // no menu link for this section (About now opens its own page): keep the current highlight
       navLinks.forEach((link) => {
         const active = link === target;
         link.classList.toggle('is-active', active);
@@ -377,6 +378,37 @@
     window.addEventListener('beforeprint', () => {
       document.querySelectorAll('.reveal').forEach(finishReveal);
     });
+  }
+
+  /* ---------- About video: sound toggle ----------
+     The video autoplays muted (browsers block autoplay with sound). Turning sound on
+     restarts it so the visitor hears the whole welcome. With reduced motion it does not
+     autoplay; the poster shows until the visitor presses the button. */
+  const aboutVideo = document.querySelector('.v2-about-video');
+  const soundBtn = document.querySelector('.v2-sound-toggle');
+  if (aboutVideo && soundBtn) {
+    if (reduceMotion) {
+      aboutVideo.removeAttribute('autoplay');
+      aboutVideo.pause();
+    }
+    const syncSoundBtn = () => {
+      const soundOn = !aboutVideo.muted;
+      soundBtn.setAttribute('aria-pressed', String(soundOn));
+      soundBtn.querySelector('use').setAttribute('href', soundOn ? '#i-volume' : '#i-volume-off');
+      soundBtn.querySelector('.visually-hidden').textContent = soundOn ? 'Turn sound off' : 'Turn sound on';
+    };
+    soundBtn.addEventListener('click', () => {
+      if (aboutVideo.muted) {
+        aboutVideo.muted = false;
+        aboutVideo.currentTime = 0;
+        aboutVideo.play().catch(() => {});
+      } else {
+        aboutVideo.muted = true;
+      }
+      syncSoundBtn();
+    });
+    syncSoundBtn();
+    soundBtn.hidden = false;
   }
 
   /* ---------- Booking form ---------- */

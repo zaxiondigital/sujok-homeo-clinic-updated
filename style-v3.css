@@ -236,7 +236,9 @@ h1, h2, h3 { margin: 0; font-family: var(--font-serif); font-weight: 400; color:
 }
 .site-header.is-scrolled { box-shadow: 0 4px 20px rgba(20, 32, 58, .08); }
 
-.header-inner { display: flex; align-items: center; gap: 24px; height: var(--header-h); max-width: 1440px; }
+/* No max-width of its own: as a .container it shares the page content's width, so the logo and the
+   Book a Consultation button line up with the content edges at every screen size */
+.header-inner { display: flex; align-items: center; gap: 24px; height: var(--header-h); }
 
 .brand { flex: none; }
 .brand { display: flex; align-items: center; }
@@ -272,7 +274,8 @@ h1, h2, h3 { margin: 0; font-family: var(--font-serif); font-weight: 400; color:
 .dropdown-toggle .icon { transition: transform .2s; }
 .dropdown-toggle[aria-expanded="true"] .icon { transform: rotate(180deg); }
 
-.nav-actions { display: flex; align-items: center; gap: 18px; padding-left: 22px; border-left: 1px solid var(--line); }
+.nav-actions { display: flex; align-items: center; gap: 10px; padding-left: 14px; border-left: 1px solid var(--line); }
+.nav-actions .btn { padding-inline: 18px; }   /* keeps "Book a Consultation" on one line beside the eight-link menu */
 
 .icon-btn {
   position: relative; display: inline-grid; place-items: center;
