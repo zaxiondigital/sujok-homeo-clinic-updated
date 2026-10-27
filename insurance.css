@@ -1,0 +1,98 @@
+/* =========================================================
+   Sujok Homeo Clinic — Insurance
+   Loaded after style-v3.css. The header, footer, buttons, eyebrow and section titles come
+   from style-v3.css unchanged; this file styles the page's own sections, and every rule is
+   scoped to .in-page.
+   ========================================================= */
+
+.in-page {
+  --in-tint: #eef5ec;          /* soft green panels (same as the topic pages) */
+  --in-radius: 18px;
+}
+.in-page .text-green { color: var(--text-green); }
+
+/* ---------- Hero: full-width photo with the title in a label (as terms.css) ---------- */
+.in-hero { position: relative; z-index: 1; }
+.in-hero-img {
+  display: block; width: 100%; aspect-ratio: 2000 / 668; max-height: 600px;
+  object-fit: cover; object-position: 50% 50%;
+}
+.in-hero-title {
+  position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%);
+  padding: 14px clamp(28px, 4vw, 48px); white-space: nowrap;
+  background: #ffffff; border-radius: 999px; box-shadow: 0 12px 30px rgba(23, 61, 43, .14);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.1; color: var(--ink-900);
+}
+
+/* ---------- Sections ---------- */
+.in-section { padding-block: var(--band-pad-y); }
+.in-hero + .in-section { padding-top: calc(var(--band-pad-y) + 24px); }
+.in-section--tint { background: #fafcf8; }
+.in-head { margin-bottom: clamp(24px, 3vw, 40px); }
+.in-head .eyebrow { margin-bottom: 12px; }
+
+/* Coverage cards */
+.in-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); }
+.in-card {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: clamp(22px, 3vw, 34px); background: #ffffff; border: 1px solid var(--line); border-radius: var(--in-radius);
+  box-shadow: 0 10px 30px rgba(23, 61, 43, .06);
+}
+.in-card-icon { width: 56px; height: 56px; margin-bottom: 6px; background: var(--in-tint); color: var(--green-800); }
+.in-card-icon .icon { width: 26px; height: 26px; stroke-width: 1.6; }
+.in-card-kicker { font-size: .82rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-green); }
+.in-card-title { font-size: clamp(1.4rem, 2vw, 1.7rem); line-height: 1.2; color: var(--ink-900); }
+.in-card p:not(.in-card-kicker):not(.in-badge) { line-height: 1.7; color: var(--ink-500); }
+.in-badge {
+  align-self: flex-start; margin-top: auto; padding: 7px 14px; border-radius: 999px;
+  font-size: .88rem; font-weight: 600; line-height: 1.2;
+}
+.in-badge--claim { background: var(--in-tint); color: var(--green-800); }
+.in-badge--direct { background: var(--green-800); color: #ffffff; }
+
+/* Reimbursement steps */
+.in-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); padding: 0; list-style: none; }
+.in-steps li { padding: 24px; background: #ffffff; border: 1px solid var(--line); border-radius: var(--in-radius); }
+.in-step-num {
+  display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 14px; border-radius: 50%;
+  background: var(--in-tint); font-weight: 700; font-size: .9rem; color: var(--green-800);
+}
+.in-step-title { margin-bottom: 6px; font-size: 1.15rem; line-height: 1.3; color: var(--ink-900); }
+.in-steps p { font-size: .95rem; line-height: 1.6; color: var(--ink-500); }
+
+.in-note {
+  display: flex; align-items: center; gap: 16px; margin-top: clamp(20px, 2.6vw, 32px);
+  padding: 18px 22px; background: #ffffff; border: 1px solid var(--line); border-left: 4px solid var(--text-green); border-radius: var(--in-radius);
+}
+.in-note-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--in-tint); color: var(--green-800);
+}
+.in-note-icon .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.in-note p { font-size: .98rem; color: var(--ink-700); }
+
+/* ---------- Booking prompt ---------- */
+.in-cta { padding-bottom: var(--band-pad-y); }
+.in-cta-box {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap;
+  padding: clamp(24px, 3.4vw, 40px) clamp(22px, 4vw, 52px);
+  background: var(--green-800); border-radius: var(--in-radius); color: #ffffff;
+}
+.in-cta-title { margin-bottom: 6px; font-size: clamp(1.5rem, 2.4vw, 2.1rem); line-height: 1.2; color: #ffffff; }
+.in-cta-text p { color: rgba(255, 255, 255, .85); }
+.in-cta-text a { font-weight: 600; color: #ffffff; white-space: nowrap; }
+.in-cta .btn-primary { background: #ffffff; color: var(--green-800); box-shadow: none; white-space: nowrap; }
+.in-cta .btn-primary:hover { background: var(--in-tint); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .in-cards, .in-steps { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .in-hero-img { aspect-ratio: 2.3 / 1; object-position: 60% 50%; }
+  .in-hero-title { padding: 10px 24px; font-size: 1.5rem; }
+  .in-cta .btn-primary { width: 100%; justify-content: center; }
+}
+@media (max-width: 360px) {
+  .in-hero-title { padding: 8px 18px; font-size: 1.25rem; }
+}

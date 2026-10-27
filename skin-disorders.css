@@ -1,0 +1,158 @@
+/* =========================================================
+   Sujok Homeo Clinic — Skin Disorders (health-topic article)
+   Loaded after style-v3.css and homeopathy.css. The hero, Health Topics menu and
+   two-column layout come from homeopathy.css unchanged; this file styles only the
+   article, and every rule is scoped to .sk-article.
+   ========================================================= */
+
+.sk-article {
+  --sk-tint: #eef5ec;          /* soft green panels (same as the other topic pages) */
+  --sk-radius: 14px;
+}
+.sk-article p { line-height: 1.7; }
+.sk-article .eyebrow { margin-bottom: 10px; }
+
+/* Section heading with a short trailing rule, as on the other topic pages */
+.sk-h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.2; color: var(--ink-900); }
+.sk-h3::after {   /* the rule follows the last word, even when the heading wraps */
+  content: ""; display: inline-block; width: 44px; height: 1.5px; margin-left: 16px;
+  vertical-align: middle; background: var(--text-green);
+}
+.sk-h4 { margin: 20px 0 10px; font-size: 1.1rem; line-height: 1.3; color: var(--green-800); }
+.sk-copy, .sk-copy p { color: var(--ink-500); }
+
+/* ---------- Introduction ---------- */
+.sk-intro {
+  display: grid; grid-template-columns: minmax(0, 56fr) minmax(0, 44fr); gap: clamp(20px, 3vw, 36px);
+  align-items: center; padding-bottom: 30px; border-bottom: 1px solid var(--line);
+}
+.sk-title { margin-bottom: 14px; font-size: clamp(2.6rem, 4.6vw, 4rem); line-height: 1.02; letter-spacing: -.01em; color: var(--ink-900); }
+.sk-lead { font-size: 1.05rem; color: var(--ink-700); }
+
+/* Green panels */
+.sk-panel { padding: 20px 22px 22px; background: var(--sk-tint); border-radius: var(--sk-radius); }
+.sk-panel-title { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 1.05rem; line-height: 1.3; color: var(--green-800); }
+.sk-panel .icon-circle { flex: none; width: 46px; height: 46px; background: #ffffff; color: var(--green-800); }
+.sk-panel .icon-circle .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.sk-panel-note { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(0, 0, 0, .08); font-size: .9rem; line-height: 1.55; color: var(--ink-700); }
+.sk-panel-note strong { color: var(--ink-900); }
+
+.sk-checks { display: grid; gap: 10px; }
+.sk-checks li { position: relative; padding-left: 30px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); }
+.sk-checks li::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--green-800) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+/* Pill tags (symptoms) */
+.sk-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.sk-tags li {
+  padding: 6px 14px; border-radius: 999px; background: #ffffff;
+  font-size: .9rem; font-weight: 500; line-height: 1.3; color: var(--ink-900);
+}
+
+/* Bulleted list (causes) */
+.sk-list { display: grid; gap: 8px; }
+.sk-list li { position: relative; padding-left: 20px; font-size: .95rem; line-height: 1.55; color: var(--ink-500); }
+.sk-list li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--text-green); }
+
+/* ---------- Sections ---------- */
+.sk-section { padding-block: 30px; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
+.sk-row {
+  display: grid; grid-template-columns: minmax(0, 54fr) minmax(0, 46fr); gap: clamp(20px, 3vw, 36px); align-items: start;
+}
+
+/* Three disorder cards */
+.sk-types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.sk-type {
+  position: relative; display: flex; flex-direction: column; gap: 4px; height: 100%;
+  padding: 18px 18px 20px; border: 1px solid var(--line); border-radius: var(--sk-radius);
+  background: #ffffff; color: inherit; text-decoration: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.sk-type-badge {
+  display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 8px; border-radius: 50%;
+  background: var(--sk-tint); font-size: 1.15rem; font-weight: 700; color: var(--green-800);
+}
+.sk-type-name { font-size: 1.05rem; font-weight: 600; line-height: 1.3; color: var(--ink-900); }
+.sk-type-desc { font-size: .9rem; line-height: 1.45; color: var(--ink-500); }
+.sk-type-arrow { position: absolute; right: 16px; top: 22px; color: var(--text-green); transition: transform .2s ease; }
+a.sk-type:hover { border-color: var(--text-green); background: var(--sk-tint); }
+a.sk-type:hover .sk-type-arrow { transform: translateX(3px); }
+a.sk-type:focus-visible { outline: 2px solid var(--text-green); outline-offset: 2px; }
+
+/* ---------- Closing note ---------- */
+.sk-note {
+  display: flex; align-items: center; gap: 16px; margin-top: 30px;
+  padding: 18px 22px; border: 1px solid var(--line); border-left: 4px solid var(--text-green); border-radius: var(--sk-radius);
+}
+.sk-note-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--sk-tint); color: var(--green-800);
+}
+.sk-note-icon .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.sk-note p { font-size: .98rem; color: var(--ink-700); }
+
+/* ---------- Booking prompt ---------- */
+.sk-cta {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px 24px;
+  margin-top: 24px; padding: 22px clamp(18px, 2.4vw, 28px); background: var(--sk-tint); border-radius: var(--sk-radius);
+}
+.sk-cta-title { margin-bottom: 4px; font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.25; color: var(--ink-900); }
+.sk-cta-text p { color: var(--ink-700); }
+.sk-cta-text a { font-weight: 600; color: var(--green-800); white-space: nowrap; }
+.sk-cta .btn { white-space: nowrap; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  /* Narrower article column: panels drop below their text, cards go 1 per row */
+  .sk-row { grid-template-columns: minmax(0, 1fr); row-gap: 20px; }
+  .sk-types { grid-template-columns: minmax(0, 1fr); }
+  .sk-type { padding-right: 44px; }
+  .sk-type-badge { position: absolute; left: 18px; top: 18px; margin: 0; }
+  .sk-type { padding-left: 72px; min-height: 76px; justify-content: center; }
+  .sk-type-arrow { top: 50%; transform: translateY(-50%); }
+  a.sk-type:hover .sk-type-arrow { transform: translate(3px, -50%); }
+}
+
+@media (max-width: 900px) {
+  .sk-intro { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .sk-cta { grid-template-columns: minmax(0, 1fr); }
+  .sk-cta .btn { justify-self: stretch; justify-content: center; }
+}
+
+/* ---------- Additions for this page ---------- */
+/* Sub-label between tag groups in a panel */
+.sk-panel-label { margin: 16px 0 8px; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-500); }
+.sk-copy p + p { margin-top: 10px; }
+
+/* Emergency note: the same pale-red warning style as the Constipation and Mental Health pages */
+.sk-alert {
+  display: flex; align-items: flex-start; gap: 16px; margin-top: 24px;
+  padding: 18px 22px; background: #fbeeec; border: 1px solid #f1d3cf; border-radius: var(--sk-radius);
+}
+.sk-alert-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: #b23b31; color: #ffffff;
+}
+.sk-alert-icon .icon { width: 22px; height: 22px; stroke-width: 2; }
+.sk-alert-title { margin-bottom: 4px; font-size: 1.05rem; line-height: 1.3; color: var(--ink-900); }
+.sk-alert p { font-size: .95rem; color: var(--ink-700); }
+.sk-alert a { font-weight: 700; color: #b23b31; white-space: nowrap; }
+
+/* Numbered steps (how a reaction happens) */
+.sk-steps { display: grid; gap: 12px; padding-left: 0; list-style: none; counter-reset: sk-step; }
+.sk-steps li { position: relative; padding-left: 38px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); counter-increment: sk-step; }
+.sk-steps li::before {
+  content: counter(sk-step); position: absolute; left: 0; top: -2px; display: grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%; background: #ffffff; font-size: .85rem; font-weight: 700; color: var(--green-800);
+}
+.sk-panel-text { margin-bottom: 12px; font-size: .95rem; color: var(--ink-700); }
+
+/* ---------- Additions for this page ---------- */
+.sk-steps strong, .sk-checks strong { color: var(--ink-900); }
+.sk-panel-label + .sk-steps { margin-top: 4px; }
+.sk-panel-label + .sk-tags, .sk-checks + .sk-panel-label { margin-top: 14px; }

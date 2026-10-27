@@ -1,0 +1,153 @@
+/* =========================================================
+   Sujok Homeo Clinic — Addictions (health-topic article)
+   Loaded after style-v3.css and homeopathy.css. The hero, Health Topics menu and
+   two-column layout come from homeopathy.css unchanged; this file styles only the
+   article, and every rule is scoped to .ad-article.
+   ========================================================= */
+
+.ad-article {
+  --ad-tint: #eef5ec;          /* soft green panels (same as the other topic pages) */
+  --ad-radius: 14px;
+}
+.ad-article p { line-height: 1.7; }
+.ad-article .eyebrow { margin-bottom: 10px; }
+
+/* Section heading with a short trailing rule, as on the other topic pages */
+.ad-h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.2; color: var(--ink-900); }
+.ad-h3::after {   /* the rule follows the last word, even when the heading wraps */
+  content: ""; display: inline-block; width: 44px; height: 1.5px; margin-left: 16px;
+  vertical-align: middle; background: var(--text-green);
+}
+.ad-h4 { margin: 20px 0 10px; font-size: 1.1rem; line-height: 1.3; color: var(--green-800); }
+.ad-copy, .ad-copy p { color: var(--ink-500); }
+
+/* ---------- Introduction ---------- */
+.ad-intro {
+  display: grid; grid-template-columns: minmax(0, 56fr) minmax(0, 44fr); gap: clamp(20px, 3vw, 36px);
+  align-items: center; padding-bottom: 30px; border-bottom: 1px solid var(--line);
+}
+.ad-title { margin-bottom: 14px; font-size: clamp(2.6rem, 4.6vw, 4rem); line-height: 1.02; letter-spacing: -.01em; color: var(--ink-900); }
+.ad-lead { font-size: 1.05rem; color: var(--ink-700); }
+
+/* Green panels */
+.ad-panel { padding: 20px 22px 22px; background: var(--ad-tint); border-radius: var(--ad-radius); }
+.ad-panel-title { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 1.05rem; line-height: 1.3; color: var(--green-800); }
+.ad-panel .icon-circle { flex: none; width: 46px; height: 46px; background: #ffffff; color: var(--green-800); }
+.ad-panel .icon-circle .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.ad-panel-note { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(0, 0, 0, .08); font-size: .9rem; line-height: 1.55; color: var(--ink-700); }
+.ad-panel-note strong { color: var(--ink-900); }
+
+.ad-checks { display: grid; gap: 10px; }
+.ad-checks li { position: relative; padding-left: 30px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); }
+.ad-checks li::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--green-800) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+/* Pill tags (symptoms) */
+.ad-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ad-tags li {
+  padding: 6px 14px; border-radius: 999px; background: #ffffff;
+  font-size: .9rem; font-weight: 500; line-height: 1.3; color: var(--ink-900);
+}
+
+/* Bulleted list (causes) */
+.ad-list { display: grid; gap: 8px; }
+.ad-list li { position: relative; padding-left: 20px; font-size: .95rem; line-height: 1.55; color: var(--ink-500); }
+.ad-list li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--text-green); }
+
+/* ---------- Sections ---------- */
+.ad-section { padding-block: 30px; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
+.ad-row {
+  display: grid; grid-template-columns: minmax(0, 54fr) minmax(0, 46fr); gap: clamp(20px, 3vw, 36px); align-items: start;
+}
+
+/* Three disorder cards */
+.ad-types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.ad-type {
+  position: relative; display: flex; flex-direction: column; gap: 4px; height: 100%;
+  padding: 18px 18px 20px; border: 1px solid var(--line); border-radius: var(--ad-radius);
+  background: #ffffff; color: inherit; text-decoration: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.ad-type-badge {
+  display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 8px; border-radius: 50%;
+  background: var(--ad-tint); font-size: 1.15rem; font-weight: 700; color: var(--green-800);
+}
+.ad-type-name { font-size: 1.05rem; font-weight: 600; line-height: 1.3; color: var(--ink-900); }
+.ad-type-desc { font-size: .9rem; line-height: 1.45; color: var(--ink-500); }
+.ad-type-arrow { position: absolute; right: 16px; top: 22px; color: var(--text-green); transition: transform .2s ease; }
+a.ad-type:hover { border-color: var(--text-green); background: var(--ad-tint); }
+a.ad-type:hover .ad-type-arrow { transform: translateX(3px); }
+a.ad-type:focus-visible { outline: 2px solid var(--text-green); outline-offset: 2px; }
+
+/* ---------- Closing note ---------- */
+.ad-note {
+  display: flex; align-items: center; gap: 16px; margin-top: 30px;
+  padding: 18px 22px; border: 1px solid var(--line); border-left: 4px solid var(--text-green); border-radius: var(--ad-radius);
+}
+.ad-note-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--ad-tint); color: var(--green-800);
+}
+.ad-note-icon .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.ad-note p { font-size: .98rem; color: var(--ink-700); }
+
+/* ---------- Booking prompt ---------- */
+.ad-cta {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px 24px;
+  margin-top: 24px; padding: 22px clamp(18px, 2.4vw, 28px); background: var(--ad-tint); border-radius: var(--ad-radius);
+}
+.ad-cta-title { margin-bottom: 4px; font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.25; color: var(--ink-900); }
+.ad-cta-text p { color: var(--ink-700); }
+.ad-cta-text a { font-weight: 600; color: var(--green-800); white-space: nowrap; }
+.ad-cta .btn { white-space: nowrap; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  /* Narrower article column: panels drop below their text, cards go 1 per row */
+  .ad-row { grid-template-columns: minmax(0, 1fr); row-gap: 20px; }
+  .ad-types { grid-template-columns: minmax(0, 1fr); }
+  .ad-type { padding-right: 44px; }
+  .ad-type-badge { position: absolute; left: 18px; top: 18px; margin: 0; }
+  .ad-type { padding-left: 72px; min-height: 76px; justify-content: center; }
+  .ad-type-arrow { top: 50%; transform: translateY(-50%); }
+  a.ad-type:hover .ad-type-arrow { transform: translate(3px, -50%); }
+}
+
+@media (max-width: 900px) {
+  .ad-intro { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .ad-cta { grid-template-columns: minmax(0, 1fr); }
+  .ad-cta .btn { justify-self: stretch; justify-content: center; }
+}
+
+/* ---------- Additions for this page ---------- */
+/* Sub-label between tag groups in a panel */
+.ad-panel-label { margin: 16px 0 8px; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-500); }
+.ad-copy p + p { margin-top: 10px; }
+
+/* Emergency note: the same pale-red warning style as the Constipation and Mental Health pages */
+.ad-alert {
+  display: flex; align-items: flex-start; gap: 16px; margin-top: 24px;
+  padding: 18px 22px; background: #fbeeec; border: 1px solid #f1d3cf; border-radius: var(--ad-radius);
+}
+.ad-alert-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: #b23b31; color: #ffffff;
+}
+.ad-alert-icon .icon { width: 22px; height: 22px; stroke-width: 2; }
+.ad-alert-title { margin-bottom: 4px; font-size: 1.05rem; line-height: 1.3; color: var(--ink-900); }
+.ad-alert p { font-size: .95rem; color: var(--ink-700); }
+.ad-alert a { font-weight: 700; color: #b23b31; white-space: nowrap; }
+
+/* Numbered steps (how a reaction happens) */
+.ad-steps { display: grid; gap: 12px; padding-left: 0; list-style: none; counter-reset: ad-step; }
+.ad-steps li { position: relative; padding-left: 38px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); counter-increment: ad-step; }
+.ad-steps li::before {
+  content: counter(ad-step); position: absolute; left: 0; top: -2px; display: grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%; background: #ffffff; font-size: .85rem; font-weight: 700; color: var(--green-800);
+}
+.ad-panel-text { margin-bottom: 12px; font-size: .95rem; color: var(--ink-700); }

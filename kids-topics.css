@@ -1,0 +1,207 @@
+/* =========================================================
+   Sujok Homeo Clinic — Kids Health topic pages (shared)
+   Used by every Kids Health topic page (kids-asthma.html, kids-eczema.html, …). Loaded after
+   style-v3.css and homeopathy.css: the hero layout, topics menu and two-column layout come from
+   homeopathy.css unchanged. This file sets the Kids Health hero photo framing (.kt-hero, as on
+   kids-health.html) and styles the article (.kt-article) the same way as the Health Topics pages.
+   ========================================================= */
+
+/* ---------- Hero (same treatment as kids-health.css) ---------- */
+.kt-hero .hp-hero-img { object-position: 100% 30%; }
+/* Soft light fade behind the text, so the blurred leaf at the photo's lower left never dims it */
+.kt-hero::after {
+  content: ""; grid-area: 1 / 1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .7) 0, rgba(255, 255, 255, .45) 30%, rgba(255, 255, 255, 0) 52%);
+}
+.kt-hero .hp-hero-content { position: relative; z-index: 1; }
+@media (max-width: 820px) {
+  .kt-hero .hp-hero-img { object-position: 80% 30%; }
+  .kt-hero::after { content: none; }
+}
+@media (max-width: 640px) {
+  .kt-hero .hp-hero-img { object-position: 72% 30%; }
+}
+
+.kt-article {
+  --kt-tint: #eef5ec;          /* soft green panels (same as the other topic pages) */
+  --kt-radius: 14px;
+}
+.kt-article p { line-height: 1.7; }
+.kt-article .eyebrow { margin-bottom: 10px; }
+
+/* Section heading with a short trailing rule, as on the other topic pages */
+.kt-h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.2; color: var(--ink-900); }
+.kt-h3::after {   /* the rule follows the last word, even when the heading wraps */
+  content: ""; display: inline-block; width: 44px; height: 1.5px; margin-left: 16px;
+  vertical-align: middle; background: var(--text-green);
+}
+.kt-h4 { margin: 20px 0 10px; font-size: 1.1rem; line-height: 1.3; color: var(--green-800); }
+.kt-copy, .kt-copy p { color: var(--ink-500); }
+
+/* ---------- Introduction ---------- */
+.kt-intro {
+  display: grid; grid-template-columns: minmax(0, 56fr) minmax(0, 44fr); gap: clamp(20px, 3vw, 36px);
+  align-items: center; padding-bottom: 30px; border-bottom: 1px solid var(--line);
+}
+.kt-title { margin-bottom: 14px; font-size: clamp(2.6rem, 4.6vw, 4rem); line-height: 1.02; letter-spacing: -.01em; color: var(--ink-900); }
+.kt-lead { font-size: 1.05rem; color: var(--ink-700); }
+
+/* Green panels */
+.kt-panel { padding: 20px 22px 22px; background: var(--kt-tint); border-radius: var(--kt-radius); }
+.kt-panel-title { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 1.05rem; line-height: 1.3; color: var(--green-800); }
+.kt-panel .icon-circle { flex: none; width: 46px; height: 46px; background: #ffffff; color: var(--green-800); }
+.kt-panel .icon-circle .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.kt-panel-note { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(0, 0, 0, .08); font-size: .9rem; line-height: 1.55; color: var(--ink-700); }
+.kt-panel-note strong { color: var(--ink-900); }
+
+.kt-checks { display: grid; gap: 10px; }
+.kt-checks li { position: relative; padding-left: 30px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); }
+.kt-checks li::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--green-800) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+/* Pill tags (symptoms) */
+.kt-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.kt-tags li {
+  padding: 6px 14px; border-radius: 999px; background: #ffffff;
+  font-size: .9rem; font-weight: 500; line-height: 1.3; color: var(--ink-900);
+}
+
+/* Bulleted list (causes) */
+.kt-list { display: grid; gap: 8px; }
+.kt-list li { position: relative; padding-left: 20px; font-size: .95rem; line-height: 1.55; color: var(--ink-500); }
+.kt-list li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--text-green); }
+
+/* ---------- Sections ---------- */
+.kt-section { padding-block: 30px; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
+.kt-row {
+  display: grid; grid-template-columns: minmax(0, 54fr) minmax(0, 46fr); gap: clamp(20px, 3vw, 36px); align-items: start;
+}
+
+/* Three disorder cards */
+.kt-types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.kt-type {
+  position: relative; display: flex; flex-direction: column; gap: 4px; height: 100%;
+  padding: 18px 18px 20px; border: 1px solid var(--line); border-radius: var(--kt-radius);
+  background: #ffffff; color: inherit; text-decoration: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.kt-type-badge {
+  display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 8px; border-radius: 50%;
+  background: var(--kt-tint); font-size: 1.15rem; font-weight: 700; color: var(--green-800);
+}
+.kt-type-name { font-size: 1.05rem; font-weight: 600; line-height: 1.3; color: var(--ink-900); }
+.kt-type-desc { font-size: .9rem; line-height: 1.45; color: var(--ink-500); }
+.kt-type-arrow { position: absolute; right: 16px; top: 22px; color: var(--text-green); transition: transform .2s ease; }
+a.kt-type:hover { border-color: var(--text-green); background: var(--kt-tint); }
+a.kt-type:hover .kt-type-arrow { transform: translateX(3px); }
+a.kt-type:focus-visible { outline: 2px solid var(--text-green); outline-offset: 2px; }
+
+/* ---------- Closing note ---------- */
+.kt-note {
+  display: flex; align-items: center; gap: 16px; margin-top: 30px;
+  padding: 18px 22px; border: 1px solid var(--line); border-left: 4px solid var(--text-green); border-radius: var(--kt-radius);
+}
+.kt-note-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--kt-tint); color: var(--green-800);
+}
+.kt-note-icon .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.kt-note p { font-size: .98rem; color: var(--ink-700); }
+
+/* ---------- Booking prompt ---------- */
+.kt-cta {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px 24px;
+  margin-top: 24px; padding: 22px clamp(18px, 2.4vw, 28px); background: var(--kt-tint); border-radius: var(--kt-radius);
+}
+.kt-cta-title { margin-bottom: 4px; font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.25; color: var(--ink-900); }
+.kt-cta-text p { color: var(--ink-700); }
+.kt-cta-text a { font-weight: 600; color: var(--green-800); white-space: nowrap; }
+.kt-cta .btn { white-space: nowrap; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  /* Narrower article column: panels drop below their text, cards go 1 per row */
+  .kt-row { grid-template-columns: minmax(0, 1fr); row-gap: 20px; }
+  .kt-types { grid-template-columns: minmax(0, 1fr); }
+  .kt-type { padding-right: 44px; }
+  .kt-type-badge { position: absolute; left: 18px; top: 18px; margin: 0; }
+  .kt-type { padding-left: 72px; min-height: 76px; justify-content: center; }
+  .kt-type-arrow { top: 50%; transform: translateY(-50%); }
+  a.kt-type:hover .kt-type-arrow { transform: translate(3px, -50%); }
+}
+
+@media (max-width: 900px) {
+  .kt-intro { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .kt-cta { grid-template-columns: minmax(0, 1fr); }
+  .kt-cta .btn { justify-self: stretch; justify-content: center; }
+}
+
+/* ---------- Additions for this page ---------- */
+/* Sub-label between tag groups in a panel */
+.kt-panel-label { margin: 16px 0 8px; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-500); }
+.kt-copy p + p { margin-top: 10px; }
+
+/* Emergency note: the same pale-red warning style as the Constipation and Mental Health pages */
+.kt-alert {
+  display: flex; align-items: flex-start; gap: 16px; margin-top: 24px;
+  padding: 18px 22px; background: #fbeeec; border: 1px solid #f1d3cf; border-radius: var(--kt-radius);
+}
+.kt-alert-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: #b23b31; color: #ffffff;
+}
+.kt-alert-icon .icon { width: 22px; height: 22px; stroke-width: 2; }
+.kt-alert-title { margin-bottom: 4px; font-size: 1.05rem; line-height: 1.3; color: var(--ink-900); }
+.kt-alert p { font-size: .95rem; color: var(--ink-700); }
+.kt-alert a { font-weight: 700; color: #b23b31; white-space: nowrap; }
+
+/* Numbered steps (how a reaction happens) */
+.kt-steps { display: grid; gap: 12px; padding-left: 0; list-style: none; counter-reset: kt-step; }
+.kt-steps li { position: relative; padding-left: 38px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); counter-increment: kt-step; }
+.kt-steps li::before {
+  content: counter(kt-step); position: absolute; left: 0; top: -2px; display: grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%; background: #ffffff; font-size: .85rem; font-weight: 700; color: var(--green-800);
+}
+.kt-panel-text { margin-bottom: 12px; font-size: .95rem; color: var(--ink-700); }
+
+/* ---------- Additions for this page ---------- */
+.kt-steps strong, .kt-checks strong { color: var(--ink-900); }
+.kt-panel-label + .kt-steps { margin-top: 4px; }
+.kt-panel-label + .kt-tags, .kt-checks + .kt-panel-label { margin-top: 14px; }
+.kt-section > .kt-copy { margin-bottom: 4px; }
+
+/* ---------- Additions for the Kids Health topic pages ---------- */
+/* Overview cards: two or four topics instead of three */
+.kt-types--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.kt-types--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Comparison table (Attention Disorders) */
+.kt-compare { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .95rem; }
+.kt-compare th, .kt-compare td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(0, 0, 0, .07); }
+.kt-compare thead th { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-500); }
+.kt-compare tbody th { font-weight: 600; color: var(--ink-900); }
+.kt-compare td { color: var(--ink-700); }
+.kt-compare tr:last-child th, .kt-compare tr:last-child td { border-bottom: 0; }
+.kt-compare .kt-yes { font-weight: 600; color: var(--green-800); }
+
+/* Medical-advice note with a bulleted list */
+.kt-alert-list { display: grid; gap: 6px; margin-top: 6px; }
+.kt-alert-list li { position: relative; padding-left: 18px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); }
+.kt-alert-list li::before { content: ""; position: absolute; left: 2px; top: .5em; width: 7px; height: 7px; border-radius: 50%; background: #b23b31; }
+
+.kt-copy .kt-h4:first-of-type { margin-top: 18px; }
+.kt-panel-label + .kt-steps, .kt-panel-label + .kt-checks { margin-top: 4px; }
+
+@media (max-width: 1180px) {
+  .kt-types--2, .kt-types--4 { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Single statistic: one large figure in a panel (Bed Wetting) */
+.kt-stat { display: flex; align-items: center; gap: 18px; }
+.kt-stat .kt-stat-number { flex: none; font-family: var(--font-serif); font-size: clamp(2.4rem, 3.6vw, 3.2rem); line-height: 1; color: var(--green-800); }
+.kt-stat .kt-stat-text { font-size: 1rem; line-height: 1.45; color: var(--ink-700); }

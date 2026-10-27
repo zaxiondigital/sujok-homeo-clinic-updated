@@ -1,0 +1,99 @@
+/* =========================================================
+   Sujok Homeo Clinic — FAQ
+   Loaded after style-v3.css. The header, footer, buttons and eyebrow come from style-v3.css
+   unchanged; this file styles the page's own sections, and every rule is scoped to .fq-page.
+   The hero, card and booking-box styles match insurance.css.
+   ========================================================= */
+
+.fq-page {
+  --fq-tint: #eef5ec;          /* soft green panels (same as the topic pages) */
+  --fq-radius: 18px;
+}
+.fq-page .text-green { color: var(--text-green); }
+
+/* ---------- Hero: full-width photo with the title in a label (as terms.css) ---------- */
+.fq-hero { position: relative; z-index: 1; }
+.fq-hero-img {
+  display: block; width: 100%; aspect-ratio: 2000 / 668; max-height: 600px;
+  object-fit: cover; object-position: 50% 50%;
+}
+.fq-hero-title {
+  position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%);
+  padding: 14px clamp(28px, 4vw, 48px); white-space: nowrap;
+  background: #ffffff; border-radius: 999px; box-shadow: 0 12px 30px rgba(23, 61, 43, .14);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.1; color: var(--ink-900);
+}
+
+/* ---------- Topics menu + question groups ---------- */
+.fq-section { padding-block: calc(var(--band-pad-y) + 24px) var(--band-pad-y); }
+.fq-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+
+.fq-nav {
+  position: sticky; top: 110px;
+  padding: 22px; background: #ffffff; border: 1px solid var(--line); border-radius: var(--fq-radius);
+}
+.fq-nav-title { margin-bottom: 10px; font-size: .82rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-green); }
+.fq-nav ul { display: grid; gap: 2px; padding: 0; list-style: none; }
+.fq-nav a {
+  display: block; padding: 8px 12px; border-radius: 10px;
+  font-size: .95rem; line-height: 1.35; color: var(--ink-700); text-decoration: none;
+}
+.fq-nav a:hover, .fq-nav a:focus-visible { background: var(--fq-tint); color: var(--green-800); }
+
+.fq-groups { display: grid; gap: clamp(36px, 4vw, 52px); }
+.fq-group { scroll-margin-top: 120px; }
+.fq-group-title {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 16px;
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem); line-height: 1.2; color: var(--ink-900);
+}
+.fq-group-title .icon-circle { flex: none; width: 48px; height: 48px; background: var(--fq-tint); color: var(--green-800); }
+.fq-group-title .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+
+/* Questions: native details/summary */
+.fq-item { background: #ffffff; border: 1px solid var(--line); border-radius: 14px; }
+.fq-item + .fq-item { margin-top: 10px; }
+.fq-item summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 22px; cursor: pointer; list-style: none;
+}
+.fq-item summary::-webkit-details-marker { display: none; }
+.fq-item summary:focus-visible { outline: 2px solid var(--text-green); outline-offset: 2px; border-radius: 14px; }
+.fq-q { font-family: inherit; font-size: 1.05rem; font-weight: 600; line-height: 1.4; color: var(--ink-900); }
+.fq-chev { flex: none; width: 20px; height: 20px; color: var(--green-800); transition: transform .2s ease; }
+.fq-item[open] { border-color: rgba(23, 61, 43, .25); box-shadow: 0 10px 30px rgba(23, 61, 43, .06); }
+.fq-item[open] .fq-chev { transform: rotate(180deg); }
+.fq-a { padding: 0 22px 20px; }
+.fq-a p { line-height: 1.7; color: var(--ink-500); }
+.fq-a p + p { margin-top: 10px; }
+.fq-a-note { padding: 10px 14px; background: #fbeeec; border-radius: 10px; font-size: .95rem; color: #8a2d26 !important; }
+
+/* ---------- Booking prompt ---------- */
+.fq-cta { padding-bottom: var(--band-pad-y); }
+.fq-cta-box {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap;
+  padding: clamp(24px, 3.4vw, 40px) clamp(22px, 4vw, 52px);
+  background: var(--green-800); border-radius: var(--fq-radius); color: #ffffff;
+}
+.fq-cta-title { margin-bottom: 6px; font-size: clamp(1.5rem, 2.4vw, 2.1rem); line-height: 1.2; color: #ffffff; }
+.fq-cta-text p { color: rgba(255, 255, 255, .85); }
+.fq-cta-text a { font-weight: 600; color: #ffffff; white-space: nowrap; }
+.fq-cta .btn-primary { background: #ffffff; color: var(--green-800); box-shadow: none; white-space: nowrap; }
+.fq-cta .btn-primary:hover { background: var(--fq-tint); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .fq-layout { grid-template-columns: minmax(0, 1fr); }
+  .fq-nav { position: static; padding: 18px; }
+  .fq-nav ul { display: flex; flex-wrap: wrap; gap: 8px; }
+  .fq-nav a { padding: 7px 14px; background: var(--fq-tint); border-radius: 999px; font-size: .9rem; color: var(--green-800); }
+}
+@media (max-width: 640px) {
+  .fq-hero-img { aspect-ratio: 2.3 / 1; object-position: 60% 50%; }
+  .fq-hero-title { padding: 10px 22px; font-size: 1.3rem; }
+  .fq-item summary { padding: 16px 18px; }
+  .fq-a { padding: 0 18px 18px; }
+  .fq-cta .btn-primary { width: 100%; justify-content: center; }
+}
+@media (max-width: 360px) {
+  .fq-hero-title { padding: 8px 16px; font-size: 1.1rem; }
+}

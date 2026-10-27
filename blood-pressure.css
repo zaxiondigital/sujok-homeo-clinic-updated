@@ -1,0 +1,181 @@
+/* =========================================================
+   Sujok Homeo Clinic — Blood Pressure (health-topic article)
+   Loaded after style-v3.css and homeopathy.css. The hero, Health Topics menu and
+   two-column layout come from homeopathy.css unchanged; this file styles only the
+   article, and every rule is scoped to .bp-article.
+   ========================================================= */
+
+.bp-article {
+  --bp-tint: #eef5ec;          /* soft green panels (same as the other topic pages) */
+  --bp-radius: 14px;
+}
+.bp-article p { line-height: 1.7; }
+.bp-article .eyebrow { margin-bottom: 10px; }
+
+/* Section heading with a short trailing rule, as on the other topic pages */
+.bp-h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.2; color: var(--ink-900); }
+.bp-h3::after {   /* the rule follows the last word, even when the heading wraps */
+  content: ""; display: inline-block; width: 44px; height: 1.5px; margin-left: 16px;
+  vertical-align: middle; background: var(--text-green);
+}
+.bp-h4 { margin: 20px 0 10px; font-size: 1.1rem; line-height: 1.3; color: var(--green-800); }
+.bp-copy, .bp-copy p { color: var(--ink-500); }
+
+/* ---------- Introduction ---------- */
+.bp-intro {
+  display: grid; grid-template-columns: minmax(0, 56fr) minmax(0, 44fr); gap: clamp(20px, 3vw, 36px);
+  align-items: center; padding-bottom: 30px; border-bottom: 1px solid var(--line);
+}
+.bp-title { margin-bottom: 14px; font-size: clamp(2.6rem, 4.6vw, 4rem); line-height: 1.02; letter-spacing: -.01em; color: var(--ink-900); }
+.bp-lead { font-size: 1.05rem; color: var(--ink-700); }
+
+/* Green panels */
+.bp-panel { padding: 20px 22px 22px; background: var(--bp-tint); border-radius: var(--bp-radius); }
+.bp-panel-title { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 1.05rem; line-height: 1.3; color: var(--green-800); }
+.bp-panel .icon-circle { flex: none; width: 46px; height: 46px; background: #ffffff; color: var(--green-800); }
+.bp-panel .icon-circle .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.bp-panel-note { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(0, 0, 0, .08); font-size: .9rem; line-height: 1.55; color: var(--ink-700); }
+.bp-panel-note strong { color: var(--ink-900); }
+
+.bp-checks { display: grid; gap: 10px; }
+.bp-checks li { position: relative; padding-left: 30px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); }
+.bp-checks li::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--green-800) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+
+/* Pill tags (symptoms) */
+.bp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.bp-tags li {
+  padding: 6px 14px; border-radius: 999px; background: #ffffff;
+  font-size: .9rem; font-weight: 500; line-height: 1.3; color: var(--ink-900);
+}
+
+/* Bulleted list (causes) */
+.bp-list { display: grid; gap: 8px; }
+.bp-list li { position: relative; padding-left: 20px; font-size: .95rem; line-height: 1.55; color: var(--ink-500); }
+.bp-list li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--text-green); }
+
+/* ---------- Sections ---------- */
+.bp-section { padding-block: 30px; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
+.bp-row {
+  display: grid; grid-template-columns: minmax(0, 54fr) minmax(0, 46fr); gap: clamp(20px, 3vw, 36px); align-items: start;
+}
+
+/* Three disorder cards */
+.bp-types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.bp-type {
+  position: relative; display: flex; flex-direction: column; gap: 4px; height: 100%;
+  padding: 18px 18px 20px; border: 1px solid var(--line); border-radius: var(--bp-radius);
+  background: #ffffff; color: inherit; text-decoration: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.bp-type-badge {
+  display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 8px; border-radius: 50%;
+  background: var(--bp-tint); font-size: 1.15rem; font-weight: 700; color: var(--green-800);
+}
+.bp-type-name { font-size: 1.05rem; font-weight: 600; line-height: 1.3; color: var(--ink-900); }
+.bp-type-desc { font-size: .9rem; line-height: 1.45; color: var(--ink-500); }
+.bp-type-arrow { position: absolute; right: 16px; top: 22px; color: var(--text-green); transition: transform .2s ease; }
+a.bp-type:hover { border-color: var(--text-green); background: var(--bp-tint); }
+a.bp-type:hover .bp-type-arrow { transform: translateX(3px); }
+a.bp-type:focus-visible { outline: 2px solid var(--text-green); outline-offset: 2px; }
+
+/* ---------- Closing note ---------- */
+.bp-note {
+  display: flex; align-items: center; gap: 16px; margin-top: 30px;
+  padding: 18px 22px; border: 1px solid var(--line); border-left: 4px solid var(--text-green); border-radius: var(--bp-radius);
+}
+.bp-note-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--bp-tint); color: var(--green-800);
+}
+.bp-note-icon .icon { width: 22px; height: 22px; stroke-width: 1.6; }
+.bp-note p { font-size: .98rem; color: var(--ink-700); }
+
+/* ---------- Booking prompt ---------- */
+.bp-cta {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px 24px;
+  margin-top: 24px; padding: 22px clamp(18px, 2.4vw, 28px); background: var(--bp-tint); border-radius: var(--bp-radius);
+}
+.bp-cta-title { margin-bottom: 4px; font-size: clamp(1.2rem, 1.6vw, 1.4rem); line-height: 1.25; color: var(--ink-900); }
+.bp-cta-text p { color: var(--ink-700); }
+.bp-cta-text a { font-weight: 600; color: var(--green-800); white-space: nowrap; }
+.bp-cta .btn { white-space: nowrap; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  /* Narrower article column: panels drop below their text, cards go 1 per row */
+  .bp-row { grid-template-columns: minmax(0, 1fr); row-gap: 20px; }
+  .bp-types { grid-template-columns: minmax(0, 1fr); }
+  .bp-type { padding-right: 44px; }
+  .bp-type-badge { position: absolute; left: 18px; top: 18px; margin: 0; }
+  .bp-type { padding-left: 72px; min-height: 76px; justify-content: center; }
+  .bp-type-arrow { top: 50%; transform: translateY(-50%); }
+  a.bp-type:hover .bp-type-arrow { transform: translate(3px, -50%); }
+}
+
+@media (max-width: 900px) {
+  .bp-intro { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .bp-cta { grid-template-columns: minmax(0, 1fr); }
+  .bp-cta .btn { justify-self: stretch; justify-content: center; }
+}
+
+/* ---------- Additions for this page ---------- */
+/* Sub-label between tag groups in a panel */
+.bp-panel-label { margin: 16px 0 8px; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-500); }
+.bp-copy p + p { margin-top: 10px; }
+
+/* Emergency note: the same pale-red warning style as the Constipation and Mental Health pages */
+.bp-alert {
+  display: flex; align-items: flex-start; gap: 16px; margin-top: 24px;
+  padding: 18px 22px; background: #fbeeec; border: 1px solid #f1d3cf; border-radius: var(--bp-radius);
+}
+.bp-alert-icon {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: #b23b31; color: #ffffff;
+}
+.bp-alert-icon .icon { width: 22px; height: 22px; stroke-width: 2; }
+.bp-alert-title { margin-bottom: 4px; font-size: 1.05rem; line-height: 1.3; color: var(--ink-900); }
+.bp-alert p { font-size: .95rem; color: var(--ink-700); }
+.bp-alert a { font-weight: 700; color: #b23b31; white-space: nowrap; }
+
+/* Numbered steps (how a reaction happens) */
+.bp-steps { display: grid; gap: 12px; padding-left: 0; list-style: none; counter-reset: bp-step; }
+.bp-steps li { position: relative; padding-left: 38px; font-size: .95rem; line-height: 1.45; color: var(--ink-700); counter-increment: bp-step; }
+.bp-steps li::before {
+  content: counter(bp-step); position: absolute; left: 0; top: -2px; display: grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%; background: #ffffff; font-size: .85rem; font-weight: 700; color: var(--green-800);
+}
+.bp-panel-text { margin-bottom: 12px; font-size: .95rem; color: var(--ink-700); }
+
+/* ---------- Additions for this page ---------- */
+/* Readings at a glance: one row per range, with a coloured marker */
+.bp-readings { display: grid; gap: 8px; margin: 0; }
+.bp-reading {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 14px 12px 16px; background: #ffffff; border-radius: 10px; border-left: 4px solid var(--text-green);
+}
+.bp-reading dt { font-size: .92rem; font-weight: 600; color: var(--ink-900); }
+.bp-reading dd { margin: 0; font-size: .92rem; font-weight: 600; white-space: nowrap; color: var(--ink-700); }
+.bp-reading--high { border-left-color: #b23b31; }
+.bp-reading--low { border-left-color: #c58a1a; }
+
+/* Physical factors: three stacked panels */
+.bp-physical { display: grid; gap: 14px; margin-top: 16px; }
+.bp-physical .bp-panel p { font-size: .95rem; color: var(--ink-700); }
+.bp-physical .bp-panel p + p { margin-top: 8px; }
+.bp-physical .bp-list { margin-top: 10px; }
+.bp-physical .bp-list li { color: var(--ink-700); }
+.bp-physical-num {
+  display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 50%;
+  background: #ffffff; font-size: .85rem; font-weight: 700; color: var(--green-800);
+}
+
+@media (max-width: 640px) {
+  /* Readings: label above its value so neither wraps awkwardly */
+  .bp-reading { flex-direction: column; align-items: flex-start; gap: 2px; }
+}
