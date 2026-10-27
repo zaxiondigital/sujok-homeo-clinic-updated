@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="digestive-diseases.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,182 +264,53 @@
       </nav>
 
       <!-- ========== Article: Digestive Diseases ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Digestive Diseases page on sujokhomeoclinic.com (supplied by the client),
-        regrouped under headings with small grammar fixes. One change, flagged to the client:
-        - "the treatment is given according to the origin, etiology and symptom to produce cure"
-          is softened (no cure claim).
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article dd-article" aria-labelledby="dd-title">
-
-        <!-- Introduction + conditions covered -->
-        <section class="dd-intro">
-          <div class="dd-intro-text">
-            <p class="eyebrow">Digestive Health</p>
-            <h2 class="dd-title" id="dd-title">Digestive Diseases</h2>
-            <p class="dd-lead">Any disease that attacks the gastrointestinal tract is labeled as a digestive disease, such as colitis, Irritable Bowel Syndrome (IBS) or Crohn’s disease.</p>
-          </div>
-          <aside class="dd-panel" aria-labelledby="dd-covers-title">
-            <h3 class="dd-panel-title" id="dd-covers-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-stomach"/></svg></span>
-              This page covers
-            </h3>
-            <ul class="dd-checks">
-              <li><strong>Colitis:</strong> inflammation of the large intestine</li>
-              <li><strong>IBS:</strong> a functional bowel disorder</li>
-              <li><strong>Crohn’s disease:</strong> a type of inflammatory bowel disease</li>
+          Text: the Digestive Diseases page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/digestive-diseases.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Digestive Diseases</h2>
+            <p>Any disease that attacks the gastrointestinal tract is labeled as a digestive disease, such as colitis, Irritable Bowel Syndrome (IBS), or Crohn’s Disease.</p>
+            <h3 class="ta-h3">Colitis</h3>
+            <p>Colitis refers to inflammation of the large intestine (colon, caecum and rectum). Signs and symptoms of colitis include abdominal tenderness or pain, loss of appetite, weight loss, fatigue, diarrhea, distension, changes in bowel habits, bleeding (such as bloody stools), cramping, bloating, and fever.</p>
+            <p>Colitis may be acute (self-limited), or chronic (persistent) and generally fits into one of the following categories:</p>
+            <ul class="ta-list">
+              <li>Autoimmune - generally inflammatory bowel disease (IBD), including Ulcerative colitis and Crohn’s Disease.</li>
+              <li>Idiopathic - includes Lymphocytic colitis, collagenous colitis. Idiopathic microscopic colitis is diagnosed by a microscopic examination of the tissue in the colon as it cannot be detected by a macroscopic exam.</li>
+              <li>Iatrogenic - Diversion colitis and Chemical colitis.</li>
+              <li>Vascular disease - Ischemic colitis.</li>
+              <li>Infectious - infectious colitis.</li>
             </ul>
-          </aside>
-        </section>
+            <p>There are many different forms of colitis, and therefore it must often be diagnosed by the etiology (cause) and the factors that potentially modify its course and severity.</p>
+            <p>And the treatment is given according to the origin, etiology and symptom to produce cure.</p>
+            <h3 class="ta-h3">Irritable Bowel Syndrome (IBS)</h3>
+            <p>IBS, also known as spastic colon, is a functional bowel disorder. The exact cause is unknown, though the most common theory is that IBS is related to an interaction disorder between the brain and gastrointestinal tract.</p>
+            <p>IBS is characterized by abdominal pain, discomfort, bloating, abdominal distension, frequent diarrhea or constipation, an urgency for bowel movements, a feeling of incomplete evacuation (tenesmus), or a change in bowel habits overall.</p>
+            <p>The onset of IBS is more likely to take place after experiencing an infection, a stressful life event or the onset of maturity. Though it has no direct effect on life expectancy, it is often a source of chronic pain and fatigue, among other symptoms.</p>
+            <h3 class="ta-h3">Crohn’s Disease</h3>
+            <p>Crohn’s disease is a type of inflammatory bowel disease (as mentioned above), that may affect any section of the gastrointestinal tract from the mouth to the anus, and causes a wide variety of symptoms.</p>
+            <p>Crohn’s is characterized by abdominal pain, diarrhea (possibly bloody), vomiting, weight loss, and complications outside of the gastrointestinal tract such as skin rashes, arthritis, inflammation of the eye, fatigue, inability to concentrate.</p>
+            <p>Crohn’s disease may develop at any age.</p>
+            <p>Depending on severity, varying methods of treatment are recommended to deal with digestive diseases, and may sometimes suggest steps as simple as changing one’s diet or seeking homeopathic remedies.</p>
+          </div>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="dd-section" aria-labelledby="dd-overview-title">
-          <h3 class="dd-h3" id="dd-overview-title">Understanding Digestive Diseases</h3>
-          <ul class="dd-types">
-            <li>
-              <a class="dd-type" href="#dd-colitis">
-                <span class="dd-type-badge" aria-hidden="true">01</span>
-                <span class="dd-type-name">Colitis</span>
-                <span class="dd-type-desc">Inflammation of the large intestine</span>
-                <svg class="icon icon-sm dd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="dd-type" href="#dd-ibs">
-                <span class="dd-type-badge" aria-hidden="true">02</span>
-                <span class="dd-type-name">Irritable Bowel Syndrome</span>
-                <span class="dd-type-desc">Also known as spastic colon</span>
-                <svg class="icon icon-sm dd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="dd-type" href="#dd-crohns">
-                <span class="dd-type-badge" aria-hidden="true">03</span>
-                <span class="dd-type-name">Crohn’s Disease</span>
-                <span class="dd-type-desc">May affect any part of the GI tract</span>
-                <svg class="icon icon-sm dd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/digestive-diseases.jpg" alt="A woman at the kitchen table holding her bloated stomach" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Colitis -->
-        <section class="dd-section" id="dd-colitis" aria-labelledby="dd-colitis-title">
-          <h3 class="dd-h3" id="dd-colitis-title">Colitis</h3>
-          <div class="dd-row">
-            <div class="dd-copy">
-              <p>Colitis refers to inflammation of the large intestine (colon, caecum and rectum). Colitis may be acute (self-limited) or chronic (persistent).</p>
-              <p>There are many different forms of colitis, and therefore it must often be diagnosed by the etiology (cause) and the factors that potentially modify its course and severity. Treatment is given according to the origin, etiology and symptoms.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="dd-panel" aria-labelledby="dd-colitis-symptoms">
-              <h4 class="dd-panel-title" id="dd-colitis-symptoms">Signs and symptoms include</h4>
-              <ul class="dd-tags">
-                <li>Abdominal tenderness or pain</li>
-                <li>Loss of appetite</li>
-                <li>Weight loss</li>
-                <li>Fatigue</li>
-                <li>Diarrhea</li>
-                <li>Distension</li>
-                <li>Changes in bowel habits</li>
-                <li>Bleeding (such as bloody stools)</li>
-                <li>Cramping</li>
-                <li>Bloating</li>
-                <li>Fever</li>
-              </ul>
-            </aside>
-          </div>
-
-          <!-- Categories of colitis -->
-          <div class="dd-panel dd-categories" aria-labelledby="dd-categories-title">
-            <h4 class="dd-panel-title" id="dd-categories-title">Colitis generally fits into one of these categories</h4>
-            <ol class="dd-steps">
-              <li><strong>Autoimmune:</strong> generally inflammatory bowel disease (IBD), including ulcerative colitis and Crohn’s disease</li>
-              <li><strong>Idiopathic:</strong> includes lymphocytic colitis and collagenous colitis. Idiopathic microscopic colitis is diagnosed by a microscopic examination of the tissue in the colon, as it cannot be detected by a macroscopic exam</li>
-              <li><strong>Iatrogenic:</strong> diversion colitis and chemical colitis</li>
-              <li><strong>Vascular disease:</strong> ischemic colitis</li>
-              <li><strong>Infectious:</strong> infectious colitis</li>
-            </ol>
-          </div>
-        </section>
-
-        <!-- IBS -->
-        <section class="dd-section" id="dd-ibs" aria-labelledby="dd-ibs-title">
-          <h3 class="dd-h3" id="dd-ibs-title">Irritable Bowel Syndrome (IBS)</h3>
-          <div class="dd-row">
-            <div class="dd-copy">
-              <p>IBS, also known as spastic colon, is a functional bowel disorder. The exact cause is unknown, though the most common theory is that IBS is related to an interaction disorder between the brain and gastrointestinal tract.</p>
-              <p>Though it has no direct effect on life expectancy, it is often a source of chronic pain and fatigue, among other symptoms.</p>
-            </div>
-            <aside class="dd-panel" aria-labelledby="dd-ibs-symptoms">
-              <h4 class="dd-panel-title" id="dd-ibs-symptoms">IBS is characterized by</h4>
-              <ul class="dd-tags">
-                <li>Abdominal pain</li>
-                <li>Discomfort</li>
-                <li>Bloating</li>
-                <li>Abdominal distension</li>
-                <li>Frequent diarrhea or constipation</li>
-                <li>An urgency for bowel movements</li>
-                <li>A feeling of incomplete evacuation (tenesmus)</li>
-                <li>A change in bowel habits overall</li>
-              </ul>
-              <p class="dd-panel-label">Onset is more likely after</p>
-              <ul class="dd-tags">
-                <li>An infection</li>
-                <li>A stressful life event</li>
-                <li>The onset of maturity</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Crohn's -->
-        <section class="dd-section" id="dd-crohns" aria-labelledby="dd-crohns-title">
-          <h3 class="dd-h3" id="dd-crohns-title">Crohn’s Disease</h3>
-          <div class="dd-row">
-            <div class="dd-copy">
-              <p>Crohn’s disease is a type of inflammatory bowel disease (as mentioned above) that may affect any section of the gastrointestinal tract, from the mouth to the anus, and causes a wide variety of symptoms.</p>
-              <p>Crohn’s disease may develop at any age.</p>
-            </div>
-            <aside class="dd-panel" aria-labelledby="dd-crohns-symptoms">
-              <h4 class="dd-panel-title" id="dd-crohns-symptoms">Crohn’s is characterized by</h4>
-              <ul class="dd-tags">
-                <li>Abdominal pain</li>
-                <li>Diarrhea (possibly bloody)</li>
-                <li>Vomiting</li>
-                <li>Weight loss</li>
-              </ul>
-              <p class="dd-panel-label">Complications outside the gastrointestinal tract</p>
-              <ul class="dd-tags">
-                <li>Skin rashes</li>
-                <li>Arthritis</li>
-                <li>Inflammation of the eye</li>
-                <li>Fatigue</li>
-                <li>Inability to concentrate</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note from the original page -->
-        <aside class="dd-note" aria-label="Treatment">
-          <span class="dd-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Depending on severity, varying methods of treatment are recommended to deal with digestive diseases, and may sometimes include steps as simple as changing one’s diet or seeking homeopathic remedies.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="dd-cta" aria-labelledby="dd-cta-title">
-          <div class="dd-cta-text">
-            <h3 class="dd-cta-title" id="dd-cta-title">Have a question about your digestive health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

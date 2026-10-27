@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="kids-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -265,145 +266,36 @@
       </nav>
 
       <!-- ========== Article: Tonsillitis ==========
-        Kids Health topic template: hero, Kids Health menu and layout as on kids-health.html; styles
-        in kids-topics.css. Text: the Tonsillitis page on sujokhomeoclinic.com (supplied by the
-        client), regrouped under headings with small fixes ("pus", "the bacterium", "viral causes").
-        One change, flagged to the client:
-        - "Homeopathic remedies can provide sufferers with relief… by improving the immunity of the
-          body" is softened.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article kt-article" aria-labelledby="kt-title">
-
-        <section class="kt-intro">
-          <div class="kt-intro-text">
+          Text: the Tonsillitis page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/kids-tonsillitis.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Kids Health</p>
-            <h2 class="kt-title" id="kt-title">Tonsillitis</h2>
-            <p class="kt-lead">Tonsils are two masses of tissue at the back of the throat. When they become overwhelmed by bacterial or viral infections, they swell and become inflamed. This condition is often referred to as tonsillitis.</p>
+            <h2 class="ta-title" id="ta-title">Tonsillitis</h2>
+            <p>Tonsils are two masses of tissue at the back of the throat that act as filters to trap germs that may otherwise enter the airways and cause infection. The tonsils also produce antibodies that help to fight infection.</p>
+            <p>When tonsils become overwhelmed by bacterial or viral infections, they swell and become inflamed. This condition is often referred to as tonsillitis.</p>
+            <p>Tonsillitis is especially common in children, sometimes recurring frequently. Signs to look for include excess drooling (for a young child), fever, pus or white spots on the tonsils, redness or a rash in the throat, severe difficulty breathing or swallowing, tender or swollen lymph nodes in the neck, pain around the ears and neck, and even bad breath. Other more severe symptoms include nausea, vomiting, and abdominal pain.</p>
+            <p>One common cause of tonsillitis is the bacterium Streptococcus (strep), which is the cause of strep throat. Other viruses include adenoviruses, influenza virus, Epstein-Barr virus, parainfluenza viruses, enteroviruses, and herpes simplex virus.</p>
+            <p>Homeopathic remedies can provide sufferers with relief from throat pain, inflamed tonsils, recurrent fever and infections by improving the immunity of the body.</p>
           </div>
-          <aside class="kt-panel" aria-labelledby="kt-glance-title">
-            <h3 class="kt-panel-title" id="kt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-throat"/></svg></span>
-              What tonsils do
-            </h3>
-            <ul class="kt-checks">
-              <li>Act as filters to trap germs that may otherwise enter the airways and cause infection</li>
-              <li>Produce antibodies that help to fight infection</li>
-            </ul>
-          </aside>
-        </section>
 
-        <section class="kt-section" aria-labelledby="kt-overview-title">
-          <h3 class="kt-h3" id="kt-overview-title">Understanding Tonsillitis</h3>
-          <ul class="kt-types">
-            <li>
-              <a class="kt-type" href="#kt-children">
-                <span class="kt-type-badge" aria-hidden="true">01</span>
-                <span class="kt-type-name">Tonsillitis in Children</span>
-                <span class="kt-type-desc">Especially common, sometimes recurring</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-signs">
-                <span class="kt-type-badge" aria-hidden="true">02</span>
-                <span class="kt-type-name">Signs to Look For</span>
-                <span class="kt-type-desc">From fever to swollen lymph nodes</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-causes">
-                <span class="kt-type-badge" aria-hidden="true">03</span>
-                <span class="kt-type-name">Common Causes</span>
-                <span class="kt-type-desc">Strep bacteria and viruses</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/kids-tonsillitis.jpg" alt="A warm honey and lemon drink, a scarf and a teddy bear on a table" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <section class="kt-section" id="kt-children" aria-labelledby="kt-children-title">
-          <h3 class="kt-h3" id="kt-children-title">Tonsillitis in Children</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Tonsillitis is especially common in children, sometimes recurring frequently.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="kt-panel" aria-labelledby="kt-how-title">
-              <h4 class="kt-panel-title" id="kt-how-title">How tonsillitis develops</h4>
-              <ol class="kt-steps">
-                <li>Tonsils trap germs at the back of the throat</li>
-                <li>They become overwhelmed by bacterial or viral infection</li>
-                <li>They swell and become inflamed</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-signs" aria-labelledby="kt-signs-title">
-          <h3 class="kt-h3" id="kt-signs-title">Signs to Look For</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Signs of tonsillitis range from fever and a sore, red throat to tender lymph nodes and even bad breath.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-signs-list">
-              <h4 class="kt-panel-title" id="kt-signs-list">Signs include</h4>
-              <ul class="kt-tags">
-                <li>Excess drooling (for a young child)</li>
-                <li>Fever</li>
-                <li>Pus or white spots on the tonsils</li>
-                <li>Redness or a rash in the throat</li>
-                <li>Severe difficulty breathing or swallowing</li>
-                <li>Tender or swollen lymph nodes in the neck</li>
-                <li>Pain around the ears and neck</li>
-                <li>Bad breath</li>
-              </ul>
-              <p class="kt-panel-label">Other, more severe symptoms</p>
-              <ul class="kt-tags">
-                <li>Nausea</li>
-                <li>Vomiting</li>
-                <li>Abdominal pain</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-causes" aria-labelledby="kt-causes-title">
-          <h3 class="kt-h3" id="kt-causes-title">Common Causes</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>One common cause of tonsillitis is the bacterium Streptococcus (strep), which is the cause of strep throat.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-viruses-title">
-              <h4 class="kt-panel-title" id="kt-viruses-title">Viral causes include</h4>
-              <ul class="kt-tags">
-                <li>Adenoviruses</li>
-                <li>Influenza virus</li>
-                <li>Epstein-Barr virus</li>
-                <li>Parainfluenza viruses</li>
-                <li>Enteroviruses</li>
-                <li>Herpes simplex virus</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <aside class="kt-note" aria-label="Homeopathic care">
-          <span class="kt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Homeopathic remedies may be considered as part of care for throat pain, inflamed tonsils, and recurrent fever and infections.</p>
-        </aside>
-
-        <section class="kt-cta" aria-labelledby="kt-cta-title">
-          <div class="kt-cta-text">
-            <h3 class="kt-cta-title" id="kt-cta-title">Have a question about your child’s health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

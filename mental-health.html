@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="mental-health.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -264,177 +265,38 @@
       </nav>
 
       <!-- ========== Article: Mental Health ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Mental Health page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings. Two additions/changes, flagged to the client:
-        - "it is treatable by homeopathic remedies depending on stage without any side effects" is
-          softened below (no cure or side-effect claim), as on the Constipation page.
-        - The crisis note (9-8-8 / 911) is added because the text mentions suicide.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article mh-article" aria-labelledby="mh-title">
+          Text: the Mental Health page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/mental-health.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Mental Health</h2>
+            <p>Mental ailments such as anxiety, depression, inability to concentrate and phobias are all areas that have the ability to greatly affect the state of your overall health if left unchecked. In any sort of homeopathic treatment mental symptoms are of the greatest priority.</p>
+            <h3 class="ta-h3">Anxiety</h3>
+            <p>Anxiety (also known as angst or worry) is both a psychological and physiological state. It is the uncomfortable feeling of fear and concern. Anxiety has the ability to create feelings of fear, worry, uneasiness, and even dread. It is also associated with restlessness, fatigue, concentration issues and muscle tension. Not to be confused with fear, anxiety is generally considered a normal reaction to a stressor, however, if it becomes overwhelming it may be classified as anxiety disorder.</p>
+            <h3 class="ta-h3">Depression</h3>
+            <p>Considered to be an illness of the entire body, depression has the ability to negatively affect one’s thoughts, behavior, feelings, view of the world, physical well-being. A depressed individual may have feelings of sadness, anxiety, emptiness, hopelessness, worry, helplessness, low worth, guilt, irritability, hurt or restlessness. They may experience an inability to focus, loss or increase of appetite, difficulty remembering details, difficulty making decisions, insomnia, excessive sleeping, fatigue, low energy, aches, pains, and even digestive issues. If severe enough, a person may contemplate, or attempt, suicide.</p>
+            <p>A depressive disorder is far more serious than a passing glum mood. If you think that you, or someone you know, may suffer from depression it is treatable by homeopathic remedies depending on stage without any side effects.</p>
+            <h3 class="ta-h3">Phobias</h3>
+            <p>A phobia is a type of anxiety disorder associated with a persistent fear of an object or situation. Though often seen as irrational, an individual suffering from a phobia will go to great lengths to avoid the object or situation that causes him or her angst. If the object or situation is unavoidable, the individual may endure it with marked distress and possible impairment.</p>          </div>
 
-        <!-- Introduction + common concerns -->
-        <section class="mh-intro">
-          <div class="mh-intro-text">
-            <p class="eyebrow">Emotional Well-being</p>
-            <h2 class="mh-title" id="mh-title">Mental Health</h2>
-            <p class="mh-lead">Mental ailments such as anxiety, depression, inability to concentrate and phobias are all areas that have the ability to greatly affect the state of your overall health if left unchecked.</p>
-          </div>
-          <aside class="mh-panel" aria-labelledby="mh-concerns-title">
-            <h3 class="mh-panel-title" id="mh-concerns-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-brain"/></svg></span>
-              Common concerns
-            </h3>
-            <ul class="mh-checks">
-              <li>Anxiety</li>
-              <li>Depression</li>
-              <li>Inability to concentrate</li>
-              <li>Phobias</li>
-            </ul>
-            <p class="mh-panel-note">In any sort of homeopathic treatment, mental symptoms are of the greatest priority.</p>
-          </aside>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/mental-health.jpg" alt="A young adult sitting thoughtfully by a window" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="mh-section" aria-labelledby="mh-overview-title">
-          <h3 class="mh-h3" id="mh-overview-title">Understanding Mental Health Concerns</h3>
-          <ul class="mh-types">
-            <li>
-              <a class="mh-type" href="#mh-anxiety">
-                <span class="mh-type-badge" aria-hidden="true">01</span>
-                <span class="mh-type-name">Anxiety</span>
-                <span class="mh-type-desc">An uncomfortable feeling of fear and concern</span>
-                <svg class="icon icon-sm mh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="mh-type" href="#mh-depression">
-                <span class="mh-type-badge" aria-hidden="true">02</span>
-                <span class="mh-type-name">Depression</span>
-                <span class="mh-type-desc">An illness of the entire body</span>
-                <svg class="icon icon-sm mh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="mh-type" href="#mh-phobias">
-                <span class="mh-type-badge" aria-hidden="true">03</span>
-                <span class="mh-type-name">Phobias</span>
-                <span class="mh-type-desc">A persistent fear of an object or situation</span>
-                <svg class="icon icon-sm mh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Anxiety -->
-        <section class="mh-section" id="mh-anxiety" aria-labelledby="mh-anxiety-title">
-          <h3 class="mh-h3" id="mh-anxiety-title">Anxiety</h3>
-          <div class="mh-row">
-            <div class="mh-copy">
-              <p>Anxiety (also known as angst or worry) is both a psychological and physiological state. It is the uncomfortable feeling of fear and concern.</p>
-              <p>Not to be confused with fear, anxiety is generally considered a normal reaction to a stressor; however, if it becomes overwhelming it may be classified as anxiety disorder.</p>
-            </div>
-            <aside class="mh-panel" aria-labelledby="mh-anxiety-signs">
-              <h4 class="mh-panel-title" id="mh-anxiety-signs">Anxiety can create feelings of</h4>
-              <ul class="mh-tags">
-                <li>Fear</li>
-                <li>Worry</li>
-                <li>Uneasiness</li>
-                <li>Dread</li>
-              </ul>
-              <p class="mh-panel-label">It is also associated with</p>
-              <ul class="mh-tags">
-                <li>Restlessness</li>
-                <li>Fatigue</li>
-                <li>Concentration issues</li>
-                <li>Muscle tension</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Depression -->
-        <section class="mh-section" id="mh-depression" aria-labelledby="mh-depression-title">
-          <h3 class="mh-h3" id="mh-depression-title">Depression</h3>
-          <div class="mh-row">
-            <div class="mh-copy">
-              <p>Considered to be an illness of the entire body, depression has the ability to negatively affect one’s thoughts, behavior, feelings, view of the world and physical well-being.</p>
-              <p>If severe enough, a person may contemplate, or attempt, suicide.</p>
-              <p>A depressive disorder is far more serious than a passing glum mood. If you think that you, or someone you know, may suffer from depression, please reach out for support. Homeopathic remedies may be considered depending on its stage.</p>
-            </div>
-            <aside class="mh-panel" aria-labelledby="mh-depression-signs">
-              <h4 class="mh-panel-title" id="mh-depression-signs">A depressed individual may feel</h4>
-              <ul class="mh-tags">
-                <li>Sadness</li>
-                <li>Anxiety</li>
-                <li>Emptiness</li>
-                <li>Hopelessness</li>
-                <li>Worry</li>
-                <li>Helplessness</li>
-                <li>Low worth</li>
-                <li>Guilt</li>
-                <li>Irritability</li>
-                <li>Hurt</li>
-                <li>Restlessness</li>
-              </ul>
-              <p class="mh-panel-label">They may also experience</p>
-              <ul class="mh-tags">
-                <li>Inability to focus</li>
-                <li>Loss or increase of appetite</li>
-                <li>Difficulty remembering details</li>
-                <li>Difficulty making decisions</li>
-                <li>Insomnia</li>
-                <li>Excessive sleeping</li>
-                <li>Fatigue</li>
-                <li>Low energy</li>
-                <li>Aches and pains</li>
-                <li>Digestive issues</li>
-              </ul>
-            </aside>
-          </div>
-
-          <!-- Crisis note (added: the text above mentions suicide) -->
-          <div class="mh-alert" role="note" aria-labelledby="mh-alert-title">
-            <span class="mh-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="mh-alert-title" id="mh-alert-title">If you or someone you know is in crisis</h4>
-              <p>Call or text <a href="tel:988">9-8-8</a> (Suicide Crisis Helpline, Canada), any time. In an emergency, call <a href="tel:911">911</a>.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- Phobias -->
-        <section class="mh-section" id="mh-phobias" aria-labelledby="mh-phobias-title">
-          <h3 class="mh-h3" id="mh-phobias-title">Phobias</h3>
-          <div class="mh-row">
-            <div class="mh-copy">
-              <p>A phobia is a type of anxiety disorder associated with a persistent fear of an object or situation. Though often seen as irrational, an individual suffering from a phobia will go to great lengths to avoid the object or situation that causes him or her angst.</p>
-            </div>
-            <aside class="mh-panel" aria-labelledby="mh-phobias-signs">
-              <h4 class="mh-panel-title" id="mh-phobias-signs">A phobia may involve</h4>
-              <ul class="mh-checks">
-                <li>A persistent fear of an object or situation</li>
-                <li>Going to great lengths to avoid it</li>
-                <li>If it is unavoidable, enduring it with marked distress and possible impairment</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="mh-cta" aria-labelledby="mh-cta-title">
-          <div class="mh-cta-text">
-            <h3 class="mh-cta-title" id="mh-cta-title">Have a question about your mental health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -279,143 +280,38 @@
       </nav>
 
       <!-- ========== Article: Spondylosis ==========
-        Pain Relief topic template: hero, Pain Relief menu and layout as on pain-management.html;
-        styles in pain-topics.css. Text: the Spondylosis page on sujokhomeoclinic.com (supplied by
-        the client), regrouped under headings. Changes flagged to the client:
-        - "degenerative osteoarthritis of the joints" → "of the joints of the spine".
-        - "spondylosis will not be apparent in a regular x-ray. It is detectable solely by MRI"
-          is corrected: spondylosis often shows on x-ray; an MRI shows more detail.
-        - "Homeopathic treatment can offer relief…" is softened.
-        - The urgent-care note is added because the text lists loss of bladder or bowel control.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article pt-article" aria-labelledby="pt-title">
-
-        <section class="pt-intro">
-          <div class="pt-intro-text">
+          Text: the Spondylosis page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/spondylosis.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Pain Relief</p>
-            <h2 class="pt-title" id="pt-title">Spondylosis</h2>
-            <p class="pt-lead">Spondylosis refers to degenerative osteoarthritis of the joints of the spine. When severe enough, it may cause pressure on nerve roots, resulting in sensory or motor disturbances.</p>
-          </div>
-          <aside class="pt-panel" aria-labelledby="pt-glance-title">
-            <h3 class="pt-panel-title" id="pt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-vertebra"/></svg></span>
-              Two common forms
-            </h3>
-            <ul class="pt-checks">
-              <li><strong>Cervical spondylosis:</strong> involves the vertebrae of the neck</li>
-              <li><strong>Lumbar spondylosis:</strong> characteristic of the lower back</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section class="pt-section" aria-labelledby="pt-overview-title">
-          <h3 class="pt-h3" id="pt-overview-title">Understanding Spondylosis</h3>
-          <ul class="pt-types">
-            <li>
-              <a class="pt-type" href="#pt-common">
-                <span class="pt-type-badge" aria-hidden="true">01</span>
-                <span class="pt-type-name">Most Common Cause</span>
-                <span class="pt-type-desc">Narrowing between two vertebrae</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-cord">
-                <span class="pt-type-badge" aria-hidden="true">02</span>
-                <span class="pt-type-name">Pressure on the Spinal Cord</span>
-                <span class="pt-type-desc">A less common cause</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-onset">
-                <span class="pt-type-badge" aria-hidden="true">03</span>
-                <span class="pt-type-name">Onset and Diagnosis</span>
-                <span class="pt-type-desc">Why it develops and how it is found</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section class="pt-section" id="pt-common" aria-labelledby="pt-common-title">
-          <h3 class="pt-h3" id="pt-common-title">Most Common Cause</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>Spondylosis is most often due to the space between two adjacent vertebrae narrowing. This causes compression of a spinal cord nerve root.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-common-effects">
-              <h4 class="pt-panel-title" id="pt-common-effects">This may produce</h4>
-              <ul class="pt-tags">
-                <li>Sensory and motor instabilities</li>
-                <li>Severe pain in the neck, shoulder, arm, back or leg</li>
-                <li>Paresthesia (pins and needles)</li>
-                <li>Muscle weakness</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-cord" aria-labelledby="pt-cord-title">
-          <h3 class="pt-h3" id="pt-cord-title">Pressure on the Spinal Cord</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>A less common cause of spondylosis is direct pressure on the spinal cord. An individual may also experience the sensation of shocks (paresthesia) in the hands and legs, due to the nerve compression and the resulting lack of blood flow.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-cord-effects">
-              <h4 class="pt-panel-title" id="pt-cord-effects">This could mean</h4>
-              <ul class="pt-tags">
-                <li>“Global” weakness</li>
-                <li>Gait dysfunction</li>
-                <li>Impaired balance</li>
-                <li>Loss of bladder or bowel control</li>
-              </ul>
-            </aside>
+            <h2 class="ta-title" id="ta-title">Spondylosis</h2>
+            <p>Spondylosis refers to degenerative osteoarthritis of the joints. When severe enough, it may cause pressure on nerve roots resulting in sensory or motor disturbances manifested as pain, paresthesia or muscle weakness.</p>
+            <p>Spondylosis is most often due to the space between two adjacent vertebrae narrowing. This causes compression of a spinal cord nerve root which may produce sensory and motor instabilities, severe pain in the neck, shoulder, arm, back or leg, and muscle weakness.</p>
+            <p>A less common cause of spondylosis is direct pressure on the spinal cord which could mean experiencing "global" weakness, gait dysfunction, impairment of balance, and possibly loss of bladder or bowel control. An individual may also endure the sensation of shocks (paresthesia) in the hands and legs due to the nerve compression and subsequent lack of blood flow.</p>
+            <p>Cervical spondylosis involves the vertebrae of the neck, whereas lumbar spondylosis is characteristic of the lower back.</p>
+            <p>There may be a number of reasons for the onset of spondylosis including repetitive strain injury often due to lifestyle absent of ergonomic care (working hunched over in front of a computer, for example), or it may be age-related degeneration, the condition is not age specific and may present itself in anyone of any age.</p>
+            <p>It should be noted, spondylosis will not be apparent in a regular x-ray. It is detectable solely by MRI.</p>
+            <p>Homeopathic treatment can offer relief to anyone suffering from spondylosis.</p>
           </div>
 
-          <div class="pt-alert" role="note" aria-labelledby="pt-alert-title">
-            <span class="pt-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/spondylosis.jpg" alt="A man at his computer holding his stiff neck" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="pt-alert-title" id="pt-alert-title">Seek urgent medical care</h4>
-              <p>If you experience loss of bladder or bowel control, seek medical care right away.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-onset" aria-labelledby="pt-onset-title">
-          <h3 class="pt-h3" id="pt-onset-title">Onset and Diagnosis</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>There may be a number of reasons for the onset of spondylosis. The condition is not age specific and may present itself in anyone, of any age.</p>
-              <p>Spondylosis may not always be apparent on a regular x-ray; an MRI can show it in more detail.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-onset-list">
-              <h4 class="pt-panel-title" id="pt-onset-list">Reasons may include</h4>
-              <ul class="pt-checks">
-                <li>Repetitive strain injury, often from a lifestyle without ergonomic care, such as working hunched over a computer</li>
-                <li>Age-related degeneration</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <aside class="pt-note" aria-label="Homeopathic care">
-          <span class="pt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Homeopathic treatment may be considered as part of care for anyone suffering from spondylosis.</p>
-        </aside>
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="pt-cta" aria-labelledby="pt-cta-title">
-          <div class="pt-cta-text">
-            <h3 class="pt-cta-title" id="pt-cta-title">Have a question about spondylosis?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

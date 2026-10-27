@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="skin-disorders.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,148 +264,36 @@
       </nav>
 
       <!-- ========== Article: Skin Disorders ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Skin Disorders page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings. One change, flagged to the client:
-        - "Skin disorders are often effectively treatable via homeopathy" is softened
-          (no effectiveness claim), as on the other topic pages.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article sk-article" aria-labelledby="sk-title">
-
-        <!-- Introduction + conditions covered -->
-        <section class="sk-intro">
-          <div class="sk-intro-text">
-            <p class="eyebrow">Skin Health</p>
-            <h2 class="sk-title" id="sk-title">Skin Disorders</h2>
-            <p class="sk-lead">There are various skin disorders from which people suffer.</p>
+          Text: the Skin Disorders page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/skin-disorders.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Skin Disorders</h2>
+            <p>There are various skin disorders from which people suffer.</p>
+            <p>A common one is eczema. Eczema is a form of dermatitis: inflammation of the epidermis, or outer layer of skin. Symptoms include redness, swelling, itching, dryness, crusting and flaking, blistering, cracking, lesions, seeping of internal fluid and bleeding, and temporary skin discolouration.</p>
+            <p>Psoriasis, another common skin ailment, is an immune-mediated disease that affects the skin and is typically a lifelong condition. Psoriasis takes place when the immune system mistakes a normal skin cell for a pathogen and emits signals that cause the overproduction of new skin cells. Psoriasis is not contagious.</p>
+            <p>Leucoderma is an acquired condition of the skin that results in localized loss of pigmentation. It may occur after enduring any number of inflammatory skin conditions, burns, steroid injections, strong medications or post-dermabrasion among other things.</p>
+            <p>Skin disorders are often effectively treatable via homeopathy.</p>
           </div>
-          <aside class="sk-panel" aria-labelledby="sk-covers-title">
-            <h3 class="sk-panel-title" id="sk-covers-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg></span>
-              This page covers
-            </h3>
-            <ul class="sk-checks">
-              <li><strong>Eczema:</strong> inflammation of the outer layer of skin</li>
-              <li><strong>Psoriasis:</strong> an immune-mediated disease that affects the skin</li>
-              <li><strong>Leucoderma:</strong> localized loss of skin pigmentation</li>
-            </ul>
-          </aside>
-        </section>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="sk-section" aria-labelledby="sk-overview-title">
-          <h3 class="sk-h3" id="sk-overview-title">Understanding Skin Disorders</h3>
-          <ul class="sk-types">
-            <li>
-              <a class="sk-type" href="#sk-eczema">
-                <span class="sk-type-badge" aria-hidden="true">01</span>
-                <span class="sk-type-name">Eczema</span>
-                <span class="sk-type-desc">A form of dermatitis</span>
-                <svg class="icon icon-sm sk-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="sk-type" href="#sk-psoriasis">
-                <span class="sk-type-badge" aria-hidden="true">02</span>
-                <span class="sk-type-name">Psoriasis</span>
-                <span class="sk-type-desc">Typically a lifelong condition</span>
-                <svg class="icon icon-sm sk-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="sk-type" href="#sk-leucoderma">
-                <span class="sk-type-badge" aria-hidden="true">03</span>
-                <span class="sk-type-name">Leucoderma</span>
-                <span class="sk-type-desc">Localized loss of pigmentation</span>
-                <svg class="icon icon-sm sk-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/skin-disorders.jpg" alt="A forearm with a patch of dry, irritated skin" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Eczema -->
-        <section class="sk-section" id="sk-eczema" aria-labelledby="sk-eczema-title">
-          <h3 class="sk-h3" id="sk-eczema-title">Eczema</h3>
-          <div class="sk-row">
-            <div class="sk-copy">
-              <p>A common skin disorder is eczema. Eczema is a form of dermatitis: inflammation of the epidermis, or outer layer of skin.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="sk-panel" aria-labelledby="sk-eczema-symptoms">
-              <h4 class="sk-panel-title" id="sk-eczema-symptoms">Symptoms include</h4>
-              <ul class="sk-tags">
-                <li>Redness</li>
-                <li>Swelling</li>
-                <li>Itching</li>
-                <li>Dryness</li>
-                <li>Crusting and flaking</li>
-                <li>Blistering</li>
-                <li>Cracking</li>
-                <li>Lesions</li>
-                <li>Seeping of internal fluid and bleeding</li>
-                <li>Temporary skin discolouration</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Psoriasis -->
-        <section class="sk-section" id="sk-psoriasis" aria-labelledby="sk-psoriasis-title">
-          <h3 class="sk-h3" id="sk-psoriasis-title">Psoriasis</h3>
-          <div class="sk-row">
-            <div class="sk-copy">
-              <p>Psoriasis, another common skin ailment, is an immune-mediated disease that affects the skin and is typically a lifelong condition.</p>
-            </div>
-            <aside class="sk-panel" aria-labelledby="sk-psoriasis-how">
-              <h4 class="sk-panel-title" id="sk-psoriasis-how">How psoriasis takes place</h4>
-              <ol class="sk-steps">
-                <li>The immune system mistakes a normal skin cell for a pathogen</li>
-                <li>It emits signals that cause the overproduction of new skin cells</li>
-              </ol>
-              <p class="sk-panel-note"><strong>Psoriasis is not contagious.</strong></p>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Leucoderma -->
-        <section class="sk-section" id="sk-leucoderma" aria-labelledby="sk-leucoderma-title">
-          <h3 class="sk-h3" id="sk-leucoderma-title">Leucoderma</h3>
-          <div class="sk-row">
-            <div class="sk-copy">
-              <p>Leucoderma is an acquired condition of the skin that results in localized loss of pigmentation.</p>
-            </div>
-            <aside class="sk-panel" aria-labelledby="sk-leucoderma-after">
-              <h4 class="sk-panel-title" id="sk-leucoderma-after">It may occur after, among other things</h4>
-              <ul class="sk-tags">
-                <li>Inflammatory skin conditions</li>
-                <li>Burns</li>
-                <li>Steroid injections</li>
-                <li>Strong medications</li>
-                <li>Dermabrasion</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="sk-note" aria-label="Homeopathic care">
-          <span class="sk-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Homeopathy may be considered as part of care for skin disorders.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="sk-cta" aria-labelledby="sk-cta-title">
-          <div class="sk-cta-text">
-            <h3 class="sk-cta-title" id="sk-cta-title">Have a question about your skin?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

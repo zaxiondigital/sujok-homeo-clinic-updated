@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-management.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -278,59 +279,34 @@
       </nav>
 
       <!-- ========== Article: Pain Management ==========
-        Text: the Pain Management page on sujokhomeoclinic.com, regrouped under headings with only
-        spelling fixes ("repairing", "manipulations"). Photo: an existing project image, used because
-        the live page's photo (a person holding their lower back) isn't in assets/ — swap it in when available.
-      -->
-      <article class="hp-article pm-article" aria-labelledby="pm-title">
-
-        <section class="pm-intro">
-          <div class="pm-intro-text">
-            <p class="eyebrow">Chronic Pain</p>
-            <h2 class="pm-title" id="pm-title">Pain Management</h2>
-            <p class="pm-lead">Millions of people worldwide suffer with chronic pain every day, be it a result of physical trauma, disease or illness, or simply due to the aging process. Whatever the cause may be, there is no need to live your life uncomfortably.</p>
-          </div>
-          <figure class="pm-photo">
-            <img src="assets/images/service-pain.jpg" alt="A practitioner examining a patient’s bent knee with both hands" width="468" height="250">
-          </figure>
-        </section>
-
-        <section class="pm-section" aria-labelledby="pm-quality-title">
-          <h3 class="pm-h3" id="pm-quality-title">Improving Quality of Life</h3>
-          <p class="pm-copy">We specialize in improving the quality of our patients’ lives by treating their ailments through homeopathic medicine to ease the physical discomfort they previously experienced on a daily basis. We help our patients regain the freedom to live their lives as fully and actively as possible.</p>
-        </section>
-
-        <section class="pm-section" aria-labelledby="pm-approach-title">
-          <h3 class="pm-h3" id="pm-approach-title">Our Approach</h3>
-          <p class="pm-copy">We are able to do that by combining:</p>
-          <ul class="pm-approach">
-            <li class="pm-card">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-bottle"/></svg></span>
-              <h4 class="pm-card-title">Homeopathy, given internally</h4>
-              <p>Works by reducing and repairing the internal injuries.</p>
-            </li>
-            <li class="pm-plus" aria-hidden="true">+</li>
-            <li class="pm-card">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-spine"/></svg></span>
-              <h4 class="pm-card-title">Chiropractic manipulations</h4>
-              <p>That restores health faster.</p>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Integrated care + booking prompt (links to the existing booking form on the homepage) -->
-        <section class="pm-cta" aria-labelledby="pm-cta-title">
-          <span class="pm-cta-icon"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg></span>
-          <div class="pm-cta-text">
-            <h3 class="pm-cta-title" id="pm-cta-title">Integrated Care Under One Roof</h3>
+          Text: the Pain Management page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/pain-management.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Sujok Homeo Clinic</p>
+            <h2 class="ta-title" id="ta-title">Pain Management</h2>
+            <p>Millions of people worldwide suffer with chronic pain every day, be it a result of physical trauma, disease or illness, or simply due to the aging process. Whatever the cause may be, there is no need to live your life uncomfortably. We specialize in improving the quality of our patients’ lives by treating their ailments through homeopathic medicine to ease the physical discomfort they previously experienced on a daily basis. We help our patients regain the freedom to live their lives as fully and actively as possible.</p>
+            <p>We are able to do that by combining Homeopathy given internally that works by reducing and repairing the internal injuries along with chiropractic manipulations that restores health faster.</p>
             <p>The best thing about our clinic is integration of health professionals under one roof working together to reach your health goals.</p>
           </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+
+          <figure class="ta-media">
+            <img src="assets/images/topics/pain-management.jpg" alt="A smiling man stretching his back and shoulders comfortably by a bright window" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
+            </div>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

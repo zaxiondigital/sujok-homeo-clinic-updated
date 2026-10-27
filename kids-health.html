@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="kids-health.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -264,37 +265,32 @@
       </nav>
 
       <!-- ========== Article: Kids Health ==========
-        Text: the Kids Health page on sujokhomeoclinic.com, unchanged; the paragraph's first sentence
-        is set as the lead. Photo: an existing project image, used because the live page's photo
-        (four children lying side by side) isn't in assets/ — swap it in when available.
-      -->
-      <article class="hp-article kh-article" aria-labelledby="kh-title">
-
-        <section class="kh-intro">
-          <div class="kh-intro-text">
-            <p class="eyebrow">For Families</p>
-            <h2 class="kh-title" id="kh-title">Kids Health</h2>
-            <p class="kh-lead">Our children are our most valuable asset.</p>
-            <p class="kh-body">It’s incredibly important the social, mental and physical well-being of our children remain intact and healthy. Our gentle, peaceful approach to healing and wellness will give you peace of mind that your child is in excellent hands and will receive nothing short of the highest quality of professional treatment from our homeopaths to ensure your child continues to enjoy a happy and active lifestyle.</p>
+          Text: the Kids Health page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/kids-health.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Sujok Homeo Clinic</p>
+            <h2 class="ta-title" id="ta-title">Kids Health</h2>
+            <p>Our children are our most valuable asset. It’s incredibly important the social, mental and physical well-being of our children remain intact and healthy. Our gentle, peaceful approach to healing and wellness will give you peace of mind that your child is in excellent hands and will receive nothing short of the highest quality of professional treatment from our homeopaths to ensure your child continues to enjoy a happy and active lifestyle.</p>
           </div>
-          <figure class="kh-photo">
-            <img src="assets/images/v2/service-kids.jpg" alt="A smiling woman taking notes at a table while talking with a young girl" width="806" height="444">
+
+          <figure class="ta-media">
+            <img src="assets/images/topics/kids-health.jpg" alt="A happy young girl laughing while drawing at the table, with a bowl of fresh fruit" width="900" height="1195" loading="lazy">
           </figure>
-        </section>
 
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="kh-cta" aria-labelledby="kh-cta-title">
-          <span class="kh-cta-icon"><svg class="icon" aria-hidden="true"><use href="#t-family"/></svg></span>
-          <div class="kh-cta-text">
-            <h3 class="kh-cta-title" id="kh-cta-title">Have a question about your child’s health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
+            </div>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

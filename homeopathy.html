@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -262,146 +263,49 @@
         </ul>
       </nav>
 
-      <!-- ========== Article (wider right column) ========== -->
-      <article class="hp-article" aria-labelledby="hp-title">
-
-        <!-- Introduction -->
-        <header class="hp-article-head">
-          <h2 class="hp-title" id="hp-title">Homeopathy</h2>
-        </header>
-
-        <div class="hp-intro">
-          <div class="hp-prose">
-            <p>Homeopathy is a gentle and natural system of medicine that aims to stimulate the body’s own healing ability. It looks at the individual as a whole – considering physical, emotional and lifestyle factors to understand the root cause of health concerns, not just the symptoms.</p>
-            <p>At Sujok Homeo Clinic, we use classical homeopathic principles to create personalized treatment plans for each individual. Our goal is to help you achieve long-term wellness by supporting your body’s natural balance.</p>
+      <!-- ========== Article: Homeopathy ==========
+          Text: the Homeopathy page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/homeopathy.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Sujok Homeo Clinic</p>
+            <h2 class="ta-title" id="ta-title">Homeopathy</h2>
+            <p>The founder of homeopathy was Dr. Samuel Hahnemann (1755-1843). Based on his observations, he formulated the so-called PRINCIPLE OF SIMILARITY, which states that a given substance can treat in a diseased person the symptoms that it produces or causes in a healthy person.</p>
+            <p>Homeopathy is a well-described, scientifically based system of approaching health and disease. "Scientific" because the insights are based on reproducible experiments. "Well-described" because from these observations a number of precise basic fundamental rules became evident, first among them the "similarity principle."</p>
+            <p>Hahnemann published his ideas and experiences in a book called the Organon. The first edition appeared in 1810 and he wrote the last edition (which appeared posthumously) in 1842. As was the custom in those days, he gave numbers to each paragraph in which he explained his different concepts. What is so striking is that Hahnemann’s fundamental concepts still hold true today nearly 200 years later. This is not to say there has been no progress in homeopathic thought but rather to the fact that subsequent investigators have been able to confirm and reconfirm these basic principles. Every serious study of homeopathy even today begins with a study of the Organon.</p>
+            <h3 class="ta-h3">What is Unitary homeopathy?</h3>
+            <p>Although homeopathy is only 200 years old, it is now practiced in a variety of ways, most of which bear little resemblance to what Hahnemann taught. In the public mind the word "homeopathy" has become so vague that for some it means only an "alternative medicine" and for others a combination of homeopathic medicines that you buy in the health food store, one mixture for allergies, another for headache, etc.</p>
+            <p>Unitary homeopathy (often called classical homeopathy) must be differentiated from all other so-called forms of homeopathy. The hallmarks of unitary homeopathy are:</p>
+            <ul class="ta-list">
+              <li>A thorough interview to discover the totality of signs and symptoms. This total picture is our most important guide to the medicine. By "signs" we mean that which can be objectively assessed by the physician. By "symptoms" we mean what the patient himself feels subjectively.</li>
+              <li>How a homeopathic medicine acts is found out by administering it to healthy volunteers and recording the symptoms the volunteers report. By repeating these trials often, we get a complete profile of the medicine. Such trials are known as "provings." All homeopathic medicines have been "proved" on healthy volunteers to learn how they act.</li>
+              <li>The total picture of the patient should be as similar as possible to the drug picture of the selected remedy. This is known as similia similibus curentur (let similar be cured by similar). The medicine should match the so-called characteristic (striking, unusual, and uncommon) symptoms of the patient as closely as possible.</li>
+              <li>Since a homeopathic remedy corresponds only superficially to a particular disease, it must be customized to match the individual with that disease, a process we call "individualization." The very same illness in another patient will most often be cured with an entirely different remedy - thus we could have two different remedies that cure two different patients with the same disease.</li>
+            </ul>
+            <p>According to the homeopathic way of thinking, a disease originates from a disturbance of the patient’s "vital force." This is the life force energy that sustains life. As the origin of disease occurs on this energetic level, the homeopathic remedy has also to be on this level.</p>
+            <ul class="ta-list">
+              <li>Such an energetic medicine is made by diluting the remedy and succussing (shaking) it. All homeopathic medicines are "potentized", i.e., diluted and succussed. This method of preparation imparts considerable energy to each substance.</li>
+              <li>"Unitary" homeopathy means that only one remedy is given at a time because only one remedy can correspond perfectly to the total picture of the patient. A prescription that does not aim for this totality is not homeopathic.</li>
+            </ul>
           </div>
-          <figure class="hp-photo hp-intro-photo">
-            <img src="assets/images/homeopathy/homeopathy-remedies.jpg" alt="An amber remedy bottle beside a wooden scoop of white homeopathic pills, chamomile flowers and green leaves" width="460" height="235" loading="lazy">
+
+          <figure class="ta-media">
+            <img src="assets/images/topics/homeopathy.jpg" alt="Amber homeopathic remedy bottles, white globules and a mortar and pestle with fresh herbs" width="900" height="1195" loading="lazy">
           </figure>
-        </div>
 
-        <!-- Key Features -->
-        <section class="hp-block" aria-labelledby="hp-features-title">
-          <h3 class="hp-h3" id="hp-features-title">Key Features of Homeopathy</h3>
-          <ul class="hp-features">
-            <li>
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-sprout"/></svg></span>
-              <h4 class="hp-h4">Natural and Gentle</h4>
-              <p>Uses highly diluted natural substances.</p>
-            </li>
-            <li>
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></span>
-              <h4 class="hp-h4">Personalized Care</h4>
-              <p>Treatment is tailored to your unique needs.</p>
-            </li>
-            <li>
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
-              <h4 class="hp-h4">Safe for All Ages</h4>
-              <p>Suitable for children, adults and seniors.</p>
-            </li>
-            <li>
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-infinity"/></svg></span>
-              <h4 class="hp-h4">Supports Long-Term Wellness</h4>
-              <p>Focuses on addressing the root cause and overall health.</p>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Editorial image-and-text band -->
-        <aside class="hp-band" aria-labelledby="hp-holistic-title">
-          <img class="hp-band-img" src="assets/images/homeopathy/holistic-leaves.jpg" alt="" width="236" height="116" loading="lazy">
-          <h3 class="hp-band-title" id="hp-holistic-title">A Holistic Approach <span>to Better Health</span></h3>
-          <p>Homeopathy considers the complete person — physical, mental and emotional — to create a treatment plan that supports your natural healing process and overall well-being.</p>
-        </aside>
-
-        <!-- What is Unitary Homeopathy? -->
-        <section class="hp-unitary" aria-labelledby="hp-unitary-title">
-          <div class="hp-unitary-intro">
-            <div class="hp-unitary-text">
-              <p class="eyebrow">Understanding</p>
-              <h2 class="hp-h2" id="hp-unitary-title">What is <span class="text-green">Unitary Homeopathy?</span></h2>
-              <p class="hp-lead">Unitary homeopathy (often called classical homeopathy) is a complete and individualized approach that looks at the whole person — physical, emotional and lifestyle factors — to find the most suitable remedy.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <img class="hp-unitary-img" src="assets/images/homeopathy/unitary-remedies.jpg" alt="Two amber remedy bottles with a wooden bowl of white homeopathic pills among leaves and small white flowers" width="480" height="272" loading="lazy">
-          </div>
-
-          <section class="hp-block" aria-labelledby="hp-principles-title">
-            <h3 class="hp-h3 hp-h3--rule" id="hp-principles-title">Key Principles of Unitary Homeopathy</h3>
-            <p class="hp-sub">The hallmarks of unitary homeopathy are:</p>
-            <ol class="hp-principles">
-              <li>
-                <div class="hp-principle-head">
-                  <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span>
-                  <h4 class="hp-h4"><span class="hp-num" aria-hidden="true">01</span>A Complete Consultation</h4>
-                </div>
-                <p>A thorough interview to discover the totality of signs and symptoms. This total picture is our most important guide to the medicine. “Signs” are what can be objectively assessed by the physician, and “symptoms” are what the patient feels subjectively.</p>
-              </li>
-              <li>
-                <div class="hp-principle-head">
-                  <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-                  <h4 class="hp-h4"><span class="hp-num" aria-hidden="true">02</span>Remedy Provings</h4>
-                </div>
-                <p>A homeopathic medicine acts as found by administering it to healthy volunteers and recording the symptoms they report. By repeating these trials often, we get a complete profile of the medicine. Such trials are known as “provings.” All homeopathic medicines have been “proved” on healthy volunteers to learn how they act.</p>
-              </li>
-              <li>
-                <div class="hp-principle-head">
-                  <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg></span>
-                  <h4 class="hp-h4"><span class="hp-num" aria-hidden="true">03</span>Similarity of Symptoms</h4>
-                </div>
-                <p>The total picture of the patient should be as similar as possible to the drug picture of the selected remedy. This is known as <i lang="la">similia similibus curentur</i> (let similar be cured by similar). The medicine should match the so-called characteristic (striking, unusual and uncommon) symptoms of the patient as closely as possible.</p>
-              </li>
-              <li>
-                <div class="hp-principle-head">
-                  <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></span>
-                  <h4 class="hp-h4"><span class="hp-num" aria-hidden="true">04</span>Individualization</h4>
-                </div>
-                <p>Since a homeopathic remedy corresponds only superficially to a particular disease, it must be customized to match the individual with that disease, a process we call “individualization.” The very same illness in another patient will most often be cured with an entirely different remedy — thus we could have two different remedies that cure two different patients with the same disease.</p>
-              </li>
-            </ol>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
           </section>
-        </section>
-
-        <!-- The Vital Force -->
-        <section class="hp-vital" aria-labelledby="hp-vital-title">
-          <img class="hp-vital-img" src="assets/images/homeopathy/vital-force-leaves.jpg" alt="" width="276" height="174" loading="lazy">
-          <div class="hp-vital-body">
-            <p class="eyebrow">The Concept</p>
-            <h3 class="hp-h2" id="hp-vital-title">The Vital Force</h3>
-            <p>According to the homeopathic way of thinking, a disease originates from a disturbance of the patient’s “vital force.” This is the life force energy that sustains life. As the origin of disease occurs on this energetic level, the homeopathic remedy has also to be on this level.</p>
-          </div>
-          <blockquote class="hp-quote">
-            <svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>
-            <p>A holistic approach that considers the whole person, not just the disease.</p>
-          </blockquote>
-        </section>
-
-        <!-- Preparation and the Meaning of “Unitary” -->
-        <section class="hp-prep" aria-labelledby="hp-prep-title">
-          <div class="hp-prep-body">
-            <p class="eyebrow">Remedy Preparation</p>
-            <h3 class="hp-h2" id="hp-prep-title">Preparation and the Meaning of “Unitary”</h3>
-            <div class="hp-prep-items">
-              <div class="hp-prep-item">
-                <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-mortar"/></svg></span>
-                <div>
-                  <h4 class="hp-h4"><span class="hp-num" aria-hidden="true">01.</span>Potentization of the Remedy</h4>
-                  <p>Such an energetic medicine is made by diluting the remedy and succussing (shaking) it. All homeopathic medicines are “potentized”, i.e., diluted and succussed. This method of preparation imparts considerable energy to each substance.</p>
-                </div>
-              </div>
-              <div class="hp-prep-item">
-                <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-bottle"/></svg></span>
-                <div>
-                  <h4 class="hp-h4"><span class="hp-num" aria-hidden="true">02.</span>One Remedy at a Time</h4>
-                  <p>“Unitary” homeopathy means that only one remedy is given at a time because only one remedy can correspond perfectly to the total picture of the patient. A prescription that does not aim for this totality is not homeopathic.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <figure class="hp-photo hp-prep-photo">
-            <img src="assets/images/homeopathy/remedy-preparation.jpg" alt="A wooden scoop spilling white homeopathic pills beside white flowers" width="335" height="184" loading="lazy">
-          </figure>
-        </section>
-      </article>
+        </article>
     </div>
   </main>
 

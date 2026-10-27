@@ -83,7 +83,10 @@ a.hp-topic:focus-visible .hp-topic-chevron { color: currentColor; transform: tra
   background: var(--green-800); color: #ffffff; font-weight: 600; border-top-color: transparent;
 }
 .hp-topic.is-active .hp-topic-icon { background: rgba(255, 255, 255, .16); color: #ffffff; }
-.hp-topic-list li:has(+ li .hp-topic.is-active) .hp-topic,
+.hp-topic.is-active .hp-topic-chevron { color: #ffffff; }
+/* Only the two lines touching the active row are hidden (its own top line and the next row's);
+   every other divider stays visible */
+.hp-topic-list .hp-topic.is-active,
 .hp-topic-list li:has(.is-active) + li .hp-topic { border-top-color: transparent; }
 
 /* Toggle shown only on tablet and phone (homeopathy.js) */

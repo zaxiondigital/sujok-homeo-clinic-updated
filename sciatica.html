@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -279,187 +280,44 @@
       </nav>
 
       <!-- ========== Article: Sciatica ==========
-        Pain Relief topic template: hero, Pain Relief menu and layout as on pain-management.html;
-        styles in pain-topics.css. Text: the Sciatica page on sujokhomeoclinic.com (supplied by the
-        client), regrouped under headings ("give spinal nerve roots" → "five"). Changes flagged:
-        - "Our combination is a viable option for treatment concerning sciatica" is softened.
-        - The urgent-care note is added because the text lists loss of bladder or bowel control.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article pt-article" aria-labelledby="pt-title">
-
-        <section class="pt-intro">
-          <div class="pt-intro-text">
+          Text: the Sciatica page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/sciatica.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Pain Relief</p>
-            <h2 class="pt-title" id="pt-title">Sciatica</h2>
-            <p class="pt-lead">Sciatica is a set of symptoms that includes pain, which may be caused by compression or irritation of one of the five spinal nerve roots, or of the left, right or both sciatic nerves.</p>
-            <p class="pt-copy">Pain from sciatica is felt in the lower back, buttocks, or various areas of the leg and foot. Symptoms are typically felt on one side of the body.</p>
-          </div>
-          <aside class="pt-panel" aria-labelledby="pt-glance-title">
-            <h3 class="pt-panel-title" id="pt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-leg"/></svg></span>
-              Other symptoms include
-            </h3>
-            <ul class="pt-tags">
-              <li>Severe numbness</li>
-              <li>Muscular weakness</li>
-              <li>Tingling (pins and needles)</li>
-              <li>Difficulty controlling leg movement</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section class="pt-section" aria-labelledby="pt-overview-title">
-          <h3 class="pt-h3" id="pt-overview-title">Causes of Sciatica</h3>
-          <p class="pt-copy">There are a number of causes that may account for the onset of sciatica:</p>
-          <ul class="pt-types">
-            <li>
-              <a class="pt-type" href="#pt-disc">
-                <span class="pt-type-badge" aria-hidden="true">01</span>
-                <span class="pt-type-name">Spinal Disc Herniation</span>
-                <span class="pt-type-desc">The cause in 90% of cases</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-stenosis">
-                <span class="pt-type-badge" aria-hidden="true">02</span>
-                <span class="pt-type-name">Spinal Stenosis</span>
-                <span class="pt-type-desc">A narrowing spinal canal</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-piriformis">
-                <span class="pt-type-badge" aria-hidden="true">03</span>
-                <span class="pt-type-name">Piriformis Syndrome</span>
-                <span class="pt-type-desc">A muscle in the gluteal region</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-pregnancy">
-                <span class="pt-type-badge" aria-hidden="true">04</span>
-                <span class="pt-type-name">Pregnancy</span>
-                <span class="pt-type-desc">Weight pressing on the nerve</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-tumors">
-                <span class="pt-type-badge" aria-hidden="true">05</span>
-                <span class="pt-type-name">Spinal Tumors</span>
-                <span class="pt-type-desc">Pressure on the cord or nerve roots</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section class="pt-section" id="pt-disc" aria-labelledby="pt-disc-title">
-          <h3 class="pt-h3" id="pt-disc-title">Spinal Disc Herniation</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>A herniated disc that puts pressure on a lumbar or sacral nerve root is the primary reason for the development of sciatica. A herniated disc limits the space available for the spinal cord, pinching nerves that travel to the sciatic nerves.</p>
-            </div>
-            <aside class="pt-panel pt-stat" aria-label="Share of sciatica cases">
-              <p class="pt-stat-number">90%</p>
-              <p class="pt-stat-text">of sciatica cases are caused by a spinal disc herniation.</p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-stenosis" aria-labelledby="pt-stenosis-title">
-          <h3 class="pt-h3" id="pt-stenosis-title">Spinal Stenosis</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>Spinal stenosis is a condition in which the spinal canal (the space through which the spinal cord runs) narrows and compresses the spinal cord, the cauda equina (a bundle of spinal nerves and spinal nerve roots), or the sciatic nerve roots.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-stenosis-causes">
-              <h4 class="pt-panel-title" id="pt-stenosis-causes">The narrowing might be caused by</h4>
-              <ul class="pt-tags">
-                <li>Bone spurs</li>
-                <li>Spondylolisthesis</li>
-                <li>Inflammation</li>
-                <li>A herniated disc</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-piriformis" aria-labelledby="pt-piriformis-title">
-          <h3 class="pt-h3" id="pt-piriformis-title">Piriformis Syndrome</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>Piriformis syndrome is a condition in which the sciatic nerve runs through the piriformis muscle (a muscle in the gluteal region) rather than beneath it.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-piriformis-how">
-              <h4 class="pt-panel-title" id="pt-piriformis-how">How it is thought to cause sciatica</h4>
-              <ol class="pt-steps">
-                <li>The muscle shortens or spasms, due to overuse or trauma</li>
-                <li>This is thought to compress the sciatic nerve</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-pregnancy" aria-labelledby="pt-pregnancy-title">
-          <h3 class="pt-h3" id="pt-pregnancy-title">Pregnancy</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>It is not uncommon for sciatica to develop during pregnancy, as a result of the weight of the fetus pressing down on the sciatic nerve while sitting, or if a leg spasm occurs.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-pregnancy-note">
-              <h4 class="pt-panel-title" id="pt-pregnancy-note">Good to know</h4>
-              <ul class="pt-checks">
-                <li>There is no direct harm to the fetus</li>
-                <li>Numbness in the legs can contribute to loss of balance, and potentially a fall</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-tumors" aria-labelledby="pt-tumors-title">
-          <h3 class="pt-h3" id="pt-tumors-title">Spinal Tumors</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>Spinal tumors are thought to be another possible contributor to sciatica, as the tumors put pressure on the spinal cord or nerve roots.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-tumors-effects">
-              <h4 class="pt-panel-title" id="pt-tumors-effects">They may also result in</h4>
-              <ul class="pt-tags">
-                <li>Severe back pain</li>
-                <li>Loss of bladder or bowel control</li>
-                <li>Muscle weakness</li>
-              </ul>
-            </aside>
+            <h2 class="ta-title" id="ta-title">Sciatica</h2>
+            <p>Sciatica is a set of symptoms that includes pain that may be caused by compression or irritation of one of the five spinal nerve roots, or the left/right or both sciatic nerves. Pain from sciatica is felt in the lower back, buttocks, or various areas of the leg and foot. Other symptoms include severe numbness, muscular weakness, tingling (pins and needles) or difficulty controlling the movement of one’s leg. Symptoms are also typically felt on one side of the body.</p>
+            <p>There are a number of causes that may account for the onset of sciatica:</p>
+            <h3 class="ta-h3">Spinal Disc Herniation</h3>
+            <p>In 90% of cases a spinal disc herniation that puts pressure on a lumbar or sacral nerve root is the primary reason for the development of sciatica. A herniated disc limits the space available for the spinal cord, pinching nerves in the spinal cord that travel to the sciatic nerves.</p>
+            <h3 class="ta-h3">Spinal Stenosis</h3>
+            <p>Spinal stenosis is a condition in which the spinal canal (spaces through which the spinal cord runs) narrows and compresses the spinal cord, cauda equina (bundle of spinal nerves and spinal nerve roots), or sciatic nerve roots. The narrowing of the spinal canal might be caused by any number of conditions such as bone spurs, spondylolisthesis, inflammation, or a herniated disc.</p>
+            <h3 class="ta-h3">Piriformis Syndrome</h3>
+            <p>Piriformis syndrome is a condition in which the sciatic nerve runs through the piriformis muscle (muscle in the gluteal region) rather than beneath it. When the muscle is shortened or spasms (due to overuse or trauma) this is thought to cause compression of the sciatic nerve.</p>
+            <h3 class="ta-h3">Pregnancy</h3>
+            <p>It is not uncommon for sciatica to develop during pregnancy as a result of the weight of the fetus pressing down on the sciatic nerve while sitting, or if a leg spasm occurs. While there is no direct harm to the fetus, the indirect harm may be derived from the numbing effect of the legs which can contribute to loss of balance and potentially a fall.</p>
+            <h3 class="ta-h3">Spinal Tumors</h3>
+            <p>It is thought that spinal tumors are another possible contributor to sciatica as the tumors induce pressure on the spinal cord or nerve roots and may also result in severe back pain, loss of bladder or bowel control, and muscle weakness.</p>
+            <p>Our combination is a viable option for treatment concerning sciatica.</p>
           </div>
 
-          <div class="pt-alert" role="note" aria-labelledby="pt-alert-title">
-            <span class="pt-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/sciatica.jpg" alt="A person holding their lower back and the back of their thigh" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="pt-alert-title" id="pt-alert-title">Seek urgent medical care</h4>
-              <p>If you experience loss of bladder or bowel control, seek medical care right away.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <aside class="pt-note" aria-label="Our care">
-          <span class="pt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Our combination of homeopathic and chiropractic care may be considered as part of care for sciatica.</p>
-        </aside>
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="pt-cta" aria-labelledby="pt-cta-title">
-          <div class="pt-cta-text">
-            <h3 class="pt-cta-title" id="pt-cta-title">Have a question about sciatica?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

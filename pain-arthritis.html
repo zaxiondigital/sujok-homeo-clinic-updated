@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
   <link rel="stylesheet" href="arthritis.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -281,127 +282,46 @@
       </nav>
 
       <!-- ========== Article: Arthritis ==========
-        Pain Relief version: same content as arthritis.html, shown with the Pain Relief hero and menu.
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Arthritis page on sujokhomeoclinic.com (from a screenshot of the live page),
-        regrouped under headings with only small grammar fixes.
-      -->
-      <article class="hp-article ar-article" aria-labelledby="ar-title">
-
-        <!-- Introduction -->
-        <section class="ar-intro">
-          <div class="ar-intro-text">
-            <p class="eyebrow">Joint Health</p>
-            <h2 class="ar-title" id="ar-title">Arthritis</h2>
-            <p class="ar-lead">There are more than 100 different forms of arthritis, though they tend to fall into one of two major categories:</p>
+          Text: the Arthritis page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/pain-arthritis.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Pain Relief</p>
+            <h2 class="ta-title" id="ta-title">Arthritis</h2>
+            <p>There are more than 100 different forms of arthritis, though they tend to fall into one of two major categories:</p>
+            <h3 class="ta-h3">Degenerative Arthritis</h3>
+            <p>Degenerative arthritis is caused by the breakdown of cartilage in the joint which results in two opposing bones that erode into one another. This bone rubbing on bone can be painful, cause stiffness, and eventually loss of use of that particular joint.</p>
+            <p>Osteoarthritis is recognized as the principal form of degenerative arthritis and the most common form of arthritis in general. Osteoarthritis may occur as a result of an injury, though it is often the result of daily wear and tear of the joint.</p>
+            <p>Initially, this form of arthritis will begin with minor pain experienced during activity, but if the condition worsens, the pain may escalate to become continuous to the point of occurring even during a state of rest.</p>
+            <p>Osteoarthritis typically affects the weight-bearing joints, such as the back, spine, knees, hips and pelvis. However, it can affect smaller joints within the body as well, such as those within the hands and feet.</p>
+            <p>Osteoarthritis is a common disease among the elderly.</p>
+            <h3 class="ta-h3">Inflammatory Arthritis</h3>
+            <p>The second major category of arthritis is inflammatory arthritis which is used to describe auto-immune forms of arthritis in which the body’s immune system attacks healthy joints and tissues. This causes inflammation and joint damage.</p>
+            <p>The most common form of inflammatory arthritis is rheumatoid arthritis. The most damage in this case, occurs to the lining of the joint and cartilage, which eventually results in erosion of the opposing bones.</p>
+            <p>Rheumatoid arthritis often affects joints found in the fingers, wrists, elbows and the knees and the disease is symmetrical which means it is mirrored on both sides of the body. If left untreated, this can lead to severe deformity.</p>
+            <p>Though this form of arthritis most commonly affects people aged twenty and over, it can develop at any age. Signs of rheumatoid arthritis in children may present themselves as a skin rash, fever, pain, disability and limitations experienced during daily activities.</p>
+            <p>The cause of rheumatoid arthritis is often unclear, however the earlier the diagnosis, the earlier an individual may receive treatment and sustain a decent quality of life.</p>
+            <p>Other forms of arthritis that fall under inflammatory arthritis include ankylosing spondylitis, psoriatic arthritis, lupus and juvenile idiopathic arthritis, among others.</p>
+            <p>Combination of homeopathic and chiropractic treatments are available to ease the debilitating and prolonged pain of those who suffer from arthritis.</p>
           </div>
-          <figure class="ar-intro-photo">
-            <img src="assets/images/service-pain.jpg" alt="A practitioner examining a patient’s bent knee with both hands" width="468" height="250">
+
+          <figure class="ta-media">
+            <img src="assets/images/topics/pain-arthritis.jpg" alt="An older woman massaging her swollen knuckles beside a warm mug" width="900" height="1195" loading="lazy">
           </figure>
-        </section>
 
-        <!-- The two categories (jump links to the sections below) -->
-        <nav class="ar-types" aria-label="Major categories of arthritis">
-          <a class="ar-type" href="#ar-degenerative">
-            <span class="ar-type-num" aria-hidden="true">01</span>
-            <span class="ar-type-name">Degenerative Arthritis</span>
-            <span class="ar-type-desc">Breakdown of cartilage in the joint</span>
-            <svg class="icon icon-sm ar-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-          </a>
-          <a class="ar-type" href="#ar-inflammatory">
-            <span class="ar-type-num" aria-hidden="true">02</span>
-            <span class="ar-type-name">Inflammatory Arthritis</span>
-            <span class="ar-type-desc">The immune system attacks healthy joints and tissues</span>
-            <svg class="icon icon-sm ar-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-          </a>
-        </nav>
-
-        <!-- Degenerative Arthritis -->
-        <section class="ar-section" id="ar-degenerative" aria-labelledby="ar-degenerative-title">
-          <h3 class="ar-h3" id="ar-degenerative-title"><span class="ar-h3-num" aria-hidden="true">01</span>Degenerative Arthritis</h3>
-          <div class="ar-row">
-            <div class="ar-copy">
-              <p>Degenerative arthritis is caused by the breakdown of cartilage in the joint, which results in two opposing bones that erode into one another. This bone rubbing on bone can be painful, cause stiffness, and eventually loss of use of that particular joint.</p>
-              <h4 class="ar-h4">Osteoarthritis</h4>
-              <p>Osteoarthritis is recognized as the principal form of degenerative arthritis and the most common form of arthritis in general. Osteoarthritis may occur as a result of an injury, though it is often the result of daily wear and tear of the joint.</p>
-              <p>Initially, this form of arthritis will begin with minor pain experienced during activity, but if the condition worsens, the pain may escalate to become continuous, to the point of occurring even during a state of rest.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="ar-panel" aria-labelledby="ar-oa-joints-title">
-              <h4 class="ar-panel-title" id="ar-oa-joints-title">
-                <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-joint"/></svg></span>
-                Joints osteoarthritis typically affects
-              </h4>
-              <p class="ar-panel-label">Weight-bearing joints</p>
-              <ul class="ar-tags">
-                <li>Back</li>
-                <li>Spine</li>
-                <li>Knees</li>
-                <li>Hips</li>
-                <li>Pelvis</li>
-              </ul>
-              <p class="ar-panel-label">Smaller joints, as well</p>
-              <ul class="ar-tags">
-                <li>Hands</li>
-                <li>Feet</li>
-              </ul>
-              <p class="ar-panel-note">Osteoarthritis is a common disease among the elderly.</p>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Inflammatory Arthritis -->
-        <section class="ar-section" id="ar-inflammatory" aria-labelledby="ar-inflammatory-title">
-          <h3 class="ar-h3" id="ar-inflammatory-title"><span class="ar-h3-num" aria-hidden="true">02</span>Inflammatory Arthritis</h3>
-          <div class="ar-row">
-            <div class="ar-copy">
-              <p>The second major category of arthritis is inflammatory arthritis, which is used to describe auto-immune forms of arthritis in which the body’s immune system attacks healthy joints and tissues. This causes inflammation and joint damage.</p>
-              <h4 class="ar-h4">Rheumatoid Arthritis</h4>
-              <p>The most common form of inflammatory arthritis is rheumatoid arthritis. The most damage in this case occurs to the lining of the joint and cartilage, which eventually results in erosion of the opposing bones.</p>
-              <p>Though this form of arthritis most commonly affects people aged twenty and over, it can develop at any age. Signs of rheumatoid arthritis in children may present themselves as a skin rash, fever, pain, disability and limitations experienced during daily activities.</p>
-              <p>The cause of rheumatoid arthritis is often unclear; however, the earlier the diagnosis, the earlier an individual may receive treatment and sustain a decent quality of life.</p>
-            </div>
-            <aside class="ar-panel" aria-labelledby="ar-ra-joints-title">
-              <h4 class="ar-panel-title" id="ar-ra-joints-title">
-                <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg></span>
-                Joints rheumatoid arthritis often affects
-              </h4>
-              <ul class="ar-tags">
-                <li>Fingers</li>
-                <li>Wrists</li>
-                <li>Elbows</li>
-                <li>Knees</li>
-              </ul>
-              <div class="ar-panel-fact">
-                <svg class="icon" aria-hidden="true"><use href="#t-mirror"/></svg>
-                <p><strong>Symmetrical:</strong> the disease is mirrored on both sides of the body. If left untreated, this can lead to severe deformity.</p>
-              </div>
-            </aside>
-          </div>
-
-          <div class="ar-others">
-            <h4 class="ar-h4">Other forms of inflammatory arthritis</h4>
-            <ul class="ar-tags ar-tags--outline">
-              <li>Ankylosing spondylitis</li>
-              <li>Psoriatic arthritis</li>
-              <li>Lupus</li>
-              <li>Juvenile idiopathic arthritis</li>
-              <li>Among others</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Homeopathic and Chiropractic Care -->
-        <section class="ar-care" aria-labelledby="ar-care-title">
-          <div class="ar-copy">
-            <p class="eyebrow">At Sujok Homeo Clinic</p>
-            <h3 class="ar-h3" id="ar-care-title">Homeopathic and Chiropractic Care</h3>
-            <p>A combination of homeopathic and chiropractic treatments is available to ease the debilitating and prolonged pain of those who suffer from arthritis.</p>
-            <p class="ar-note">Homeopathic and chiropractic care do not replace medical assessment. Please see a doctor about severe or persistent symptoms.</p>
-          </div>
-          <img class="ar-care-img" src="assets/images/v2/service-chiropractic.jpg" alt="A chiropractor with one hand on a seated patient’s shoulder and the other on her lower back" width="806" height="444" loading="lazy">
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

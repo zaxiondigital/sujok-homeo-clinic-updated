@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
   <link rel="stylesheet" href="headaches.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -281,151 +282,37 @@
       </nav>
 
       <!-- ========== Article: Headaches ==========
-        Pain Relief version: same content as headaches.html, shown with the Pain Relief hero and menu.
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Headaches page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes. One change, flagged to the client:
-        - "Homeopathic treatment has been a proven successful solution for headaches and
-          migraines" is softened below (no effectiveness claim), as on the other topic pages.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article hd-article" aria-labelledby="hd-title">
-
-        <!-- Introduction + at a glance -->
-        <section class="hd-intro">
-          <div class="hd-intro-text">
-            <p class="eyebrow">Neurological Health</p>
-            <h2 class="hd-title" id="hd-title">Headaches</h2>
-            <p class="hd-lead">Headaches, also known as cephalalgia, occur when you experience pain anywhere in the region of the head or neck, and can be a symptom of a number of different conditions of the head or neck.</p>
+          Text: the Headaches page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/pain-headaches.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Pain Relief</p>
+            <h2 class="ta-title" id="ta-title">Headaches</h2>
+            <p>Headaches, also known as cephalalgia, occur when you experience pain anywhere in the region of the head or neck and can be a symptom of a number of different conditions of the head or neck.</p>
+            <p>As the brain does not have pain receptors, the pain experienced from headaches is caused by the disturbance of one or more of the pain-sensitive structures around the brain including the cranium, muscles, nerves, arteries and veins, subcutaneous tissues, eyes, ears, sinuses and mucous membranes.</p>
+            <p>Migraines are a common ailment of those who suffer from frequent headaches. A migraine is a chronic neurological disorder characterized by recurrent headaches that range from moderate to severe in pain.</p>
+            <p>Depending on the severity, they may be accompanied by flashes of light, blind spots, tingling in the limbs, nausea, vomiting, an increased sensitivity to noise and light, and may last for hours or days.</p>
+            <p>Migraines are the product of the swollen blood vessels and the release of chemicals from the nerve fibres coiled around those blood vessels. When a migraine strikes, the temporal artery enlarges causing the release of chemicals, inflammation and pain.</p>
+            <p>Millions of people in North America alone suffer the debilitating effects brought on by migraine headaches, and note that females tend to be more susceptible to them than males. Homeopathic treatment has been a proven successful solution for headaches and migraines.</p>
           </div>
-          <aside class="hd-panel" aria-labelledby="hd-glance-title">
-            <h3 class="hd-panel-title" id="hd-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-head"/></svg></span>
-              Headaches at a glance
-            </h3>
-            <ul class="hd-checks">
-              <li>Also known as cephalalgia</li>
-              <li>Pain anywhere in the region of the head or neck</li>
-              <li>Can be a symptom of a number of different conditions</li>
-            </ul>
-          </aside>
-        </section>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="hd-section" aria-labelledby="hd-overview-title">
-          <h3 class="hd-h3" id="hd-overview-title">Understanding Headaches</h3>
-          <ul class="hd-types">
-            <li>
-              <a class="hd-type" href="#hd-causes">
-                <span class="hd-type-badge" aria-hidden="true">01</span>
-                <span class="hd-type-name">Headache Pain</span>
-                <span class="hd-type-desc">Where the pain comes from</span>
-                <svg class="icon icon-sm hd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="hd-type" href="#hd-migraines">
-                <span class="hd-type-badge" aria-hidden="true">02</span>
-                <span class="hd-type-name">Migraines</span>
-                <span class="hd-type-desc">A chronic neurological disorder</span>
-                <svg class="icon icon-sm hd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="hd-type" href="#hd-how">
-                <span class="hd-type-badge" aria-hidden="true">03</span>
-                <span class="hd-type-name">How a Migraine Happens</span>
-                <span class="hd-type-desc">Blood vessels, chemicals and pain</span>
-                <svg class="icon icon-sm hd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/pain-headaches.jpg" alt="A man in a dim room covering his eyes during a migraine" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Headache pain -->
-        <section class="hd-section" id="hd-causes" aria-labelledby="hd-causes-title">
-          <h3 class="hd-h3" id="hd-causes-title">Headache Pain</h3>
-          <div class="hd-row">
-            <div class="hd-copy">
-              <p>As the brain does not have pain receptors, the pain experienced from headaches is caused by the disturbance of one or more of the pain-sensitive structures around the brain.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="hd-panel" aria-labelledby="hd-structures-title">
-              <h4 class="hd-panel-title" id="hd-structures-title">Pain-sensitive structures around the brain</h4>
-              <ul class="hd-tags">
-                <li>Cranium</li>
-                <li>Muscles</li>
-                <li>Nerves</li>
-                <li>Arteries and veins</li>
-                <li>Subcutaneous tissues</li>
-                <li>Eyes</li>
-                <li>Ears</li>
-                <li>Sinuses</li>
-                <li>Mucous membranes</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Migraines -->
-        <section class="hd-section" id="hd-migraines" aria-labelledby="hd-migraines-title">
-          <h3 class="hd-h3" id="hd-migraines-title">Migraines</h3>
-          <div class="hd-row">
-            <div class="hd-copy">
-              <p>Migraines are a common ailment of those who suffer from frequent headaches. A migraine is a chronic neurological disorder characterized by recurrent headaches that range from moderate to severe in pain.</p>
-              <p>Millions of people in North America alone suffer the debilitating effects brought on by migraine headaches, and females tend to be more susceptible to them than males.</p>
-            </div>
-            <aside class="hd-panel" aria-labelledby="hd-symptoms-title">
-              <h4 class="hd-panel-title" id="hd-symptoms-title">Depending on the severity, they may be accompanied by</h4>
-              <ul class="hd-tags">
-                <li>Flashes of light</li>
-                <li>Blind spots</li>
-                <li>Tingling in the limbs</li>
-                <li>Nausea</li>
-                <li>Vomiting</li>
-                <li>Increased sensitivity to noise and light</li>
-              </ul>
-              <p class="hd-panel-note">Migraines may last for hours or days.</p>
-            </aside>
-          </div>
-        </section>
-
-        <!-- How a migraine happens -->
-        <section class="hd-section" id="hd-how" aria-labelledby="hd-how-title">
-          <h3 class="hd-h3" id="hd-how-title">How a Migraine Happens</h3>
-          <div class="hd-row">
-            <div class="hd-copy">
-              <p>Migraines are the product of swollen blood vessels and the release of chemicals from the nerve fibres coiled around those blood vessels.</p>
-            </div>
-            <aside class="hd-panel" aria-labelledby="hd-steps-title">
-              <h4 class="hd-panel-title" id="hd-steps-title">When a migraine strikes</h4>
-              <ol class="hd-steps">
-                <li>The temporal artery enlarges</li>
-                <li>Chemicals are released from the nerve fibres around it</li>
-                <li>This causes inflammation and pain</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="hd-note" aria-label="Homeopathic care">
-          <span class="hd-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Homeopathic care may be considered for headaches and migraines.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="hd-cta" aria-labelledby="hd-cta-title">
-          <div class="hd-cta-text">
-            <h3 class="hd-cta-title" id="hd-cta-title">Have a question about your headaches?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

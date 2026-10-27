@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="allergies.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -264,160 +265,36 @@
       </nav>
 
       <!-- ========== Article: Allergies ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Allergies page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes. Two additions/changes, flagged to the client:
-        - "Homeopathic remedies are often an effective method of treatment and can reduce these
-          hypersensitivity disorders" is softened below (no effectiveness claim), as on the
-          Mental Health page.
-        - The emergency note (call 911) is added because the text describes anaphylaxis.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article al-article" aria-labelledby="al-title">
-
-        <!-- Introduction + how a reaction may present -->
-        <section class="al-intro">
-          <div class="al-intro-text">
-            <p class="eyebrow">Immune Health</p>
-            <h2 class="al-title" id="al-title">Allergies</h2>
-            <p class="al-lead">An allergy is the body’s response to a substance which is not necessarily harmful in itself, yet causes an immune response — an allergic reaction.</p>
-            <p class="al-copy">These allergic reactions generally occur when allergens (the substances causing the reaction) are present within the surrounding environment.</p>
-          </div>
-          <aside class="al-panel" aria-labelledby="al-signs-title">
-            <h3 class="al-panel-title" id="al-signs-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-allergy"/></svg></span>
-              A reaction may present as
-            </h3>
-            <ul class="al-checks">
-              <li>A runny nose</li>
-              <li>Sneezing</li>
-              <li>Itchy eyes</li>
-              <li>Swelling of any kind</li>
-              <li>A visible rash on the skin</li>
-            </ul>
-          </aside>
-        </section>
-
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="al-section" aria-labelledby="al-overview-title">
-          <h3 class="al-h3" id="al-overview-title">Understanding Allergies</h3>
-          <ul class="al-types">
-            <li>
-              <a class="al-type" href="#al-reaction">
-                <span class="al-type-badge" aria-hidden="true">01</span>
-                <span class="al-type-name">Allergic Reactions</span>
-                <span class="al-type-desc">How the immune system responds</span>
-                <svg class="icon icon-sm al-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="al-type" href="#al-anaphylaxis">
-                <span class="al-type-badge" aria-hidden="true">02</span>
-                <span class="al-type-name">Anaphylaxis</span>
-                <span class="al-type-desc">A severe reaction with a rapid onset</span>
-                <svg class="icon icon-sm al-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="al-type" href="#al-allergens">
-                <span class="al-type-badge" aria-hidden="true">03</span>
-                <span class="al-type-name">Common Allergens</span>
-                <span class="al-type-desc">Substances that may cause a reaction</span>
-                <svg class="icon icon-sm al-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Allergic reactions -->
-        <section class="al-section" id="al-reaction" aria-labelledby="al-reaction-title">
-          <h3 class="al-h3" id="al-reaction-title">Allergic Reactions</h3>
-          <div class="al-row">
-            <div class="al-copy">
-              <p>An allergic reaction tends to aggravate the senses and could present itself as a runny nose, sneezing, itchy eyes, swelling of any kind, or perhaps a visible rash on the skin.</p>
-              <p>When an allergic reaction takes place, the immune system has produced antibodies to attack the invading substance, which in turn prompts blood cells to release chemicals, such as histamine.</p>
-            </div>
-            <aside class="al-panel" aria-labelledby="al-steps-title">
-              <h4 class="al-panel-title" id="al-steps-title">How a reaction happens</h4>
-              <ol class="al-steps">
-                <li>An allergen is present in the surrounding environment</li>
-                <li>The immune system produces antibodies to attack the invading substance</li>
-                <li>Blood cells release chemicals, such as histamine</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Anaphylaxis -->
-        <section class="al-section" id="al-anaphylaxis" aria-labelledby="al-anaphylaxis-title">
-          <h3 class="al-h3" id="al-anaphylaxis-title">Anaphylaxis</h3>
-          <div class="al-row">
-            <div class="al-copy">
-              <p>In some cases, the immune system may overreact and cause a severe allergic reaction such as anaphylaxis — a reaction that has a rapid onset and may lead to extreme disability or even death if not treated immediately.</p>
-            </div>
-            <aside class="al-panel" aria-labelledby="al-examples-title">
-              <h4 class="al-panel-title" id="al-examples-title">For example</h4>
-              <p class="al-panel-text">An increasing number of people have anaphylactic reactions when exposed to:</p>
-              <ul class="al-tags">
-                <li>Shellfish</li>
-                <li>A bee sting</li>
-                <li>A wasp sting</li>
-              </ul>
-            </aside>
+          Text: the Allergies page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/allergies.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Allergies</h2>
+            <p>An allergy is the body’s response to a substance which is not necessarily harmful in itself, yet causes an immune response - an allergic reaction. These allergic reactions generally occur when allergens (the substance causing the reaction) is present within the surrounding environment.</p>
+            <p>An allergic reaction tends to aggravate the senses and could present itself as a runny nose, sneezing, itchy eyes, swelling of any kind, or perhaps a visible rash on the skin. When an allergic reaction takes place, the immune system has produced antibodies to attack the invading substance which in turn promotes blood cells to release chemicals, such as histamine.</p>
+            <p>In some cases, the immune system may overreact and cause a severe allergic reaction such as anaphylaxis - a reaction that has a rapid onset and may lead to extreme disability or even death if not treated immediately. As an example, an increasing number of people have anaphylactic reactions when exposed to shellfish or after being stung by a bee or a wasp.</p>
+            <p>Some common allergens include pollen, dust mites, mould, animal dander or saliva, insects, chemicals often found in household cleaners, various foods and medicines. These allergens are generally protein-based. Non-protein allergens, such as the drug penicillin for example, requires being bound to a protein once it enters the body.</p>
+            <p>Whether you suffer from seasonal, food, or other allergies, Homeopathic remedies are often an effective method of treatment and can reduce these hypersensitivity disorders.</p>
           </div>
 
-          <!-- Emergency note (added: the text above describes anaphylaxis) -->
-          <div class="al-alert" role="note" aria-labelledby="al-alert-title">
-            <span class="al-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/allergies.jpg" alt="A woman sneezing into a tissue among spring blossoms" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="al-alert-title" id="al-alert-title">Anaphylaxis is a medical emergency</h4>
-              <p>If you think someone is having a severe allergic reaction, call <a href="tel:911">911</a> right away.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- Common allergens -->
-        <section class="al-section" id="al-allergens" aria-labelledby="al-allergens-title">
-          <h3 class="al-h3" id="al-allergens-title">Common Allergens</h3>
-          <div class="al-row">
-            <div class="al-copy">
-              <p>These allergens are generally protein-based. Non-protein allergens, such as the drug penicillin for example, need to be bound to a protein once they enter the body.</p>
-            </div>
-            <aside class="al-panel" aria-labelledby="al-common-title">
-              <h4 class="al-panel-title" id="al-common-title">Some common allergens</h4>
-              <ul class="al-tags">
-                <li>Pollen</li>
-                <li>Dust mites</li>
-                <li>Mould</li>
-                <li>Animal dander or saliva</li>
-                <li>Insects</li>
-                <li>Chemicals in household cleaners</li>
-                <li>Various foods</li>
-                <li>Medicines</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="al-note" aria-label="Homeopathic care">
-          <span class="al-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Whether you suffer from seasonal, food or other allergies, homeopathic remedies may be considered as part of your care.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="al-cta" aria-labelledby="al-cta-title">
-          <div class="al-cta-text">
-            <h3 class="al-cta-title" id="al-cta-title">Have a question about your allergies?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

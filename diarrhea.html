@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="diarrhea.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,214 +264,45 @@
       </nav>
 
       <!-- ========== Article: Diarrhea ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Diarrhea page on sujokhomeoclinic.com (supplied by the client), regrouped under
-        headings with small grammar fixes. One correction, flagged to the client: osmotic diarrhea
-        "can also be the cause of insufficient digestion" reads backwards; it now says it can be
-        caused by insufficient digestion.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article dh-article" aria-labelledby="dh-title">
-
-        <!-- Introduction + at a glance -->
-        <section class="dh-intro">
-          <div class="dh-intro-text">
-            <p class="eyebrow">Digestive Health</p>
-            <h2 class="dh-title" id="dh-title">Diarrhea</h2>
-            <p class="dh-lead">Diarrhea is a condition in which a person will have three or more liquid (or loose) bowel movements per day.</p>
-            <p class="dh-copy">The loss of fluids through diarrhea may result in dehydration or electrolyte deficiencies such as salt imbalances.</p>
+          Text: the Diarrhea page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/diarrhea.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Diarrhea</h2>
+            <p>Diarrhea is a condition in which a person will have three or more liquid (or loose) bowel movements per day. The loss of fluids through diarrhea may result in dehydration or electrolyte deficiencies such as salt imbalances.</p>
+            <p>There are several different types of diarrhea:</p>
+            <h3 class="ta-h3">Secretory</h3>
+            <p>Secretory diarrhea refers to an increase in active secretion, or an inhibition of absorption. This kind of diarrhea continues even in the absence of oral food intake.</p>
+            <h3 class="ta-h3">Osmotic</h3>
+            <p>Osmotic diarrhea takes place when too much water has been drawn into the bowels. Ingesting beverages with excessive sugar or salt can draw water from the body into the bowel and cause osmotic diarrhea. However, this type of diarrhea can also be caused by insufficient digestion. Healthy individuals may experience osmotic diarrhea in the presence of too much magnesium, vitamin C, undigested lactose, or excess fructose.</p>
+            <h3 class="ta-h3">Exudative</h3>
+            <p>Exudative diarrhea is often associated with inflammatory bowel diseases and other severe infections such as food poisoning or E. coli. Exudative diarrhea is characterized by the presence of blood and pus in the stool.</p>
+            <h3 class="ta-h3">Motility-related</h3>
+            <p>Motility-related diarrhea is caused by the rapid movement of food through the intestines (hypermotility). If food that moves through the gastrointestinal tract too quickly, there is not sufficient time for nutrients and water to be absorbed.</p>
+            <h3 class="ta-h3">Inflammatory</h3>
+            <p>Inflammatory diarrhea is characterized by a loss of protein-rich fluids and a decreased ability to absorb these lost fluids, usually a result of damage to the mucosal lining. Ailments such as bacterial infections, viral infections, parasitic infections or autoimmune deficiencies can contribute to this type of diarrhea.</p>
+            <h3 class="ta-h3">Dysentery</h3>
+            <p>Generally, if blood is visible in the stool this indicates dysentery. Dysentery is often a symptom of Shigella, Entamoeba histolytica, and Salmonella, among other things.</p>
           </div>
-          <aside class="dh-panel" aria-labelledby="dh-glance-title">
-            <h3 class="dh-panel-title" id="dh-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-intestine"/></svg></span>
-              Diarrhea at a glance
-            </h3>
-            <ul class="dh-checks">
-              <li>Three or more liquid or loose bowel movements per day</li>
-              <li>Fluid loss may result in dehydration</li>
-              <li>It may also cause electrolyte deficiencies, such as salt imbalances</li>
-            </ul>
-          </aside>
-        </section>
 
-        <!-- Overview cards: the six types (jump links to the sections below) -->
-        <section class="dh-section" aria-labelledby="dh-overview-title">
-          <h3 class="dh-h3" id="dh-overview-title">Types of Diarrhea</h3>
-          <p class="dh-copy">There are several different types of diarrhea:</p>
-          <ul class="dh-types">
-            <li>
-              <a class="dh-type" href="#dh-secretory">
-                <span class="dh-type-badge" aria-hidden="true">01</span>
-                <span class="dh-type-name">Secretory</span>
-                <span class="dh-type-desc">Continues even without food intake</span>
-                <svg class="icon icon-sm dh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="dh-type" href="#dh-osmotic">
-                <span class="dh-type-badge" aria-hidden="true">02</span>
-                <span class="dh-type-name">Osmotic</span>
-                <span class="dh-type-desc">Too much water drawn into the bowels</span>
-                <svg class="icon icon-sm dh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="dh-type" href="#dh-exudative">
-                <span class="dh-type-badge" aria-hidden="true">03</span>
-                <span class="dh-type-name">Exudative</span>
-                <span class="dh-type-desc">Blood and pus in the stool</span>
-                <svg class="icon icon-sm dh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="dh-type" href="#dh-motility">
-                <span class="dh-type-badge" aria-hidden="true">04</span>
-                <span class="dh-type-name">Motility-related</span>
-                <span class="dh-type-desc">Food moves through too quickly</span>
-                <svg class="icon icon-sm dh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="dh-type" href="#dh-inflammatory">
-                <span class="dh-type-badge" aria-hidden="true">05</span>
-                <span class="dh-type-name">Inflammatory</span>
-                <span class="dh-type-desc">Damage to the mucosal lining</span>
-                <svg class="icon icon-sm dh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="dh-type" href="#dh-dysentery">
-                <span class="dh-type-badge" aria-hidden="true">06</span>
-                <span class="dh-type-name">Dysentery</span>
-                <span class="dh-type-desc">Blood visible in the stool</span>
-                <svg class="icon icon-sm dh-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/diarrhea.jpg" alt="A man on a sofa holding his stomach, with water and a rehydration drink" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Secretory -->
-        <section class="dh-section" id="dh-secretory" aria-labelledby="dh-secretory-title">
-          <h3 class="dh-h3" id="dh-secretory-title">Secretory Diarrhea</h3>
-          <div class="dh-row">
-            <div class="dh-copy">
-              <p>Secretory diarrhea refers to an increase in active secretion, or an inhibition of absorption.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="dh-panel" aria-labelledby="dh-secretory-key">
-              <h4 class="dh-panel-title" id="dh-secretory-key">Key point</h4>
-              <ul class="dh-checks">
-                <li>This kind of diarrhea continues even in the absence of oral food intake</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Osmotic -->
-        <section class="dh-section" id="dh-osmotic" aria-labelledby="dh-osmotic-title">
-          <h3 class="dh-h3" id="dh-osmotic-title">Osmotic Diarrhea</h3>
-          <div class="dh-row">
-            <div class="dh-copy">
-              <p>Osmotic diarrhea takes place when too much water has been drawn into the bowels. Ingesting beverages with excessive sugar or salt can draw water from the body into the bowel and cause osmotic diarrhea. However, this type of diarrhea can also be caused by insufficient digestion.</p>
-            </div>
-            <aside class="dh-panel" aria-labelledby="dh-osmotic-causes">
-              <h4 class="dh-panel-title" id="dh-osmotic-causes">Healthy individuals may experience it in the presence of too much</h4>
-              <ul class="dh-tags">
-                <li>Magnesium</li>
-                <li>Vitamin C</li>
-                <li>Undigested lactose</li>
-                <li>Fructose</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Exudative -->
-        <section class="dh-section" id="dh-exudative" aria-labelledby="dh-exudative-title">
-          <h3 class="dh-h3" id="dh-exudative-title">Exudative Diarrhea</h3>
-          <div class="dh-row">
-            <div class="dh-copy">
-              <p>Exudative diarrhea is characterized by the presence of blood and pus in the stool.</p>
-            </div>
-            <aside class="dh-panel" aria-labelledby="dh-exudative-assoc">
-              <h4 class="dh-panel-title" id="dh-exudative-assoc">Often associated with</h4>
-              <ul class="dh-tags">
-                <li>Inflammatory bowel diseases</li>
-                <li>Food poisoning</li>
-                <li>E. coli</li>
-                <li>Other severe infections</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Motility-related -->
-        <section class="dh-section" id="dh-motility" aria-labelledby="dh-motility-title">
-          <h3 class="dh-h3" id="dh-motility-title">Motility-related Diarrhea</h3>
-          <div class="dh-row">
-            <div class="dh-copy">
-              <p>Motility-related diarrhea is caused by the rapid movement of food through the intestines (hypermotility).</p>
-            </div>
-            <aside class="dh-panel" aria-labelledby="dh-motility-how">
-              <h4 class="dh-panel-title" id="dh-motility-how">How it happens</h4>
-              <ol class="dh-steps">
-                <li>Food moves through the gastrointestinal tract too quickly</li>
-                <li>There is not sufficient time for nutrients and water to be absorbed</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Inflammatory -->
-        <section class="dh-section" id="dh-inflammatory" aria-labelledby="dh-inflammatory-title">
-          <h3 class="dh-h3" id="dh-inflammatory-title">Inflammatory Diarrhea</h3>
-          <div class="dh-row">
-            <div class="dh-copy">
-              <p>Inflammatory diarrhea is characterized by a loss of protein-rich fluids and a decreased ability to absorb these lost fluids, usually a result of damage to the mucosal lining.</p>
-            </div>
-            <aside class="dh-panel" aria-labelledby="dh-inflammatory-contrib">
-              <h4 class="dh-panel-title" id="dh-inflammatory-contrib">Ailments that can contribute</h4>
-              <ul class="dh-tags">
-                <li>Bacterial infections</li>
-                <li>Viral infections</li>
-                <li>Parasitic infections</li>
-                <li>Autoimmune deficiencies</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Dysentery -->
-        <section class="dh-section" id="dh-dysentery" aria-labelledby="dh-dysentery-title">
-          <h3 class="dh-h3" id="dh-dysentery-title">Dysentery</h3>
-          <div class="dh-row">
-            <div class="dh-copy">
-              <p>Generally, if blood is visible in the stool, this indicates dysentery.</p>
-            </div>
-            <aside class="dh-panel" aria-labelledby="dh-dysentery-symptom">
-              <h4 class="dh-panel-title" id="dh-dysentery-symptom">Dysentery is often a symptom of</h4>
-              <ul class="dh-tags">
-                <li>Shigella</li>
-                <li>Entamoeba histolytica</li>
-                <li>Salmonella</li>
-                <li>Among other things</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="dh-cta" aria-labelledby="dh-cta-title">
-          <div class="dh-cta-text">
-            <h3 class="dh-cta-title" id="dh-cta-title">Have a question about your digestive health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

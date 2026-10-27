@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="female-disorders.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -264,168 +265,45 @@
       </nav>
 
       <!-- ========== Article: Female Disorders ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Female Disorders page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes. Changes flagged to the client:
-        - The opening claim (homeopathy "can significantly reduce the risk of side effects that
-          often accompany abrasive medications") is softened.
-        - "These contractions are the release of an excess of fatty acids" is corrected to
-          prostaglandins (compounds made from fatty acids).
-        - "Severe conditions such as ovarian cyst, fibroids could all be addressed by homeopathic
-          professional" is softened so it doesn't contradict the medical-diagnosis advice.
-        - The medical-advice note gathers the page's own "seek a medical opinion" lines.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article fd-article" aria-labelledby="fd-title">
-
-        <!-- Introduction + areas covered -->
-        <section class="fd-intro">
-          <div class="fd-intro-text">
-            <p class="eyebrow">Women’s Health</p>
-            <h2 class="fd-title" id="fd-title">Female Disorders</h2>
-            <p class="fd-lead">If you suffer from menstrual, uterine or ovarian ailments, alternative forms of medicine, such as homeopathy, offer a natural approach that may be considered as part of your care.</p>
-          </div>
-          <aside class="fd-panel" aria-labelledby="fd-areas-title">
-            <h3 class="fd-panel-title" id="fd-areas-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-female"/></svg></span>
-              This page covers
-            </h3>
-            <ul class="fd-checks">
-              <li>Menstrual ailments</li>
-              <li>Uterine issues</li>
-              <li>Ovarian issues</li>
-            </ul>
-          </aside>
-        </section>
-
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="fd-section" aria-labelledby="fd-overview-title">
-          <h3 class="fd-h3" id="fd-overview-title">Understanding Female Disorders</h3>
-          <ul class="fd-types">
-            <li>
-              <a class="fd-type" href="#fd-menstruation">
-                <span class="fd-type-badge" aria-hidden="true">01</span>
-                <span class="fd-type-name">Menstruation</span>
-                <span class="fd-type-desc">Cramps, PMS and irregular cycles</span>
-                <svg class="icon icon-sm fd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="fd-type" href="#fd-uterine">
-                <span class="fd-type-badge" aria-hidden="true">02</span>
-                <span class="fd-type-name">Uterine Issues</span>
-                <span class="fd-type-desc">The womb and its three layers</span>
-                <svg class="icon icon-sm fd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="fd-type" href="#fd-ovarian">
-                <span class="fd-type-badge" aria-hidden="true">03</span>
-                <span class="fd-type-name">Ovarian Issues</span>
-                <span class="fd-type-desc">Ovarian cysts and PCOS</span>
-                <svg class="icon icon-sm fd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Menstruation -->
-        <section class="fd-section" id="fd-menstruation" aria-labelledby="fd-menstruation-title">
-          <h3 class="fd-h3" id="fd-menstruation-title">Menstruation</h3>
-          <div class="fd-row">
-            <div class="fd-copy">
-              <p>Menstruation refers to the periodic shedding of the uterine lining. Menstruation generally lasts from puberty (sexual maturity) to menopause, which is generally considered the end of a woman’s reproductive life.</p>
-              <h4 class="fd-h4">Painful cramps (dysmenorrhea)</h4>
-              <p>Many women suffer painful uterine cramps during menstruation cycles, at which time the muscles of the uterus contract spasmodically to push the menstrual fluid out of the uterus. These contractions are caused by the release of an excess of prostaglandins, compounds made from fatty acids. Dysmenorrhea is the medical term used when referring to painful menstrual cramping.</p>
-              <h4 class="fd-h4">Premenstrual syndrome (PMS)</h4>
-              <p>Numerous women also suffer from emotional and psychological disturbances due to menstruation. This is commonly known as premenstrual syndrome (PMS) and may induce a wide array of symptoms.</p>
-              <p>Though there is a wide spectrum of variances between how women experience menstruation, some changes may be indicators of more serious issues such as hormone imbalances, uterine fibroids or other various medical issues.</p>
-            </div>
-            <aside class="fd-panel" aria-labelledby="fd-pms-title">
-              <h4 class="fd-panel-title" id="fd-pms-title">PMS symptoms may include</h4>
-              <ul class="fd-tags">
-                <li>Irritability</li>
-                <li>Fatigue</li>
-                <li>Easily provoked tearfulness</li>
-                <li>Mood swings</li>
-              </ul>
-              <p class="fd-panel-label">More severe symptoms (a smaller percentage of women)</p>
-              <ul class="fd-tags">
-                <li>Anxiety</li>
-                <li>Depression</li>
-              </ul>
-            </aside>
+          Text: the Female Disorders page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/female-disorders.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Female Disorders</h2>
+            <p>If you suffer from menstrual, uterine or ovarian ailments, alternative forms of medicine, such as homeopathy, offer natural forms of treatment that can significantly reduce the risk of side effects that often accompany abrasive medications.</p>
+            <h3 class="ta-h3">Menstruation</h3>
+            <p>Menstruation refers to the periodic shedding of the uterine lining. Menstruation generally lasts from puberty (sexual maturity) to menopause which is generally considered the end of a woman’s reproductive life.</p>
+            <p>Though, menstruation typically ceases if a woman conceives or is breastfeeding, if it stops for longer than ninety days, a professional medical opinion should be sought as this could be indicative of a number of health issues.</p>
+            <p>Many women suffer painful uterine cramps during menstruation cycles, at which time the muscles of the uterus contract spasmodically to push the menstrual fluid out of the uterus. These contractions are the release of an excess of fatty acids. Dysmenorrhea is the medical term used when referring to painful menstrual cramping.</p>
+            <p>Numerous women also suffer from emotional and psychological disturbances due to menstruation. This is commonly known as premenstrual syndrome (PMS) and may induce a wide array of symptoms including irritability, fatigue, easily provoked tearfulness and mood swings. More severe symptoms, generally experienced by a smaller percentage of females, include anxiety and depression.</p>
+            <p>Though there is a wide spectrum of variances between how women experience menstruation, cycle irregularity (or absenteeism), prolonged or shortened menstrual flow or an abnormal volume of flow may be indicators of more serious issues such as hormone imbalances, uterine fibroids or other various medical issues.</p>
+            <h3 class="ta-h3">Uterine Issues</h3>
+            <p>The uterus, also known as the womb, is the major female hormone-responsive reproductive sex organ. One end of the uterus opens into the vagina, while the other is connected to one or both fallopian tubes through which eggs travel into the womb to develop during gestation.</p>
+            <p>The uterus consists of three separate layers, the innermost layer, the endometrium, is the lining of the uterine cavity. Next, the myometrium is the smooth muscle which makes up most of the uterus. Finally the loose, connective tissue around the uterus is the parametrium.</p>
+            <p>Any issues surrounding the uterus include uterine bleeding, polyps, fibroids, prolapse, rupture or cancer and should all be diagnosed by a medical professional.</p>
+            <h3 class="ta-h3">Ovarian Issues</h3>
+            <p>The ovary is an ovum-producing (egg-producing) reproductive organ found in pairs as part of the vertebrate female reproductive system. Ovarian diseases are classified as endocrine disorders, or disorders of the reproductive system.</p>
+            <p>Small ovarian cysts are quite common in healthy women and are caused when the egg fails to release from the follicle in the ovary. Polycystic ovary syndrome, in which women have more follicles than usual, may cause menstrual cycle irregularities. Severe conditions such as ovarian cyst, fibroids could all be addressed by homeopathic professional.</p>
           </div>
 
-          <!-- Medical-advice note: the page's own "seek a medical opinion" lines -->
-          <div class="fd-alert" role="note" aria-labelledby="fd-alert-title">
-            <span class="fd-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/female-disorders.jpg" alt="A woman resting on a sofa with a hot water bottle on her lower abdomen and herbal tea" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="fd-alert-title" id="fd-alert-title">When to seek a medical opinion</h4>
-              <ul class="fd-alert-list">
-                <li>Menstruation stops for longer than ninety days (it typically ceases if a woman conceives or is breastfeeding)</li>
-                <li>Cycle irregularity or absence</li>
-                <li>Prolonged or shortened menstrual flow, or an abnormal volume of flow</li>
-              </ul>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- Uterine issues -->
-        <section class="fd-section" id="fd-uterine" aria-labelledby="fd-uterine-title">
-          <h3 class="fd-h3" id="fd-uterine-title">Uterine Issues</h3>
-          <div class="fd-row">
-            <div class="fd-copy">
-              <p>The uterus, also known as the womb, is the major female hormone-responsive reproductive sex organ. One end of the uterus opens into the vagina, while the other is connected to one or both fallopian tubes, through which eggs travel into the womb to develop during gestation.</p>
-              <p>Issues surrounding the uterus include uterine bleeding, polyps, fibroids, prolapse, rupture or cancer, and should all be diagnosed by a medical professional.</p>
-            </div>
-            <aside class="fd-panel" aria-labelledby="fd-layers-title">
-              <h4 class="fd-panel-title" id="fd-layers-title">The three layers of the uterus</h4>
-              <ol class="fd-steps">
-                <li><strong>Endometrium:</strong> the innermost layer, the lining of the uterine cavity</li>
-                <li><strong>Myometrium:</strong> the smooth muscle which makes up most of the uterus</li>
-                <li><strong>Parametrium:</strong> the loose, connective tissue around the uterus</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Ovarian issues -->
-        <section class="fd-section" id="fd-ovarian" aria-labelledby="fd-ovarian-title">
-          <h3 class="fd-h3" id="fd-ovarian-title">Ovarian Issues</h3>
-          <div class="fd-row">
-            <div class="fd-copy">
-              <p>The ovary is an ovum-producing (egg-producing) reproductive organ found in pairs as part of the vertebrate female reproductive system. Ovarian diseases are classified as endocrine disorders, or disorders of the reproductive system.</p>
-            </div>
-            <aside class="fd-panel" aria-labelledby="fd-ovary-title">
-              <h4 class="fd-panel-title" id="fd-ovary-title">Common ovarian conditions</h4>
-              <ul class="fd-checks">
-                <li><strong>Small ovarian cysts:</strong> quite common in healthy women, caused when the egg fails to release from the follicle in the ovary</li>
-                <li><strong>Polycystic ovary syndrome (PCOS):</strong> women have more follicles than usual, which may cause menstrual cycle irregularities</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="fd-note" aria-label="Homeopathic care">
-          <span class="fd-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Conditions such as ovarian cysts and fibroids can be discussed with our homeopathic professionals, alongside diagnosis by a medical professional.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="fd-cta" aria-labelledby="fd-cta-title">
-          <div class="fd-cta-text">
-            <h3 class="fd-cta-title" id="fd-cta-title">Have a question about your health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

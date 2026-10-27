@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -279,72 +280,32 @@
       </nav>
 
       <!-- ========== Article: Undiagnosed Pains ==========
-        Pain Relief topic template: hero, Pain Relief menu and layout as on pain-management.html;
-        styles in pain-topics.css. Text: the Undiagnosed Pains page on sujokhomeoclinic.com
-        (supplied by the client: one sentence). One change, flagged to the client:
-        - "…offer alternative methods of treatment that may provide long-term relief" is softened.
-        The cards link to the existing Chiropractic and Homeopathy pages. The closing note reuses
-        the clinic's own "under one roof" line from the Pain Management page.
-      -->
-      <article class="hp-article pt-article" aria-labelledby="pt-title">
-
-        <section class="pt-intro">
-          <div class="pt-intro-text">
+          Text: the Undiagnosed Pains page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/undiagnosed-pains.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Pain Relief</p>
-            <h2 class="pt-title" id="pt-title">Undiagnosed Pains</h2>
-            <p class="pt-lead">If you find yourself suffering from unknown ailments related to pain, chiropractic care, homeopathy, or both offer alternative methods of care that may be considered.</p>
+            <h2 class="ta-title" id="ta-title">Undiagnosed Pains</h2>
+            <p>If you find yourself suffering from unknown ailments related to pain, chiropractic care, homeopathy, or both offer alternative methods of treatment that may provide long-term relief.</p>
           </div>
-          <aside class="pt-panel" aria-labelledby="pt-glance-title">
-            <h3 class="pt-panel-title" id="pt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-question"/></svg></span>
-              Options to consider
-            </h3>
-            <ul class="pt-checks">
-              <li>Chiropractic care</li>
-              <li>Homeopathy</li>
-              <li>Both, working together</li>
-            </ul>
-          </aside>
-        </section>
 
-        <section class="pt-section" aria-labelledby="pt-overview-title">
-          <h3 class="pt-h3" id="pt-overview-title">Learn More About Each Approach</h3>
-          <ul class="pt-types pt-types--2">
-            <li>
-              <a class="pt-type" href="chiropractic.html">
-                <span class="pt-type-badge" aria-hidden="true">01</span>
-                <span class="pt-type-name">Chiropractic</span>
-                <span class="pt-type-desc">Spinal and musculoskeletal care</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="homeopathy.html">
-                <span class="pt-type-badge" aria-hidden="true">02</span>
-                <span class="pt-type-name">Homeopathy</span>
-                <span class="pt-type-desc">A natural, holistic approach</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/undiagnosed-pains.jpg" alt="A patient describing their pain to a clinician" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <aside class="pt-note" aria-label="Our clinic">
-          <span class="pt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg></span>
-          <p>The best thing about our clinic is integration of health professionals under one roof, working together to reach your health goals.</p>
-        </aside>
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="pt-cta" aria-labelledby="pt-cta-title">
-          <div class="pt-cta-text">
-            <h3 class="pt-cta-title" id="pt-cta-title">Have a question about your pain?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
+            </div>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

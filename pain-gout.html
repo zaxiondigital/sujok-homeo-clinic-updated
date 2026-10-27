@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
   <link rel="stylesheet" href="gout.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -281,156 +282,38 @@
       </nav>
 
       <!-- ========== Article: Gout ==========
-        Pain Relief version: same content as gout.html, shown with the Pain Relief hero and menu.
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Gout page on sujokhomeoclinic.com (supplied by the client), regrouped under
-        headings with small grammar fixes ("pseudogout", "then", "affected"). The "can spread"
-        warning is the page's own line, shown in the medical-advice style. "Urate nephropathy (also
-        a function of the kidneys)" is reworded to "a kidney condition".
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article gt-article" aria-labelledby="gt-title">
-
-        <!-- Introduction + at a glance -->
-        <section class="gt-intro">
-          <div class="gt-intro-text">
-            <p class="eyebrow">Joint Health</p>
-            <h2 class="gt-title" id="gt-title">Gout</h2>
-            <p class="gt-lead">Commonly characterized by recurrent attacks of acute inflammatory arthritis, gout is a hot and extremely tender swelling of the joint.</p>
-          </div>
-          <aside class="gt-panel" aria-labelledby="gt-glance-title">
-            <h3 class="gt-panel-title" id="gt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-foot"/></svg></span>
-              Gout at a glance
-            </h3>
-            <ul class="gt-checks">
-              <li>Recurrent attacks of acute inflammatory arthritis</li>
-              <li>A hot and extremely tender swelling of the joint</li>
-              <li>Most commonly found at the base of the big toe</li>
-            </ul>
-          </aside>
-        </section>
-
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="gt-section" aria-labelledby="gt-overview-title">
-          <h3 class="gt-h3" id="gt-overview-title">Understanding Gout</h3>
-          <ul class="gt-types">
-            <li>
-              <a class="gt-type" href="#gt-causes">
-                <span class="gt-type-badge" aria-hidden="true">01</span>
-                <span class="gt-type-name">What Causes Gout</span>
-                <span class="gt-type-desc">Uric acid crystals in a joint</span>
-                <svg class="icon icon-sm gt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="gt-type" href="#gt-where">
-                <span class="gt-type-badge" aria-hidden="true">02</span>
-                <span class="gt-type-name">Where Gout Appears</span>
-                <span class="gt-type-desc">From the big toe to other joints</span>
-                <svg class="icon icon-sm gt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="gt-type" href="#gt-forms">
-                <span class="gt-type-badge" aria-hidden="true">03</span>
-                <span class="gt-type-name">Other Forms of Gout</span>
-                <span class="gt-type-desc">Pseudogout and refractory chronic gout</span>
-                <svg class="icon icon-sm gt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Causes -->
-        <section class="gt-section" id="gt-causes" aria-labelledby="gt-causes-title">
-          <h3 class="gt-h3" id="gt-causes-title">What Causes Gout</h3>
-          <div class="gt-row">
-            <div class="gt-copy">
-              <p>Gout is caused by elevated levels of uric acid in the blood, which leads to the deposit of uric acid crystals within a joint. This causes inflammation. Joints will become swollen and can possibly lose function altogether.</p>
-            </div>
-            <aside class="gt-panel" aria-labelledby="gt-how-title">
-              <h4 class="gt-panel-title" id="gt-how-title">How gout develops</h4>
-              <ol class="gt-steps">
-                <li>Uric acid levels in the blood become elevated</li>
-                <li>Uric acid crystals are deposited within a joint</li>
-                <li>This causes inflammation; the joint becomes swollen and can lose function</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Where gout appears -->
-        <section class="gt-section" id="gt-where" aria-labelledby="gt-where-title">
-          <h3 class="gt-h3" id="gt-where-title">Where Gout Appears</h3>
-          <div class="gt-row">
-            <div class="gt-copy">
-              <p>The most common location for gout tends to be at the base of the big toe; however, it may show up in other joints.</p>
-              <p>During early stages, gout will usually occur in only one joint.</p>
-            </div>
-            <aside class="gt-panel" aria-labelledby="gt-joints-title">
-              <h4 class="gt-panel-title" id="gt-joints-title">Other joints it may affect</h4>
-              <ul class="gt-tags">
-                <li>Heels</li>
-                <li>Knees</li>
-                <li>Wrists</li>
-                <li>Fingers</li>
-              </ul>
-              <p class="gt-panel-label">It may also manifest itself as</p>
-              <ul class="gt-tags">
-                <li>Tophi</li>
-                <li>Kidney stones</li>
-                <li>Urate nephropathy (a kidney condition)</li>
-              </ul>
-            </aside>
+          Text: the Gout page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/pain-gout.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Pain Relief</p>
+            <h2 class="ta-title" id="ta-title">Gout</h2>
+            <p>Commonly characterized by recurrent attacks of acute inflammatory arthritis, gout is a hot and extremely tender swelling of the joint.</p>
+            <p>Gout is caused by elevated levels of uric acid in the blood which leads to the deposit of uric acid crystals within a joint. This causes inflammation. Joints will become swollen and can possibly lose function altogether.</p>
+            <p>The most common location for gout tends to be at the base of the big toe, however, it may show up in other joints such as heels, knees, wrists and fingers. It is also possible for gout to manifest itself as tophi, kidney stones, or urate nephropathy (also a function of the kidneys).</p>
+            <p>There is also a less common form of gout caused by the formation of rhomboid crystals of calcium pyrophosphate. This form of gouty arthritis is known as pseudo gout.</p>
+            <p>When uric acid levels and other gout symptoms cannot be successfully controlled, this is referred to as refractory chronic gout (RCG).</p>
+            <p>During early stages gout will usually occur in only one joint, but over time, it can spread to other joints becoming particularly painful and potentially debilitating if not successfully treated.</p>
+            <p>In our clinic we first target the advancement of the disease and then the affected parts are treated.</p>
           </div>
 
-          <!-- Medical-advice note: the page's own "can spread" warning -->
-          <div class="gt-alert" role="note" aria-labelledby="gt-alert-title">
-            <span class="gt-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/pain-gout.jpg" alt="A foot with a swollen big toe resting on a cushion beside an ice pack" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="gt-alert-title" id="gt-alert-title">Gout can spread</h4>
-              <p>Over time, it can spread to other joints, becoming particularly painful and potentially debilitating if not successfully treated.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- Other forms -->
-        <section class="gt-section" id="gt-forms" aria-labelledby="gt-forms-title">
-          <h3 class="gt-h3" id="gt-forms-title">Other Forms of Gout</h3>
-          <div class="gt-row">
-            <div class="gt-copy">
-              <p>There is also a less common form of gout, and gout that cannot be successfully controlled has its own name.</p>
-            </div>
-            <aside class="gt-panel" aria-labelledby="gt-forms-list">
-              <h4 class="gt-panel-title" id="gt-forms-list">Two forms to know</h4>
-              <ol class="gt-steps">
-                <li><strong>Pseudogout:</strong> a less common form of gouty arthritis, caused by the formation of rhomboid crystals of calcium pyrophosphate</li>
-                <li><strong>Refractory chronic gout (RCG):</strong> when uric acid levels and other gout symptoms cannot be successfully controlled</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note from the original page -->
-        <aside class="gt-note" aria-label="Our approach">
-          <span class="gt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>In our clinic, we first target the advancement of the disease, and then the affected parts are treated.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="gt-cta" aria-labelledby="gt-cta-title">
-          <div class="gt-cta-text">
-            <h3 class="gt-cta-title" id="gt-cta-title">Have a question about gout?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

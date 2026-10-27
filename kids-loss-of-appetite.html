@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="kids-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -265,147 +266,41 @@
       </nav>
 
       <!-- ========== Article: Loss of Appetite ==========
-        Kids Health topic template: hero, Kids Health menu and layout as on kids-health.html; styles
-        in kids-topics.css. Text: the Loss of Appetite page on sujokhomeoclinic.com (supplied by the
-        client), regrouped under headings. Changes flagged to the client:
-        - "…can be easily taken care by homeopathic treatment… All those could be efficiently cured
-          by our professional team" is removed/softened (no cure claim).
-        - The acute-phase protein sentence is corrected: it is the proteins' concentration in blood
-          plasma that rises or falls, not "the concentration of plasma".
-        - The anorexia nervosa warning is the page's own line, shown in the medical-advice style.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article kt-article" aria-labelledby="kt-title">
-
-        <section class="kt-intro">
-          <div class="kt-intro-text">
+          Text: the Loss of Appetite page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/kids-loss-of-appetite.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Kids Health</p>
-            <h2 class="kt-title" id="kt-title">Loss of Appetite</h2>
-            <p class="kt-lead">Anorexia, not to be used interchangeably with the condition anorexia nervosa, is the medical term for a decreased sensation of appetite.</p>
-            <p class="kt-copy">A number of reasons could be the cause of this loss of appetite, such as anorexia as a product of infection.</p>
-          </div>
-          <aside class="kt-panel" aria-labelledby="kt-glance-title">
-            <h3 class="kt-panel-title" id="kt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-bowl"/></svg></span>
-              Two different terms
-            </h3>
-            <ul class="kt-checks">
-              <li><strong>Anorexia:</strong> the medical term for a decreased sensation of appetite</li>
-              <li><strong>Anorexia nervosa:</strong> an eating disorder involving severe restriction of food intake</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section class="kt-section" aria-labelledby="kt-overview-title">
-          <h3 class="kt-h3" id="kt-overview-title">Understanding Loss of Appetite</h3>
-          <ul class="kt-types">
-            <li>
-              <a class="kt-type" href="#kt-infection">
-                <span class="kt-type-badge" aria-hidden="true">01</span>
-                <span class="kt-type-name">Appetite and Infection</span>
-                <span class="kt-type-desc">How the body’s response can reduce appetite</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-nervosa">
-                <span class="kt-type-badge" aria-hidden="true">02</span>
-                <span class="kt-type-name">Anorexia Nervosa</span>
-                <span class="kt-type-desc">An eating disorder</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-children">
-                <span class="kt-type-badge" aria-hidden="true">03</span>
-                <span class="kt-type-name">Appetite in Children</span>
-                <span class="kt-type-desc">Why it’s important to catch symptoms early</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section class="kt-section" id="kt-infection" aria-labelledby="kt-infection-title">
-          <h3 class="kt-h3" id="kt-infection-title">Appetite and Infection</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Acute-phase proteins are a class of proteins whose concentrations in blood plasma increase or decrease in response to inflammation in the body. This response is known as the acute-phase reaction, or APR.</p>
-              <p>When the onset of anorexia is triggered by infection, APR may promote the production of pro-inflammatory cytokines, small protein molecules that promote systemic inflammation. In turn, these may have an indirect effect on appetite through heightened production of leptin from fat stores. These inflammatory cytokines may also signal the central nervous system more directly: through the blood-brain barrier, via specific organs, or by triggering production of eicosanoids in the endothelial cells in brain blood vessels.</p>
-              <p>Anorexia is also a common side effect of certain drugs and medications, and of course there are a variety of other reasons that may result in decreased appetite.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-infection-steps">
-              <h4 class="kt-panel-title" id="kt-infection-steps">How infection can reduce appetite</h4>
-              <ol class="kt-steps">
-                <li>Infection triggers the acute-phase reaction (APR)</li>
-                <li>APR may promote pro-inflammatory cytokines</li>
-                <li>These affect appetite, through leptin or by signalling the central nervous system</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-nervosa" aria-labelledby="kt-nervosa-title">
-          <h3 class="kt-h3" id="kt-nervosa-title">Anorexia Nervosa</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Anorexia nervosa is an eating disorder identified as a severe restriction of food intake due to an irrational fear of gaining weight, and a distorted self-body image. This disorder typically involves excessive weight loss and may cause metabolic and hormonal disorders, and when severe enough, may lead to death.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-nervosa-facts">
-              <h4 class="kt-panel-title" id="kt-nervosa-facts">Key facts</h4>
-              <ul class="kt-checks">
-                <li>A severe restriction of food intake</li>
-                <li>An irrational fear of gaining weight and a distorted self-body image</li>
-                <li>Onset happens most often in adolescence</li>
-                <li>More prevalent among females than males</li>
-              </ul>
-            </aside>
+            <h2 class="ta-title" id="ta-title">Loss of Appetite</h2>
+            <p>Anorexia, not to be used interchangeably with the condition anorexia nervosa, is the medical term for a decreased sensation of appetite. A number of reasons could be the cause of this loss of appetite, such as anorexia as a product of infection.</p>
+            <p>Acute-phase proteins are a class of proteins in which the concentration of plasma increases or decreases in response to inflammation in the body. This response - the influx or decrease of plasma - is known as the acute-phase reaction, aka APR.</p>
+            <p>When the onset of anorexia is triggered by infection, APR may promote the production of pro-inflammatory cytokines, small protein molecules that promote systemic inflammation. In turn, these may have an indirect effect on appetite through heightened production of leptin from fat stores. As well, these inflammatory cytokines may also signal the central nervous system more directly through the blood-brain barrier, via specific organs, or by triggering production of eicosanoids in the endothelial cells in brain blood vessels.</p>
+            <p>Anorexia is also a common side effect of certain drugs and medications that can be easily taken care of by homeopathic treatment and of course, there are a variety of reasons, that may result in decreased appetite. All those could be efficiently cured by our professional team.</p>
+            <h3 class="ta-h3">Anorexia Nervosa</h3>
+            <p>Anorexia nervosa is an eating disorder identified as a severe restriction of food intake due to an irrational fear of gaining weight, and a distorted self-body image. This disorder typically involves excessive weight loss and may cause metabolic and hormonal disorders, and when severe enough, may lead to death.</p>
+            <p>The onset of anorexia nervosa happens most often in adolescence and is more prevalent among females than males.</p>
+            <p>If you fear your child may be suffering from anorexia nervosa, it is important to seek medical help immediately, as your child may require medical treatment, both psychological and physical.</p>
+            <p>In general, various factors could affect appetite in a child including reasons that are genetic, environmental, physical or psychological. If left untreated, a limited appetite could lead to eating habits that cause malnutrition or eating disorders such as anorexia nervosa, mentioned above.</p>
+            <p>It is important to catch symptoms early on as to prevent poor eating habits from becoming deeply entrenched and thereby more difficult to treat. Natural solutions, such as homeopathy, are available.</p>
           </div>
 
-          <div class="kt-alert" role="note" aria-labelledby="kt-alert-title">
-            <span class="kt-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/kids-loss-of-appetite.jpg" alt="A young boy pushing away a full plate of food" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="kt-alert-title" id="kt-alert-title">Seek medical help immediately</h4>
-              <p>If you fear your child may be suffering from anorexia nervosa, it is important to seek medical help immediately, as your child may require medical treatment, both psychological and physical.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-children" aria-labelledby="kt-children-title">
-          <h3 class="kt-h3" id="kt-children-title">Appetite in Children</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>If left untreated, a limited appetite could lead to eating habits that cause malnutrition, or eating disorders such as anorexia nervosa, mentioned above.</p>
-              <p>It is important to catch symptoms early on, to prevent poor eating habits from becoming deeply entrenched and thereby more difficult to treat.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-factors-title">
-              <h4 class="kt-panel-title" id="kt-factors-title">Factors that could affect a child’s appetite</h4>
-              <ul class="kt-tags">
-                <li>Genetic</li>
-                <li>Environmental</li>
-                <li>Physical</li>
-                <li>Psychological</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <aside class="kt-note" aria-label="Homeopathic care">
-          <span class="kt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Natural solutions, such as homeopathy, are available.</p>
-        </aside>
-
-        <section class="kt-cta" aria-labelledby="kt-cta-title">
-          <div class="kt-cta-text">
-            <h3 class="kt-cta-title" id="kt-cta-title">Have a question about your child’s health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

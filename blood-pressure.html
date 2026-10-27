@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="blood-pressure.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,188 +264,66 @@
       </nav>
 
       <!-- ========== Article: Blood Pressure ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Blood Pressure page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes ("systemic", "mmHg"). One correction, flagged to
-        the client: the supplied "desirable" reading of "120/180 mmHG" is a typo for 120/80 mmHg.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article bp-article" aria-labelledby="bp-title">
-
-        <!-- Introduction + how it is measured -->
-        <section class="bp-intro">
-          <div class="bp-intro-text">
-            <p class="eyebrow">Heart Health</p>
-            <h2 class="bp-title" id="bp-title">Blood Pressure</h2>
-            <p class="bp-lead">Blood pressure is the arterial pressure of systemic circulation. In other words, it is the pressure exerted by circulating blood on the walls of blood vessels due to the pumping of the heart.</p>
-            <p class="bp-copy">The rate of blood flow depends on the level of resistance blood vessels present to the flow.</p>
-          </div>
-          <aside class="bp-panel" aria-labelledby="bp-measure-title">
-            <h3 class="bp-panel-title" id="bp-measure-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-pulse"/></svg></span>
-              How it is measured
-            </h3>
-            <ul class="bp-checks">
-              <li>Expressed as systolic (maximum) pressure over diastolic (minimum) pressure</li>
-              <li>Measured in the brachial artery, the major artery found in the upper arm</li>
-              <li>Measured in millimetres of mercury (mmHg)</li>
+          Text: the Blood Pressure page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/blood-pressure.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Blood Pressure</h2>
+            <p>Blood pressure is the arterial pressure of systemic circulation. In other words, it is the pressure exerted by circulating blood on the walls of blood vessels due to the pumping of the heart. The rate of blood flow depends on the level of resistance blood vessels present to the flow.</p>
+            <p>A person’s blood pressure is most often expressed as systolic (maximum) pressure over diastolic (minimum) pressure and refers to the systemic arterial pressure measured in the brachial artery which is the major artery found in the upper arm. Blood pressure is measured in millimeters of mercury (mmHg).</p>
+            <p>A reading of 120/80 mmHg has become widely regarded as a "desirable" blood pressure reading.</p>
+            <p>High blood pressure, referred to as hypertension, is generally anything above 140/90 mmHg. Low blood pressure, hypotension, is generally any reading below 90/60 mmHg. The risk of cardiovascular disease increases significantly in someone who has high blood pressure.</p>
+            <p>Various factors that can affect blood pressure include:</p>
+            <ul class="ta-list">
+              <li>age</li>
+              <li>weight</li>
+              <li>height</li>
+              <li>gender</li>
+              <li>diet</li>
+              <li>levels of physical activity</li>
+              <li>emotional health (such as stress)</li>
+              <li>sleep</li>
+              <li>digestion</li>
+              <li>drug or alcohol intake</li>
+              <li>existing medical conditions</li>
+              <li>overall health</li>
             </ul>
-          </aside>
-        </section>
+            <p>As well, it should also be taken into account that normal blood pressure values fluctuate throughout a 24-hour cycle with the highest readings during the afternoon and the lowest at night.</p>
+            <p>Other physical factors that affect blood arterial pressure include:</p>
+            <h3 class="ta-h3">Blood volume (the amount of blood present in the body)</h3>
+            <ul class="ta-list">
+              <li>The more blood the higher the rate of blood return to the heart and thus the resulting cardiac output.</li>
+            </ul>
+            <h3 class="ta-h3">Resistance</h3>
+            <ul class="ta-list">
+              <li>Referring to the resistance of blood vessels, the higher the resistance, the slower the blood flow and the higher the arterial pressure is upstream. Resistance factors in vessel radius (larger radius = lower resistance), vessel length (longer length = higher resistance), blood viscosity and smoothness of the blood vessel walls. (Smoothness is diminished by buildup of fatty deposits on arterial walls.)</li>
+            </ul>
+            <h3 class="ta-h3">Viscosity</h3>
+            <ul class="ta-list">
+              <li>This refers to the thickness of the blood. If the thickness of the fluid increases, arterial pressure increases as well. If blood becomes too thick, the risk of experiencing a blood clot is increased. As well, there are certain medical conditions that affect viscosity, the most common one being anemia (low red blood cell concentration) which reduces viscosity.</li>
+            </ul>
+            <p>In general, as adults age, systolic pressure tends to rise while diastolic pressure tends to fall. As well, elderly tend to have above "normal" blood pressure as a result of reduced flexibility of the arteries. However, an abnormal change in blood pressure is very often an indication of an issue affecting the heart’s output, blood vessels’ resistance, or both.</p>
+            <p>Homeopathic approach to any disease is to rule out the cause, treatment is given accordingly.</p>
+          </div>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="bp-section" aria-labelledby="bp-overview-title">
-          <h3 class="bp-h3" id="bp-overview-title">Understanding Blood Pressure</h3>
-          <ul class="bp-types">
-            <li>
-              <a class="bp-type" href="#bp-readings">
-                <span class="bp-type-badge" aria-hidden="true">01</span>
-                <span class="bp-type-name">Blood Pressure Readings</span>
-                <span class="bp-type-desc">Desirable, high and low</span>
-                <svg class="icon icon-sm bp-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="bp-type" href="#bp-factors">
-                <span class="bp-type-badge" aria-hidden="true">02</span>
-                <span class="bp-type-name">What Affects It</span>
-                <span class="bp-type-desc">From age and diet to sleep and stress</span>
-                <svg class="icon icon-sm bp-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="bp-type" href="#bp-physical">
-                <span class="bp-type-badge" aria-hidden="true">03</span>
-                <span class="bp-type-name">Physical Factors</span>
-                <span class="bp-type-desc">Blood volume, resistance and viscosity</span>
-                <svg class="icon icon-sm bp-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/blood-pressure.jpg" alt="A blood pressure cuff on an arm with a digital monitor on the table" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Readings -->
-        <section class="bp-section" id="bp-readings" aria-labelledby="bp-readings-title">
-          <h3 class="bp-h3" id="bp-readings-title">Blood Pressure Readings</h3>
-          <div class="bp-row">
-            <div class="bp-copy">
-              <p>A reading of 120/80 mmHg has become widely regarded as a “desirable” blood pressure reading.</p>
-              <p>High blood pressure, referred to as hypertension, is generally anything above 140/90 mmHg. Low blood pressure, hypotension, is generally any reading below 90/60 mmHg.</p>
-              <p>The risk of cardiovascular disease increases significantly in someone who has high blood pressure.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="bp-panel" aria-labelledby="bp-scale-title">
-              <h4 class="bp-panel-title" id="bp-scale-title">Readings at a glance</h4>
-              <dl class="bp-readings">
-                <div class="bp-reading bp-reading--ok">
-                  <dt>Desirable</dt>
-                  <dd>120/80 mmHg</dd>
-                </div>
-                <div class="bp-reading bp-reading--high">
-                  <dt>High (hypertension)</dt>
-                  <dd>above 140/90 mmHg</dd>
-                </div>
-                <div class="bp-reading bp-reading--low">
-                  <dt>Low (hypotension)</dt>
-                  <dd>below 90/60 mmHg</dd>
-                </div>
-              </dl>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Factors -->
-        <section class="bp-section" id="bp-factors" aria-labelledby="bp-factors-title">
-          <h3 class="bp-h3" id="bp-factors-title">What Affects Blood Pressure</h3>
-          <div class="bp-row">
-            <div class="bp-copy">
-              <p>Various factors can affect blood pressure.</p>
-              <p>As well, it should be taken into account that normal blood pressure values fluctuate throughout a 24-hour cycle, with the highest readings during the afternoon and the lowest at night.</p>
-            </div>
-            <aside class="bp-panel" aria-labelledby="bp-list-title">
-              <h4 class="bp-panel-title" id="bp-list-title">Factors that can affect blood pressure</h4>
-              <ul class="bp-tags">
-                <li>Age</li>
-                <li>Weight</li>
-                <li>Height</li>
-                <li>Gender</li>
-                <li>Diet</li>
-                <li>Levels of physical activity</li>
-                <li>Emotional health (such as stress)</li>
-                <li>Sleep</li>
-                <li>Digestion</li>
-                <li>Drug or alcohol intake</li>
-                <li>Existing medical conditions</li>
-                <li>Overall health</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Physical factors -->
-        <section class="bp-section" id="bp-physical" aria-labelledby="bp-physical-title">
-          <h3 class="bp-h3" id="bp-physical-title">Physical Factors</h3>
-          <p class="bp-copy">Other physical factors that affect arterial blood pressure include:</p>
-          <ul class="bp-physical">
-            <li class="bp-panel">
-              <h4 class="bp-panel-title"><span class="bp-physical-num" aria-hidden="true">01</span>Blood volume</h4>
-              <p>The amount of blood present in the body. The more blood, the higher the rate of blood return to the heart, and thus the resulting cardiac output.</p>
-            </li>
-            <li class="bp-panel">
-              <h4 class="bp-panel-title"><span class="bp-physical-num" aria-hidden="true">02</span>Resistance</h4>
-              <p>Referring to the resistance of blood vessels: the higher the resistance, the slower the blood flow and the higher the arterial pressure is upstream. Resistance factors in:</p>
-              <ul class="bp-list">
-                <li>Vessel radius (larger radius = lower resistance)</li>
-                <li>Vessel length (longer length = higher resistance)</li>
-                <li>Blood viscosity</li>
-                <li>Smoothness of the blood vessel walls (smoothness is diminished by buildup of fatty deposits on arterial walls)</li>
-              </ul>
-            </li>
-            <li class="bp-panel">
-              <h4 class="bp-panel-title"><span class="bp-physical-num" aria-hidden="true">03</span>Viscosity</h4>
-              <p>This refers to the thickness of the blood. If the thickness of the fluid increases, arterial pressure increases as well. If blood becomes too thick, the risk of experiencing a blood clot is increased.</p>
-              <p>As well, there are certain medical conditions that affect viscosity, the most common one being anemia (low red blood cell concentration), which reduces viscosity.</p>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Age -->
-        <section class="bp-section" id="bp-age" aria-labelledby="bp-age-title">
-          <h3 class="bp-h3" id="bp-age-title">Blood Pressure and Age</h3>
-          <div class="bp-row">
-            <div class="bp-copy">
-              <p>In general, as adults age, systolic pressure tends to rise while diastolic pressure tends to fall. As well, the elderly tend to have above “normal” blood pressure as a result of reduced flexibility of the arteries.</p>
-              <p>However, an abnormal change in blood pressure is very often an indication of an issue affecting the heart’s output, the blood vessels’ resistance, or both.</p>
-            </div>
-            <aside class="bp-panel" aria-labelledby="bp-age-panel">
-              <h4 class="bp-panel-title" id="bp-age-panel">As adults age</h4>
-              <ul class="bp-checks">
-                <li>Systolic pressure tends to rise</li>
-                <li>Diastolic pressure tends to fall</li>
-                <li>Reduced flexibility of the arteries can raise blood pressure above “normal”</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note from the original page -->
-        <aside class="bp-note" aria-label="Homeopathic approach">
-          <span class="bp-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>The homeopathic approach to any disease is to rule out the cause, and treatment is given accordingly.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="bp-cta" aria-labelledby="bp-cta-title">
-          <div class="bp-cta-text">
-            <h3 class="bp-cta-title" id="bp-cta-title">Have a question about your blood pressure?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

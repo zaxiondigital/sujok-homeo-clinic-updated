@@ -1,0 +1,80 @@
+/* =========================================================
+   Sujok Homeo Clinic — Homeopathy topic article (live-site text)
+   Loaded after homeopathy.css on homeopathy.html and the 17 Homeopathy topic pages. The hero,
+   Health Topics menu and page layout come from homeopathy.css; this file styles the article:
+   the topic text on the left and its image on the right. Every rule is scoped to .ta-article.
+   ========================================================= */
+
+.ta-article {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+  gap: clamp(24px, 3vw, 48px); align-items: start;
+}
+
+/* ---------- Text ---------- */
+.ta-text .eyebrow { margin-bottom: 12px; }
+.ta-title { margin-bottom: 20px; font-size: clamp(2rem, 3.2vw, 2.8rem); line-height: 1.1; color: var(--ink-900); }
+.ta-text p { line-height: 1.75; color: var(--ink-500); }
+.ta-text p + p, .ta-text ul + p { margin-top: 14px; }
+.ta-h3 {
+  display: flex; align-items: center; gap: 14px; margin: 32px 0 12px;
+  font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.25; color: var(--ink-900);
+}
+.ta-h3::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.ta-list { display: grid; gap: 10px; margin-top: 14px; padding-left: 0; list-style: none; }
+.ta-list li { position: relative; padding-left: 22px; line-height: 1.7; color: var(--ink-500); }
+.ta-list li::before {
+  content: ""; position: absolute; left: 4px; top: .7em; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--text-green);
+}
+.ta-h3 + .ta-list { margin-top: 0; }
+.ta-list--num { counter-reset: ta-step; }
+.ta-list--num li { counter-increment: ta-step; padding-left: 34px; }
+.ta-list--num li::before {
+  content: counter(ta-step); top: .15em; left: 0; width: 24px; height: 24px;
+  display: grid; place-items: center; font-size: .8rem; font-weight: 700; color: var(--green-800); background: #eef5ec;
+}
+.ta-video { position: relative; margin-top: 24px; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #0d1f16; }
+.ta-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.ta-video + .ta-h3 { margin-top: 32px; }
+.ta-photo.ta-photo--inline { margin-top: 20px; aspect-ratio: 16 / 9; }
+.ta-inline-img { display: block; width: 100%; height: auto; margin-top: 20px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; }
+.ta-note {
+  margin-top: 24px; padding: 14px 18px; border-radius: 12px;
+  background: #fbeeec; color: #8a2d26 !important; font-weight: 500;
+}
+
+/* ---------- Image (placeholder until the client supplies the photo) ---------- */
+/* The figure stretches to the text's height and the photo sticks inside it, so it stops scrolling
+   at the end of the text instead of sliding over the booking prompt below */
+.ta-media { align-self: stretch; }
+.ta-media > * { position: sticky; top: calc(var(--header-h) + 24px); }
+.ta-photo {
+  display: grid; place-items: center; align-content: center; gap: 10px; aspect-ratio: 4 / 5;
+  padding: 24px; text-align: center; border-radius: 18px;
+  background: #f4f8f2; border: 2px dashed #c9dcc3; color: var(--green-800);
+}
+.ta-photo .icon { width: 36px; height: 36px; stroke-width: 1.4; }
+.ta-photo span { font-size: .95rem; font-weight: 600; }
+.ta-photo small { font-size: .85rem; color: var(--ink-500); }
+.ta-media img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; }
+
+/* ---------- Booking prompt (links to the booking form on the homepage) ---------- */
+.ta-cta {
+  grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px 24px; margin-top: 12px; padding: clamp(20px, 3vw, 28px) clamp(20px, 3vw, 32px);
+  background: #eef5ec; border-radius: 18px;
+}
+.ta-cta-title { margin-bottom: 4px; font-size: clamp(1.2rem, 1.8vw, 1.4rem); line-height: 1.25; color: var(--ink-900); }
+.ta-cta p { color: var(--ink-700); }
+.ta-cta p a { font-weight: 600; color: var(--green-800); white-space: nowrap; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .ta-article { grid-template-columns: minmax(0, 1fr); }
+  .ta-media { order: -1; }
+  .ta-media > * { position: static; }
+  .ta-photo, .ta-media img { aspect-ratio: 16 / 10; }
+}
+@media (max-width: 640px) {
+  .ta-cta .btn { width: 100%; justify-content: center; }
+}

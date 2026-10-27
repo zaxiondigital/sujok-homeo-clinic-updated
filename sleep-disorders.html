@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="sleep-disorders.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,142 +264,46 @@
       </nav>
 
       <!-- ========== Article: Sleep Disorders ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Sleep Disorders page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes. Changes flagged to the client:
-        - "Alternative methods of treatment, such as homeopathy, can offer relief…" is softened
-          (no relief claim), as on the other topic pages.
-        - "Age is not an excuse in homeopathy" is reworded to "age is no barrier to care".
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article sd-article" aria-labelledby="sd-title">
-
-        <!-- Introduction + common sleep disorders -->
-        <section class="sd-intro">
-          <div class="sd-intro-text">
-            <p class="eyebrow">Sleep Health</p>
-            <h2 class="sd-title" id="sd-title">Sleep Disorders</h2>
-            <p class="sd-lead">Sleep disorders such as insomnia and sleep apnoea affect millions of people worldwide every year.</p>
+          Text: the Sleep Disorders page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/sleep-disorders.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Sleep Disorders</h2>
+            <p>Sleep disorders such as insomnia and sleep apnoea affect millions of people worldwide every year.</p>
+            <h3 class="ta-h3">Insomnia</h3>
+            <p>Insomnia is a sleep disorder of which an individual is unable to fall asleep or stay asleep as long as is desired resulting in poor quality of sleep. Sometimes referred to as sleeplessness, insomnia may often accompany other medical or psychiatric disorders. Individuals suffering from insomnia will often experience functional impairment during their waking hours.</p>
+            <p>There are several degrees of insomnia, and within there, three different types of insomnia have been categorized: transient; acute; chronic.</p>
+            <p>Transient insomnia lasts anywhere from days to weeks. Transient insomnia may be likened to sleep deprivation.</p>
+            <p>Acute insomnia is the inability to gain consistent level of sleep for a period of three weeks to six months.</p>
+            <p>Chronic insomnia will last for years at a time. People who suffer from chronic insomnia are at an increased risk of experiencing mental fatigue and hallucinations.</p>
+            <p>All types of insomnia may be brought on by an already existing medical disorder, changes in sleep environment, changes to the hours during which one sleeps, severe depression, or even stress.</p>
+            <p>Insomnia more commonly affects women than men, and though it is not biased to age, individuals over the age of 60 are at higher risk. Age is not an excuse in homeopathy.</p>
+            <h3 class="ta-h3">Sleep Apnoea</h3>
+            <p>Sleep apnoea is characterized by abnormal pauses in breathing or abnormally low breathing during sleep. Apnoea (every pause in breath) may last from seconds to minutes and typically happen five to thirty times or more per hour.</p>
+            <p>There are three types of sleep apnoea: central (CSA); obstructive (OSA); complex or mixed sleep apnoea.</p>
+            <p>When CSA is experienced, breath is interrupted by a lack of respiratory effort. OSA is characterized by breathing interrupted by a physical block to airflow, snoring is quite common.</p>
+            <p>Complex sleep apnoea is a combination of both CSA and OSA.</p>
+            <p>Alternative methods of treatment, such as homeopathy, can offer relief for those dealing with sleeping disorders.</p>
           </div>
-          <aside class="sd-panel" aria-labelledby="sd-common-title">
-            <h3 class="sd-panel-title" id="sd-common-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-moon"/></svg></span>
-              Common sleep disorders
-            </h3>
-            <ul class="sd-checks">
-              <li><strong>Insomnia:</strong> being unable to fall asleep or stay asleep as long as is desired</li>
-              <li><strong>Sleep apnoea:</strong> abnormal pauses in breathing, or abnormally low breathing, during sleep</li>
-            </ul>
-          </aside>
-        </section>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="sd-section" aria-labelledby="sd-overview-title">
-          <h3 class="sd-h3" id="sd-overview-title">Understanding Sleep Disorders</h3>
-          <ul class="sd-types">
-            <li>
-              <a class="sd-type" href="#sd-insomnia">
-                <span class="sd-type-badge" aria-hidden="true">01</span>
-                <span class="sd-type-name">Insomnia</span>
-                <span class="sd-type-desc">Difficulty falling or staying asleep</span>
-                <svg class="icon icon-sm sd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="sd-type" href="#sd-insomnia-types">
-                <span class="sd-type-badge" aria-hidden="true">02</span>
-                <span class="sd-type-name">Types of Insomnia</span>
-                <span class="sd-type-desc">Transient, acute and chronic</span>
-                <svg class="icon icon-sm sd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="sd-type" href="#sd-apnoea">
-                <span class="sd-type-badge" aria-hidden="true">03</span>
-                <span class="sd-type-name">Sleep Apnoea</span>
-                <span class="sd-type-desc">Pauses in breathing during sleep</span>
-                <svg class="icon icon-sm sd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/sleep-disorders.jpg" alt="A woman lying awake in bed at night beside an alarm clock" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Insomnia -->
-        <section class="sd-section" id="sd-insomnia" aria-labelledby="sd-insomnia-title">
-          <h3 class="sd-h3" id="sd-insomnia-title">Insomnia</h3>
-          <div class="sd-row">
-            <div class="sd-copy">
-              <p>Insomnia is a sleep disorder in which an individual is unable to fall asleep or stay asleep as long as is desired, resulting in poor quality of sleep. Sometimes referred to as sleeplessness, insomnia may often accompany other medical or psychiatric disorders. Individuals suffering from insomnia will often experience functional impairment during their waking hours.</p>
-              <p>Insomnia more commonly affects women than men, and though it can affect people of any age, individuals over the age of 60 are at higher risk. In homeopathy, age is no barrier to care.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="sd-panel" aria-labelledby="sd-causes-title">
-              <h4 class="sd-panel-title" id="sd-causes-title">All types of insomnia may be brought on by</h4>
-              <ul class="sd-tags">
-                <li>An existing medical disorder</li>
-                <li>Changes in sleep environment</li>
-                <li>Changes to the hours during which one sleeps</li>
-                <li>Severe depression</li>
-                <li>Stress</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Types of insomnia -->
-        <section class="sd-section" id="sd-insomnia-types" aria-labelledby="sd-insomnia-types-title">
-          <h3 class="sd-h3" id="sd-insomnia-types-title">Types of Insomnia</h3>
-          <div class="sd-row">
-            <div class="sd-copy">
-              <p>There are several degrees of insomnia, and within these, three different types of insomnia have been categorized: transient, acute and chronic.</p>
-            </div>
-            <aside class="sd-panel" aria-labelledby="sd-durations-title">
-              <h4 class="sd-panel-title" id="sd-durations-title">How long each type lasts</h4>
-              <ol class="sd-steps">
-                <li><strong>Transient:</strong> lasts anywhere from days to weeks, and may be likened to sleep deprivation</li>
-                <li><strong>Acute:</strong> the inability to gain a consistent level of sleep for a period of three weeks to six months</li>
-                <li><strong>Chronic:</strong> lasts for years at a time; people who suffer from it are at an increased risk of experiencing mental fatigue and hallucinations</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Sleep apnoea -->
-        <section class="sd-section" id="sd-apnoea" aria-labelledby="sd-apnoea-title">
-          <h3 class="sd-h3" id="sd-apnoea-title">Sleep Apnoea</h3>
-          <div class="sd-row">
-            <div class="sd-copy">
-              <p>Sleep apnoea is characterized by abnormal pauses in breathing or abnormally low breathing during sleep. Each apnoea (pause in breath) may last from seconds to minutes, and they typically happen five to thirty times or more per hour.</p>
-            </div>
-            <aside class="sd-panel" aria-labelledby="sd-apnoea-types-title">
-              <h4 class="sd-panel-title" id="sd-apnoea-types-title">Three types of sleep apnoea</h4>
-              <ol class="sd-steps">
-                <li><strong>Central (CSA):</strong> breath is interrupted by a lack of respiratory effort</li>
-                <li><strong>Obstructive (OSA):</strong> breathing is interrupted by a physical block to airflow; snoring is quite common</li>
-                <li><strong>Complex or mixed:</strong> a combination of both CSA and OSA</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="sd-note" aria-label="Homeopathic care">
-          <span class="sd-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Alternative methods, such as homeopathy, may be considered as part of care for those dealing with sleeping disorders.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="sd-cta" aria-labelledby="sd-cta-title">
-          <div class="sd-cta-text">
-            <h3 class="sd-cta-title" id="sd-cta-title">Having trouble sleeping?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

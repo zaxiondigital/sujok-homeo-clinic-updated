@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="male-disorders.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,142 +264,36 @@
       </nav>
 
       <!-- ========== Article: Male Disorders ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Male Disorders page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes. Changes flagged to the client:
-        - The opening claim ("homeopathic treatment is available to treat such ailments providing
-          you a natural means to regain peace of mind…") is softened.
-        - "Homeopathic treatment can help in that age group as well" is softened.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article md-article" aria-labelledby="md-title">
-
-        <!-- Introduction + at a glance -->
-        <section class="md-intro">
-          <div class="md-intro-text">
-            <p class="eyebrow">Men’s Health</p>
-            <h2 class="md-title" id="md-title">Male Disorders</h2>
-            <p class="md-lead">Should you experience difficulty with areas such as erectile dysfunction, homeopathic care is available as a natural approach that may be considered as part of your care.</p>
-            <p class="md-copy">Erectile dysfunction is a sexual dysfunction characterized as the inability to develop or maintain a penile erection during sexual performance.</p>
+          Text: the Male Disorders page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/male-disorders.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Male Disorders</h2>
+            <p>Should you experience difficulty with areas such as erectile dysfunction, homeopathic treatment is available to treat such ailments providing you a natural means to regain peace of mind and the ability to comfortably enjoy all aspects of your life.</p>
+            <p>Erectile dysfunction is a sexual dysfunction characterized as the inability to develop or maintain a penile erection during sexual performance.</p>
+            <p>An erection is the hydraulic effect of blood entering and being retained in sponge-like bodies within the penis. This process is initiated as a result of sexual arousal after the brain transmits signals from the brain to nerves in the penis.</p>
+            <p>Causes of erectile dysfunction may be due to drug use (anti-depressants and nicotine), hormonal insufficiencies, neurogenic disorders, cavernosal disorders, psychological factors (anxiety, stress, and mental incapacities), diseases (diabetes, multiple sclerosis), kidney failure, or it could be medically caused such as by surgery.</p>
+            <p>Age is also a major factor for many men. The chances of erectile dysfunction is four times higher in men aged 60 and over. Homeopathic treatment can help in that age group as well.</p>
           </div>
-          <aside class="md-panel" aria-labelledby="md-glance-title">
-            <h3 class="md-panel-title" id="md-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-male"/></svg></span>
-              Erectile dysfunction at a glance
-            </h3>
-            <ul class="md-checks">
-              <li>The inability to develop or maintain an erection during sexual performance</li>
-              <li>Many possible causes, from drug use to disease</li>
-              <li>Four times more likely in men aged 60 and over</li>
-            </ul>
-          </aside>
-        </section>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="md-section" aria-labelledby="md-overview-title">
-          <h3 class="md-h3" id="md-overview-title">Understanding Erectile Dysfunction</h3>
-          <ul class="md-types">
-            <li>
-              <a class="md-type" href="#md-how">
-                <span class="md-type-badge" aria-hidden="true">01</span>
-                <span class="md-type-name">How an Erection Happens</span>
-                <span class="md-type-desc">Arousal, nerve signals and blood flow</span>
-                <svg class="icon icon-sm md-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="md-type" href="#md-causes">
-                <span class="md-type-badge" aria-hidden="true">02</span>
-                <span class="md-type-name">Possible Causes</span>
-                <span class="md-type-desc">Physical, psychological and medical</span>
-                <svg class="icon icon-sm md-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="md-type" href="#md-age">
-                <span class="md-type-badge" aria-hidden="true">03</span>
-                <span class="md-type-name">Age as a Factor</span>
-                <span class="md-type-desc">A major factor for many men</span>
-                <svg class="icon icon-sm md-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/male-disorders.jpg" alt="A middle-aged man sitting thoughtfully on the edge of a bed" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- How an erection happens -->
-        <section class="md-section" id="md-how" aria-labelledby="md-how-title">
-          <h3 class="md-h3" id="md-how-title">How an Erection Happens</h3>
-          <div class="md-row">
-            <div class="md-copy">
-              <p>An erection is the hydraulic effect of blood entering and being retained in sponge-like bodies within the penis. This process is initiated as a result of sexual arousal, after the brain transmits signals to nerves in the penis.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="md-panel" aria-labelledby="md-steps-title">
-              <h4 class="md-panel-title" id="md-steps-title">The process</h4>
-              <ol class="md-steps">
-                <li>Sexual arousal</li>
-                <li>The brain transmits signals to nerves in the penis</li>
-                <li>Blood enters and is retained in sponge-like bodies within the penis</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Causes -->
-        <section class="md-section" id="md-causes" aria-labelledby="md-causes-title">
-          <h3 class="md-h3" id="md-causes-title">Possible Causes</h3>
-          <div class="md-row">
-            <div class="md-copy">
-              <p>Causes of erectile dysfunction may be physical, psychological or medical, from drug use and hormonal insufficiencies to diseases, kidney failure, or medical causes such as surgery.</p>
-            </div>
-            <aside class="md-panel" aria-labelledby="md-causes-list-title">
-              <h4 class="md-panel-title" id="md-causes-list-title">Causes may include</h4>
-              <ul class="md-tags">
-                <li>Drug use (anti-depressants and nicotine)</li>
-                <li>Hormonal insufficiencies</li>
-                <li>Neurogenic disorders</li>
-                <li>Cavernosal disorders</li>
-                <li>Psychological factors (anxiety, stress and mental incapacities)</li>
-                <li>Diseases (diabetes, multiple sclerosis)</li>
-                <li>Kidney failure</li>
-                <li>Medical causes, such as surgery</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Age -->
-        <section class="md-section" id="md-age" aria-labelledby="md-age-title">
-          <h3 class="md-h3" id="md-age-title">Age as a Factor</h3>
-          <div class="md-row">
-            <div class="md-copy">
-              <p>Age is also a major factor for many men. The chances of erectile dysfunction are four times higher in men aged 60 and over.</p>
-            </div>
-            <aside class="md-panel md-stat" aria-label="Erectile dysfunction and age">
-              <p class="md-stat-number">4×</p>
-              <p class="md-stat-text">higher chance of erectile dysfunction in men aged 60 and over</p>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="md-note" aria-label="Homeopathic care">
-          <span class="md-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Homeopathic care is available for men in this age group as well.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="md-cta" aria-labelledby="md-cta-title">
-          <div class="md-cta-text">
-            <h3 class="md-cta-title" id="md-cta-title">Have a question about men’s health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="kidney-disorders.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -264,160 +265,39 @@
       </nav>
 
       <!-- ========== Article: Kidney Disorders ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Kidney Disorders page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes. Changes flagged to the client:
-        - The glomerulus is described as "a tubular structure"; corrected to "a cluster of tiny
-          blood vessels".
-        - "natural homeopathic remedies can be the solution to finding long-term relief" is softened.
-        - The kidney-disease warning is the page's own line, shown in the medical-advice style.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article kd-article" aria-labelledby="kd-title">
-
-        <!-- Introduction + conditions covered -->
-        <section class="kd-intro">
-          <div class="kd-intro-text">
-            <p class="eyebrow">Kidney Health</p>
-            <h2 class="kd-title" id="kd-title">Kidney Disorders</h2>
-            <p class="kd-lead">The kidneys are organs that serve several essential regulatory roles in the body. It is vital they remain healthy, as they are connected to all other functions within the body.</p>
-          </div>
-          <aside class="kd-panel" aria-labelledby="kd-covers-title">
-            <h3 class="kd-panel-title" id="kd-covers-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-kidney"/></svg></span>
-              This page covers
-            </h3>
-            <ul class="kd-checks">
-              <li><strong>Nephropathy:</strong> kidney disease, damage to or disease of a kidney</li>
-              <li><strong>Cystitis:</strong> inflammation of the urinary bladder</li>
-            </ul>
-          </aside>
-        </section>
-
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="kd-section" aria-labelledby="kd-overview-title">
-          <h3 class="kd-h3" id="kd-overview-title">Understanding Kidney Disorders</h3>
-          <ul class="kd-types">
-            <li>
-              <a class="kd-type" href="#kd-nephropathy">
-                <span class="kd-type-badge" aria-hidden="true">01</span>
-                <span class="kd-type-name">Nephropathy</span>
-                <span class="kd-type-desc">Kidney disease and its two types</span>
-                <svg class="icon icon-sm kd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kd-type" href="#kd-causes">
-                <span class="kd-type-badge" aria-hidden="true">02</span>
-                <span class="kd-type-name">Causes of Nephropathy</span>
-                <span class="kd-type-desc">From antibodies to chronic conditions</span>
-                <svg class="icon icon-sm kd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kd-type" href="#kd-cystitis">
-                <span class="kd-type-badge" aria-hidden="true">03</span>
-                <span class="kd-type-name">Cystitis</span>
-                <span class="kd-type-desc">A urinary tract infection</span>
-                <svg class="icon icon-sm kd-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Nephropathy -->
-        <section class="kd-section" id="kd-nephropathy" aria-labelledby="kd-nephropathy-title">
-          <h3 class="kd-h3" id="kd-nephropathy-title">Nephropathy</h3>
-          <div class="kd-row">
-            <div class="kd-copy">
-              <p>Nephropathy, also known as kidney disease, is characterized by damage to, or disease of, a kidney.</p>
-            </div>
-            <aside class="kd-panel" aria-labelledby="kd-types-title">
-              <h4 class="kd-panel-title" id="kd-types-title">There are two types</h4>
-              <ol class="kd-steps">
-                <li><strong>Nephrosis:</strong> non-inflammatory</li>
-                <li><strong>Nephritis:</strong> inflammatory</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Causes of nephropathy -->
-        <section class="kd-section" id="kd-causes" aria-labelledby="kd-causes-title">
-          <h3 class="kd-h3" id="kd-causes-title">Causes of Nephropathy</h3>
-          <div class="kd-row">
-            <div class="kd-copy">
-              <p>Causes of nephropathy may include deposits of immunoglobulin A antibodies in the glomerulus (a cluster of tiny blood vessels in the kidney that filters blood to form urine), or long-term exposure to lead or lead salts.</p>
-              <p>Chronic conditions such as lupus, diabetes and high blood pressure may contribute as well.</p>
-            </div>
-            <aside class="kd-panel" aria-labelledby="kd-causes-list-title">
-              <h4 class="kd-panel-title" id="kd-causes-list-title">Causes may include</h4>
-              <ul class="kd-checks">
-                <li>Deposits of immunoglobulin A (IgA) antibodies in the glomerulus</li>
-                <li>Long-term exposure to lead or lead salts</li>
-              </ul>
-              <p class="kd-panel-label">Chronic conditions that may contribute</p>
-              <ul class="kd-tags">
-                <li>Lupus</li>
-                <li>Diabetes</li>
-                <li>High blood pressure</li>
-              </ul>
-            </aside>
+          Text: the Kidney Disorders page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/kidney-disorders.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Kidney Disorders</h2>
+            <p>The kidneys are organs that serve several essential regulatory roles in the body. It is vital they remain healthy as they are connected to all other functions within the body.</p>
+            <h3 class="ta-h3">Nephropathy</h3>
+            <p>Nephropathy, also known as kidney disease, is characterized by damage to, or disease of, a kidney. There are two types: Nephrosis (non-inflammatory) and Nephritis (inflammatory).</p>
+            <p>Causes of nephropathy may include deposit of immunoglobulin A antibodies in the glomerulus (a tubular structure in the kidney that filters blood to form urine), or long-term exposure to lead or the salts found in lead. Chronic conditions such as lupus, diabetes, and high blood pressure may contribute as well. If not treated effectively, kidney disease can have serious consequences.</p>
+            <h3 class="ta-h3">Cystitis</h3>
+            <p>Cystitis is a urinary bladder inflammation most commonly referred to as a urinary tract infection. It is most often caused by a bacterial infection.</p>
+            <p>Signs and symptoms include the feeling of pressure in the lower pelvis, painful urination, frequent urination, the urgent need to urinate, urination with traces of blood, urine that is dark, cloudy, or that has a strong smell, pain above the pubic bone, lower back or abdomen, or feeling unwell, weak, or feverish.</p>
+            <p>If you suffer from a kidney-related ailment such as Nephropathy (Kidney Disease) or Cystitis, natural homeopathic remedies can be the solution to finding long-term relief.</p>
           </div>
 
-          <!-- Medical-advice note: the page's own kidney-disease warning -->
-          <div class="kd-alert" role="note" aria-labelledby="kd-alert-title">
-            <span class="kd-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/kidney-disorders.jpg" alt="A man holding his lower back near the kidneys, with a glass of water" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="kd-alert-title" id="kd-alert-title">Kidney disease should be treated</h4>
-              <p>If not treated effectively, kidney disease can have serious consequences.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- Cystitis -->
-        <section class="kd-section" id="kd-cystitis" aria-labelledby="kd-cystitis-title">
-          <h3 class="kd-h3" id="kd-cystitis-title">Cystitis</h3>
-          <div class="kd-row">
-            <div class="kd-copy">
-              <p>Cystitis is a urinary bladder inflammation, most commonly referred to as a urinary tract infection. It is most often caused by a bacterial infection.</p>
-            </div>
-            <aside class="kd-panel" aria-labelledby="kd-cystitis-signs">
-              <h4 class="kd-panel-title" id="kd-cystitis-signs">Signs and symptoms include</h4>
-              <ul class="kd-tags">
-                <li>Pressure in the lower pelvis</li>
-                <li>Painful urination</li>
-                <li>Frequent urination</li>
-                <li>An urgent need to urinate</li>
-                <li>Traces of blood in the urine</li>
-                <li>Dark, cloudy or strong-smelling urine</li>
-                <li>Pain above the pubic bone</li>
-                <li>Lower back or abdominal pain</li>
-                <li>Feeling unwell, weak or feverish</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="kd-note" aria-label="Homeopathic care">
-          <span class="kd-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>If you suffer from a kidney-related ailment such as nephropathy (kidney disease) or cystitis, natural homeopathic remedies may be considered as part of your care.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="kd-cta" aria-labelledby="kd-cta-title">
-          <div class="kd-cta-text">
-            <h3 class="kd-cta-title" id="kd-cta-title">Have a question about your kidney health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

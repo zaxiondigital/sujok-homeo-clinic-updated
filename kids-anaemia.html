@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="kids-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -265,125 +266,35 @@
       </nav>
 
       <!-- ========== Article: Anaemia ==========
-        Kids Health topic template: hero, Kids Health menu and layout as on kids-health.html; styles
-        in kids-topics.css. Text: the Anaemia page on sujokhomeoclinic.com (supplied by the client),
-        regrouped under headings. One change, flagged to the client:
-        - "Homeopathic remedies are an agreeable form of treatment…" is softened.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article kt-article" aria-labelledby="kt-title">
-
-        <section class="kt-intro">
-          <div class="kt-intro-text">
+          Text: the Anaemia page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/kids-anaemia.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Kids Health</p>
-            <h2 class="kt-title" id="kt-title">Anaemia</h2>
-            <p class="kt-lead">Anaemia is a condition in which a person suffers from a decreased number of red blood cells in their bloodstream, resulting in a less than normal quantity of hemoglobin in their blood.</p>
+            <h2 class="ta-title" id="ta-title">Anaemia</h2>
+            <p>Anaemia is a condition in which a person suffers from a decreased number of red blood cells in their bloodstream resulting in a less than normal quantity of hemoglobin in his or her blood. (Hemoglobin carries oxygen through blood from the respiratory organs to the rest of the body.)</p>
+            <p>Anaemia may also be a result of other types of hemoglobin deficiency in which the oxygen-binding ability of each hemoglobin molecule is lessened as a result of deformity, or lack in production.</p>
+            <p>As hemoglobin carries oxygen from the lungs to the capillaries (the smallest of the body’s blood vessels), anaemia results in a lack of oxygen among the organs, which in turn may produce a wide array of clinical consequences - all human cells are dependent on oxygen for survival.</p>
+            <p>As anaemia is the most common disorder of the blood, there are many forms of treatment available, such as homeopathy. Homeopathic remedies are an agreeable form of treatment for individuals living with this type of blood disorder.</p>
           </div>
-          <aside class="kt-panel" aria-labelledby="kt-glance-title">
-            <h3 class="kt-panel-title" id="kt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-drop"/></svg></span>
-              Anaemia at a glance
-            </h3>
-            <ul class="kt-checks">
-              <li>The most common disorder of the blood</li>
-              <li>Fewer red blood cells and less hemoglobin than normal</li>
-              <li>Results in a lack of oxygen among the organs</li>
-            </ul>
-          </aside>
-        </section>
 
-        <section class="kt-section" aria-labelledby="kt-overview-title">
-          <h3 class="kt-h3" id="kt-overview-title">Understanding Anaemia</h3>
-          <ul class="kt-types">
-            <li>
-              <a class="kt-type" href="#kt-hemoglobin">
-                <span class="kt-type-badge" aria-hidden="true">01</span>
-                <span class="kt-type-name">What Hemoglobin Does</span>
-                <span class="kt-type-desc">Carrying oxygen around the body</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-deficiency">
-                <span class="kt-type-badge" aria-hidden="true">02</span>
-                <span class="kt-type-name">Hemoglobin Deficiency</span>
-                <span class="kt-type-desc">Deformity or lack in production</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-effects">
-                <span class="kt-type-badge" aria-hidden="true">03</span>
-                <span class="kt-type-name">Effects on the Body</span>
-                <span class="kt-type-desc">Why oxygen matters to every cell</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/kids-anaemia.jpg" alt="A tired young girl resting her head at the table beside iron-rich food" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <section class="kt-section" id="kt-hemoglobin" aria-labelledby="kt-hemoglobin-title">
-          <h3 class="kt-h3" id="kt-hemoglobin-title">What Hemoglobin Does</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Hemoglobin carries oxygen through the blood from the respiratory organs to the rest of the body.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="kt-panel" aria-labelledby="kt-path-title">
-              <h4 class="kt-panel-title" id="kt-path-title">Oxygen’s path</h4>
-              <ol class="kt-steps">
-                <li>Hemoglobin picks up oxygen in the lungs</li>
-                <li>It carries the oxygen through the blood</li>
-                <li>It delivers it to the capillaries, the smallest of the body’s blood vessels</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-deficiency" aria-labelledby="kt-deficiency-title">
-          <h3 class="kt-h3" id="kt-deficiency-title">Hemoglobin Deficiency</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Anaemia may also be a result of other types of hemoglobin deficiency, in which the oxygen-binding ability of each hemoglobin molecule is lessened.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-deficiency-causes">
-              <h4 class="kt-panel-title" id="kt-deficiency-causes">This may be a result of</h4>
-              <ul class="kt-checks">
-                <li>Deformity of the hemoglobin molecule</li>
-                <li>A lack in production</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-effects" aria-labelledby="kt-effects-title">
-          <h3 class="kt-h3" id="kt-effects-title">Effects on the Body</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>As hemoglobin carries oxygen from the lungs to the capillaries, anaemia results in a lack of oxygen among the organs, which in turn may produce a wide array of clinical consequences.</p>
-            </div>
-            <aside class="kt-panel" aria-label="Why oxygen matters">
-              <h4 class="kt-panel-title">Why it matters</h4>
-              <p class="kt-panel-text">All human cells are dependent on oxygen for survival.</p>
-            </aside>
-          </div>
-        </section>
-
-        <aside class="kt-note" aria-label="Homeopathic care">
-          <span class="kt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>As anaemia is the most common disorder of the blood, there are many forms of treatment available, and homeopathic remedies may be considered as part of care.</p>
-        </aside>
-
-        <section class="kt-cta" aria-labelledby="kt-cta-title">
-          <div class="kt-cta-text">
-            <h3 class="kt-cta-title" id="kt-cta-title">Have a question about your child’s health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

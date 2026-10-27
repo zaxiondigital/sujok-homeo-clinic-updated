@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -279,136 +280,43 @@
       </nav>
 
       <!-- ========== Article: Frozen Shoulder ==========
-        Pain Relief topic template: hero, Pain Relief menu and layout as on pain-management.html;
-        styles in pain-topics.css. Text: the Frozen Shoulder page on sujokhomeoclinic.com (supplied
-        by the client), regrouped under headings. One change, flagged to the client:
-        - "Homeopathic medicine can offer relief, often long-term, from the debilitating pain…" is
-          softened.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article pt-article" aria-labelledby="pt-title">
-
-        <section class="pt-intro">
-          <div class="pt-intro-text">
+          Text: the Frozen Shoulder page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/frozen-shoulder.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Pain Relief</p>
-            <h2 class="pt-title" id="pt-title">Frozen Shoulder</h2>
-            <p class="pt-lead">Referred to medically as adhesive capsulitis, frozen shoulder is a disorder in which the shoulder capsule (the connective tissue surrounding the shoulder joint) becomes inflamed and stiff.</p>
-            <p class="pt-copy">Shoulder movement becomes severely restricted, and it often results in chronic pain.</p>
+            <h2 class="ta-title" id="ta-title">Frozen Shoulder</h2>
+            <p>Referred to medically as adhesive capsulitis, frozen shoulder is a disorder in which the shoulder capsule (the connective tissue surrounding the shoulder joint) becomes inflamed and stiff. Shoulder movement becomes severely restricted and often results in chronic pain.</p>
+            <p>While the exact cause is not known, this condition is most often believed to be brought on by injury or trauma to the shoulder area. However, sometimes there may be an autoimmune component in which the body attacks the healthy tissue in the capsule sparking the onset of the condition.</p>
+            <p>Adhesive capsulitis is characterized in three stages:</p>
+            <ol class="ta-list ta-list--num">
+              <li>The "freezing" stage. Lasting anywhere from six weeks to nine months, the individual experiences the slow onset of pain that worsens over time as the shoulder loses mobility.</li>
+              <li>The "frozen" stage. Also known as the adhesive stage, this period is characterized by a slow improvement pain-wise, however, stiffness remains. This stage lasts from four to nine months.</li>
+              <li>The "thawing" stage. This is the recovery period during which the mobility of the shoulder slowly returns to normal. This recovery process may last anywhere from five to twenty-six months.</li>
+            </ol>
+            <p>In general, pain from adhesive capsulitis often worsens at night and during colder weather. Sudden bumps and movements have the ability to bring on remarkable pain and cramping that can last for up to several minutes. As well, lack of fluid in the joint may further restrict movement.</p>
+            <p>This limited mobility can make small tasks arduous, and sleeping for extended periods of time difficult as the individual will often be woken by the pain. Recovery is very often slow, and the condition may sometimes lead to problems in the back and neck, and even depression.</p>
+            <p>Risk factors for developing frozen shoulder include diabetes, stroke, an accident resulting in injury to the shoulder, lung disease, connective tissues disorders and heart disease. People under the age of forty rarely develop this condition.</p>
+            <p>Homeopathic medicine can offer relief, often long-term, from the debilitating pain of adhesive capsulitis.</p>
           </div>
-          <aside class="pt-panel" aria-labelledby="pt-glance-title">
-            <h3 class="pt-panel-title" id="pt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-shoulder"/></svg></span>
-              Frozen shoulder at a glance
-            </h3>
-            <ul class="pt-checks">
-              <li>Inflamed and stiff shoulder capsule</li>
-              <li>Severely restricted movement</li>
-              <li>People under the age of forty rarely develop it</li>
-            </ul>
-          </aside>
-        </section>
 
-        <section class="pt-section" aria-labelledby="pt-overview-title">
-          <h3 class="pt-h3" id="pt-overview-title">Understanding Frozen Shoulder</h3>
-          <ul class="pt-types">
-            <li>
-              <a class="pt-type" href="#pt-causes">
-                <span class="pt-type-badge" aria-hidden="true">01</span>
-                <span class="pt-type-name">Causes and Risk Factors</span>
-                <span class="pt-type-desc">Injury, trauma and more</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-stages">
-                <span class="pt-type-badge" aria-hidden="true">02</span>
-                <span class="pt-type-name">The Three Stages</span>
-                <span class="pt-type-desc">Freezing, frozen and thawing</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-living">
-                <span class="pt-type-badge" aria-hidden="true">03</span>
-                <span class="pt-type-name">Living With It</span>
-                <span class="pt-type-desc">Pain, sleep and daily tasks</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/frozen-shoulder.jpg" alt="A woman holding her stiff shoulder while trying to raise her arm" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <section class="pt-section" id="pt-causes" aria-labelledby="pt-causes-title">
-          <h3 class="pt-h3" id="pt-causes-title">Causes and Risk Factors</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>While the exact cause is not known, this condition is most often believed to be brought on by injury or trauma to the shoulder area. However, sometimes there may be an autoimmune component, in which the body attacks the healthy tissue in the capsule, sparking the onset of the condition.</p>
-              <p>People under the age of forty rarely develop this condition.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="pt-panel" aria-labelledby="pt-risk-title">
-              <h4 class="pt-panel-title" id="pt-risk-title">Risk factors include</h4>
-              <ul class="pt-tags">
-                <li>Diabetes</li>
-                <li>Stroke</li>
-                <li>An accident injuring the shoulder</li>
-                <li>Lung disease</li>
-                <li>Connective tissue disorders</li>
-                <li>Heart disease</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-stages" aria-labelledby="pt-stages-title">
-          <h3 class="pt-h3" id="pt-stages-title">The Three Stages</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>Adhesive capsulitis is characterized in three stages, from the slow onset of pain to the gradual return of mobility.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-stages-list">
-              <h4 class="pt-panel-title" id="pt-stages-list">The stages</h4>
-              <ol class="pt-steps">
-                <li><strong>Freezing (6 weeks to 9 months):</strong> a slow onset of pain that worsens over time as the shoulder loses mobility</li>
-                <li><strong>Frozen (4 to 9 months):</strong> also known as the adhesive stage; pain slowly improves, but stiffness remains</li>
-                <li><strong>Thawing (5 to 26 months):</strong> the recovery period, as the shoulder’s mobility slowly returns to normal</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-living" aria-labelledby="pt-living-title">
-          <h3 class="pt-h3" id="pt-living-title">Living With Frozen Shoulder</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>This limited mobility can make small tasks arduous, and sleeping for extended periods of time difficult, as the individual will often be woken by the pain. Recovery is very often slow, and the condition may sometimes lead to problems in the back and neck, and even depression.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-pain-title">
-              <h4 class="pt-panel-title" id="pt-pain-title">In general</h4>
-              <ul class="pt-checks">
-                <li>Pain often worsens at night and during colder weather</li>
-                <li>Sudden bumps and movements can bring on remarkable pain and cramping lasting up to several minutes</li>
-                <li>Lack of fluid in the joint may further restrict movement</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <aside class="pt-note" aria-label="Homeopathic care">
-          <span class="pt-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Homeopathic medicine may be considered as part of care for the pain of adhesive capsulitis.</p>
-        </aside>
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="pt-cta" aria-labelledby="pt-cta-title">
-          <div class="pt-cta-text">
-            <h3 class="pt-cta-title" id="pt-cta-title">Have a question about frozen shoulder?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

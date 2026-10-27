@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="kids-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -265,169 +266,46 @@
       </nav>
 
       <!-- ========== Article: Recurrent Infections ==========
-        Kids Health topic template: hero, Kids Health menu and layout as on kids-health.html; styles
-        in kids-topics.css. Text: the Recurrent Infections page on sujokhomeoclinic.com (supplied by
-        the client), regrouped under headings with small fixes ("brought on by infection").
-        One change, flagged to the client:
-        - The opening claim ("…gently treat your child's ailments… it improves the immunity of the
-          body and keep your child away from any kind of recurrent infections") is softened.
-        The UTI advice is the page's own line, shown in the medical-advice style.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article kt-article" aria-labelledby="kt-title">
-
-        <section class="kt-intro">
-          <div class="kt-intro-text">
+          Text: the Recurrent Infections page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/kids-recurrent-infections.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Kids Health</p>
-            <h2 class="kt-title" id="kt-title">Recurrent Infections</h2>
-            <p class="kt-lead">If your child repeatedly suffers from infections of the ears, eyes, throat, chest, stomach or bladder, among other areas, homeopathic medicine offers a gentle, natural approach that may be considered as part of your child’s care.</p>
-          </div>
-          <aside class="kt-panel" aria-labelledby="kt-glance-title">
-            <h3 class="kt-panel-title" id="kt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-repeat"/></svg></span>
-              This page covers
-            </h3>
-            <ul class="kt-checks">
-              <li>Ear infections</li>
-              <li>Eye infections</li>
-              <li>Throat infections</li>
-              <li>Bladder infections</li>
+            <h2 class="ta-title" id="ta-title">Recurrent Infections</h2>
+            <p>If your child repeatedly suffers from infections of the ears, eyes, throat, chest, stomach or bladder among other areas, homeopathic medicine offers non-invasive and natural methods through which to gently treat your child’s ailments so that he or she can get back into his or her daily routine. Beauty of this treatment is that it improves the immunity of the body and keeps your child away from any kind of recurrent infections.</p>
+            <h3 class="ta-h3">Ear Infections</h3>
+            <p>Otitis is the medical term for inflammation, or infection, of the ear. Otitis is separated into three different categories:</p>
+            <ul class="ta-list">
+              <li>Otitis externa - aka "swimmer’s ear", concerns the outer ear and ear canal. It is generally painful to touch or pull the ear.</li>
+              <li>Otitis media - concerns the "middle" ear in that the ear is infected or clogged with fluid behind the ear drum where it is normally an air-filled space. This is a very common childhood infection.</li>
+              <li>Otitis interna - the inner ear is inflamed. As the inner ear contains sensory organs for balance and hearing, vertigo is often a common symptom.</li>
             </ul>
-          </aside>
-        </section>
-
-        <section class="kt-section" aria-labelledby="kt-overview-title">
-          <h3 class="kt-h3" id="kt-overview-title">Common Infections in Children</h3>
-          <ul class="kt-types kt-types--4">
-            <li>
-              <a class="kt-type" href="#kt-ear">
-                <span class="kt-type-badge" aria-hidden="true">01</span>
-                <span class="kt-type-name">Ear Infections</span>
-                <span class="kt-type-desc">Otitis externa, media and interna</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-eye">
-                <span class="kt-type-badge" aria-hidden="true">02</span>
-                <span class="kt-type-name">Eye Infections</span>
-                <span class="kt-type-desc">Conjunctivitis, or “pink eye”</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-throat">
-                <span class="kt-type-badge" aria-hidden="true">03</span>
-                <span class="kt-type-name">Throat Infections</span>
-                <span class="kt-type-desc">Strep throat and laryngitis</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="kt-type" href="#kt-bladder">
-                <span class="kt-type-badge" aria-hidden="true">04</span>
-                <span class="kt-type-name">Bladder Infections</span>
-                <span class="kt-type-desc">Urinary tract infections (UTI)</span>
-                <svg class="icon icon-sm kt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <section class="kt-section" id="kt-ear" aria-labelledby="kt-ear-title">
-          <h3 class="kt-h3" id="kt-ear-title">Ear Infections</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Otitis is the medical term for inflammation, or infection, of the ear. Otitis is separated into three different categories.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-otitis-title">
-              <h4 class="kt-panel-title" id="kt-otitis-title">Three types of otitis</h4>
-              <ol class="kt-steps">
-                <li><strong>Otitis externa</strong> (“swimmer’s ear”): concerns the outer ear and ear canal. It is generally painful to touch or pull the ear.</li>
-                <li><strong>Otitis media:</strong> concerns the middle ear, which is infected or clogged with fluid behind the eardrum, where it is normally an air-filled space. This is a very common childhood infection.</li>
-                <li><strong>Otitis interna:</strong> the inner ear is inflamed. As the inner ear contains sensory organs for balance and hearing, vertigo is often a common symptom.</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-eye" aria-labelledby="kt-eye-title">
-          <h3 class="kt-h3" id="kt-eye-title">Eye Infections</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Children are often susceptible to eye infections such as conjunctivitis, also known as “pink eye”. Conjunctivitis is an inflammation of the conjunctiva, the outermost layer of the eye and inner surface of the eyelids. Most often it is due to an infection (either viral or bacterial) or an allergic reaction.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-eye-symptoms">
-              <h4 class="kt-panel-title" id="kt-eye-symptoms">Symptoms include</h4>
-              <ul class="kt-tags">
-                <li>Red eyes</li>
-                <li>Watery eyes</li>
-                <li>Swelling of the eye</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-throat" aria-labelledby="kt-throat-title">
-          <h3 class="kt-h3" id="kt-throat-title">Throat Infections</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>Throat infections such as strep throat or laryngitis are common ailments for children.</p>
-              <h4 class="kt-h4">Strep throat</h4>
-              <p>Strep throat is a type of pharyngitis brought on by infection. It affects the throat (pharynx), more specifically the tonsils and sometimes the larynx. Strep throat is contagious and may be spread through close contact with someone who is infected.</p>
-              <h4 class="kt-h4">Laryngitis</h4>
-              <p>Laryngitis is inflammation of the larynx. It may cause a hoarse voice, or temporary loss of voice altogether, due to irritation of the vocal cords. Laryngitis can be both infectious and non-infectious, depending on origin.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-strep-symptoms">
-              <h4 class="kt-panel-title" id="kt-strep-symptoms">Common strep throat symptoms</h4>
-              <ul class="kt-tags">
-                <li>Sore throat</li>
-                <li>Enlarged lymph nodes</li>
-                <li>Fever</li>
-              </ul>
-              <p class="kt-panel-label">Laryngitis may be</p>
-              <ul class="kt-checks">
-                <li><strong>Acute:</strong> lasting less than a few days</li>
-                <li><strong>Chronic:</strong> lasting up to three weeks or more</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="kt-section" id="kt-bladder" aria-labelledby="kt-bladder-title">
-          <h3 class="kt-h3" id="kt-bladder-title">Bladder Infections</h3>
-          <div class="kt-row">
-            <div class="kt-copy">
-              <p>A urinary tract infection (UTI) is the most common form of bladder infection, occurring more commonly in females than males.</p>
-            </div>
-            <aside class="kt-panel" aria-labelledby="kt-uti-title">
-              <h4 class="kt-panel-title" id="kt-uti-title">In young children</h4>
-              <ul class="kt-checks">
-                <li>The only symptom of a UTI may be fever</li>
-              </ul>
-            </aside>
+            <h3 class="ta-h3">Eye Infections</h3>
+            <p>Children are often susceptible to eye infections such as conjunctivitis, also known as "pink eye". Conjunctivitis is an inflammation of the conjunctiva - the outermost layer of the eye and inner surface of the eyelids. Most often it is due to an infection (either viral or bacterial) or an allergic reaction. Symptoms include red and watery eyes, and swelling of the eye.</p>
+            <h3 class="ta-h3">Throat Infections</h3>
+            <p>Throat infections such as strep throat or laryngitis are common ailments for children. Strep throat is a type of pharyngitis brought on by infection. It affects the throat (pharynx), more specifically the tonsils and sometimes the larynx. Common symptoms are sore throat, enlarged lymph nodes, and fever. Strep throat is contagious and may be spread through close contact with someone who is infected.</p>
+            <p>Laryngitis is inflammation of the larynx. It may cause a hoarse voice, or temporary loss of voice altogether due to irritation of the vocal cords. If laryngitis lasts less than a few days, it is categorized as acute; otherwise, it is chronic and may last up to three weeks or more. Laryngitis can be both infectious and non-infectious depending on origin.</p>
+            <h3 class="ta-h3">Bladder Infections</h3>
+            <p>A urinary tract infection (UTI) is the most common form of bladder infection occurring more commonly in females than males. In young children, the only symptom of a UTI may be fever. If you suspect your child may be suffering from a UTI, it is wise to seek a professional medical opinion.</p>
           </div>
 
-          <div class="kt-alert" role="note" aria-labelledby="kt-alert-title">
-            <span class="kt-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/kids-recurrent-infections.jpg" alt="A boy wrapped in a blanket on the sofa with tissues and a warm drink" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="kt-alert-title" id="kt-alert-title">Suspect a UTI?</h4>
-              <p>If you suspect your child may be suffering from a UTI, it is wise to seek a professional medical opinion.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <section class="kt-cta" aria-labelledby="kt-cta-title">
-          <div class="kt-cta-text">
-            <h3 class="kt-cta-title" id="kt-cta-title">Have a question about your child’s health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

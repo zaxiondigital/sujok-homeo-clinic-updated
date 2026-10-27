@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="breathing-disorders.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -264,158 +265,43 @@
       </nav>
 
       <!-- ========== Article: Breathing Disorders ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Breathing Disorders page on sujokhomeoclinic.com (supplied by the client),
-        regrouped under headings with small grammar fixes. The pneumonia warning is the page's own
-        line, shown in the medical-advice style used on the other topic pages.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article br-article" aria-labelledby="br-title">
-
-        <!-- Introduction + conditions covered -->
-        <section class="br-intro">
-          <div class="br-intro-text">
-            <p class="eyebrow">Respiratory Health</p>
-            <h2 class="br-title" id="br-title">Breathing Disorders</h2>
-            <p class="br-lead">Breathing disorders can include ailments such as asthma, bronchitis and pneumonia.</p>
-          </div>
-          <aside class="br-panel" aria-labelledby="br-covers-title">
-            <h3 class="br-panel-title" id="br-covers-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-lungs"/></svg></span>
-              This page covers
-            </h3>
-            <ul class="br-checks">
-              <li><strong>Asthma:</strong> an inflammatory disease of the airways</li>
-              <li><strong>Bronchitis:</strong> inflammation of the larger and medium-sized airways</li>
-              <li><strong>Pneumonia:</strong> an inflammatory condition of the lungs</li>
-            </ul>
-          </aside>
-        </section>
-
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="br-section" aria-labelledby="br-overview-title">
-          <h3 class="br-h3" id="br-overview-title">Understanding Breathing Disorders</h3>
-          <ul class="br-types">
-            <li>
-              <a class="br-type" href="#br-asthma">
-                <span class="br-type-badge" aria-hidden="true">01</span>
-                <span class="br-type-name">Asthma</span>
-                <span class="br-type-desc">Inflamed, overly sensitive airways</span>
-                <svg class="icon icon-sm br-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="br-type" href="#br-bronchitis">
-                <span class="br-type-badge" aria-hidden="true">02</span>
-                <span class="br-type-name">Bronchitis</span>
-                <span class="br-type-desc">Acute or chronic coughing</span>
-                <svg class="icon icon-sm br-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="br-type" href="#br-pneumonia">
-                <span class="br-type-badge" aria-hidden="true">03</span>
-                <span class="br-type-name">Pneumonia</span>
-                <span class="br-type-desc">Inflammation of the lungs’ air sacs</span>
-                <svg class="icon icon-sm br-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Asthma -->
-        <section class="br-section" id="br-asthma" aria-labelledby="br-asthma-title">
-          <h3 class="br-h3" id="br-asthma-title">Asthma</h3>
-          <div class="br-row">
-            <div class="br-copy">
-              <p>Asthma is a highly common inflammatory disease of the airways. Inflammation causes the airways to become overly sensitive to irritants and increases one’s susceptibility to allergens. The swelling results in a narrowing of the airways, making it difficult for air to flow freely to and from the lungs.</p>
-              <p>It is thought that asthma is caused by a combination of genetic and environmental factors. Someone who suffers from long-lasting or recurrent asthma is considered to be asthmatic.</p>
-              <h4 class="br-h4">Asthma attacks</h4>
-              <p>An asthma attack, or an episode, is when symptoms experienced are more severe than usual.</p>
-            </div>
-            <aside class="br-panel" aria-labelledby="br-asthma-symptoms">
-              <h4 class="br-panel-title" id="br-asthma-symptoms">Symptoms include</h4>
-              <ul class="br-tags">
-                <li>Coughing</li>
-                <li>Wheezing</li>
-                <li>Tightness in the chest area</li>
-                <li>Shortness of breath</li>
-                <li>Difficulty breathing</li>
-              </ul>
-              <p class="br-panel-label">During an episode</p>
-              <ol class="br-steps">
-                <li>The muscles of the airways tighten</li>
-                <li>Inflammation occurs</li>
-                <li>Excess mucus is produced, resulting in less airflow</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Bronchitis -->
-        <section class="br-section" id="br-bronchitis" aria-labelledby="br-bronchitis-title">
-          <h3 class="br-h3" id="br-bronchitis-title">Bronchitis</h3>
-          <div class="br-row">
-            <div class="br-copy">
-              <p>Bronchitis, typically characterized by uncomfortable bouts of coughing, is an inflammation of the mucous membranes of the larger and medium-sized airways that carry airflow from the trachea into the lungs. It can be diagnosed as either acute or chronic.</p>
-            </div>
-            <aside class="br-panel" aria-labelledby="br-bronchitis-types">
-              <h4 class="br-panel-title" id="br-bronchitis-types">Two forms of bronchitis</h4>
-              <ol class="br-steps">
-                <li><strong>Acute:</strong> the development of a cough, with or without mucus expelled from the respiratory tract, often during a viral ailment such as a cold or the flu. Viruses cause about 90% of cases; bacteria generally account for the rest.</li>
-                <li><strong>Chronic:</strong> a cough that lasts three or more months per year for at least two years, often the result of recurrent injury to the airways from inhaled irritants, such as cigarette smoke or other air pollutants.</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Pneumonia -->
-        <section class="br-section" id="br-pneumonia" aria-labelledby="br-pneumonia-title">
-          <h3 class="br-h3" id="br-pneumonia-title">Pneumonia</h3>
-          <div class="br-row">
-            <div class="br-copy">
-              <p>Pneumonia is an inflammatory condition of the lungs. It primarily affects the microscopic air sacs in the lung called alveoli.</p>
-            </div>
-            <aside class="br-panel" aria-labelledby="br-pneumonia-symptoms">
-              <h4 class="br-panel-title" id="br-pneumonia-symptoms">Symptoms include</h4>
-              <ul class="br-tags">
-                <li>Coughing</li>
-                <li>Chest pain</li>
-                <li>Fever</li>
-                <li>Difficulty breathing</li>
-              </ul>
-              <p class="br-panel-label">Commonly caused by</p>
-              <ul class="br-tags">
-                <li>Infection (viral or bacterial)</li>
-                <li>Certain drugs</li>
-                <li>Autoimmune diseases</li>
-              </ul>
-            </aside>
+          Text: the Breathing Disorders page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/breathing-disorders.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Breathing Disorders</h2>
+            <p>Breathing disorders can include ailments such as asthma, bronchitis and pneumonia.</p>
+            <h3 class="ta-h3">Asthma</h3>
+            <p>Asthma is a highly common inflammatory disease of the airways. Inflammation causes the airways to become overly sensitive to irritants and increase one’s susceptibility to allergens. The swelling results in a narrowing of the airways making it difficult for air to flow freely to and from the lungs.</p>
+            <p>Symptoms include coughing, wheezing, tightness in the chest area, shortness of breath and difficulty breathing. It is thought that asthma is caused by a combination of genetic and environmental factors.</p>
+            <p>An asthma attack, or an episode, is when symptoms experienced are more severe than usual. During an episode what typically happens is the muscles of the airways tighten, inflammation occurs and excess mucus is produced, thus resulting in less airflow.</p>
+            <p>Someone who suffers from long-lasting or recurrent asthma is considered to be asthmatic.</p>
+            <h3 class="ta-h3">Bronchitis</h3>
+            <p>Bronchitis, typically characterized via uncomfortable bouts of coughing, is an inflammation of the mucous membranes of the larger and medium-sized airways that carry airflow from the trachea into the lungs and can be diagnosed as either acute or chronic.</p>
+            <p>Acute bronchitis is the development of a cough either with or without mucus expelled from the respiratory tract and often occurs during the course of an acute viral ailment such as a cold or the flu. Viruses cause about 90% of acute bronchitis cases; bacteria generally accounts for the rest.</p>
+            <p>Chronic bronchitis is the development of a cough that lasts three or more months per year for a minimum of at least two years. It is often a result of recurrent injury to the airways via irritants that have been inhaled, such as cigarette smoke or other air pollutants.</p>
+            <h3 class="ta-h3">Pneumonia</h3>
+            <p>Pneumonia is an inflammatory condition of the lungs and is commonly caused by infection (viral or bacterial), particular drugs and other conditions such as autoimmune diseases. Pneumonia primarily affects the microscopic air sacs in the lung called alveoli. Symptoms of pneumonia include coughing, chest pain, fever and difficulty breathing. Pneumonia should be taken seriously, as it can escalate to a severe level if left untreated or coupled with one or more ailments.</p>
           </div>
 
-          <!-- Medical-advice note: the page's own pneumonia warning -->
-          <div class="br-alert" role="note" aria-labelledby="br-alert-title">
-            <span class="br-alert-icon"><svg class="icon" aria-hidden="true"><use href="#t-alert"/></svg></span>
+          <figure class="ta-media">
+            <img src="assets/images/topics/breathing-disorders.jpg" alt="A woman using an asthma inhaler" width="900" height="1195" loading="lazy">
+          </figure>
+
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
             <div>
-              <h4 class="br-alert-title" id="br-alert-title">Pneumonia should be taken seriously</h4>
-              <p>It can escalate to a severe level if left untreated or coupled with one or more ailments.</p>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="br-cta" aria-labelledby="br-cta-title">
-          <div class="br-cta-text">
-            <h3 class="br-cta-title" id="br-cta-title">Have a question about your breathing?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

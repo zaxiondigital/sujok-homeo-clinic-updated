@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="thyroid.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,136 +264,41 @@
       </nav>
 
       <!-- ========== Article: Thyroid ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Thyroid page on sujokhomeoclinic.com (from a screenshot of the live page),
-        regrouped under headings with only spelling fixes ("Graves'", "exophthalmos",
-        "abnormalities", "heart rate"). No photo: the live page's photo (a neck examination)
-        isn't in assets/ — add one here when available.
-      -->
-      <article class="hp-article ty-article" aria-labelledby="ty-title">
-
-        <!-- Introduction + what the thyroid controls -->
-        <section class="ty-intro">
-          <div class="ty-intro-text">
-            <p class="eyebrow">Endocrine Health</p>
-            <h2 class="ty-title" id="ty-title">Thyroid</h2>
-            <p class="ty-lead">The thyroid, one of the human body’s largest endocrine glands, is located in the back of the neck, below the thyroid cartilage which forms one’s “Adam’s apple”.</p>
+          Text: the Thyroid page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/thyroid.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Thyroid</h2>
+            <p>The thyroid, one of the human body’s largest endocrine glands, is located in the back of the neck, below the thyroid cartilage which forms one’s "Adam’s apple". The thyroid controls how quickly the body uses energy, creates proteins and how sensitive the body is to other hormones.</p>
+            <p>Common disorders of the thyroid include hyperthyroidism, hypothyroidism, or thyroid nodules which are generally benign, but may be cancerous in some cases.</p>
+            <h3 class="ta-h3">Hyperthyroidism</h3>
+            <p>Hyperthyroidism describes an overactive thyroid that results in the overproduction of the thyroid hormones T3 and T4. This is often the result of the development of Grave’s disease, an autoimmune disease in which antibodies produced stimulate the thyroid to secrete excessive quantities of hormones.</p>
+            <p>Hyperthyroidism presents itself with symptoms such as heart palpitations, excessive sweating, diarrhea, weight loss, increased appetite, muscle weakness, abnormal sensitivity to heat, a thyroid goiter (swollen thyroid gland), or protruding eyes known as exophthalmos.</p>
+            <h3 class="ta-h3">Hypothyroidism</h3>
+            <p>Hypothyroidism is the underproduction of the thyroid hormones T3 and T4.</p>
+            <p>This form of thyroid disorder may occur as a result of congenital thyroid abnormalities, autoimmune diseases such as Hashimoto’s thyroiditis, iodine deficiency, or because the thyroid has been completely removed from the body during surgery which is often undergone to treat hyperthyroidism and thyroid cancer.</p>
+            <p>Common symptoms of hypothyroidism include weight gain, tiredness, baldness, an intolerance to cold and bradycardia - a resting heart rate of less than 60 beats per minute which may result in cardiac arrest.</p>
+            <p>It should be noted that seasonal allergies may trigger episodes of hyper- or hypothyroidism.</p>
           </div>
-          <aside class="ty-panel ty-controls" aria-labelledby="ty-controls-title">
-            <h3 class="ty-panel-title" id="ty-controls-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#t-thyroid"/></svg></span>
-              The thyroid controls
-            </h3>
-            <ul class="ty-checks">
-              <li>How quickly the body uses energy</li>
-              <li>How the body creates proteins</li>
-              <li>How sensitive the body is to other hormones</li>
-            </ul>
-          </aside>
-        </section>
 
-        <!-- Common disorders (jump links to the sections below) -->
-        <section class="ty-section" aria-labelledby="ty-disorders-title">
-          <h3 class="ty-h3" id="ty-disorders-title">Common Thyroid Disorders</h3>
-          <p class="ty-copy">Common disorders of the thyroid include hyperthyroidism, hypothyroidism, or thyroid nodules which are generally benign, but may be cancerous in some cases.</p>
-          <ul class="ty-types">
-            <li>
-              <a class="ty-type" href="#ty-hyper">
-                <span class="ty-type-badge" aria-hidden="true">↑</span>
-                <span class="ty-type-name">Hyperthyroidism</span>
-                <span class="ty-type-desc">An overactive thyroid</span>
-                <svg class="icon icon-sm ty-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="ty-type" href="#ty-hypo">
-                <span class="ty-type-badge" aria-hidden="true">↓</span>
-                <span class="ty-type-name">Hypothyroidism</span>
-                <span class="ty-type-desc">Underproduction of thyroid hormones</span>
-                <svg class="icon icon-sm ty-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <div class="ty-type ty-type--static">
-                <span class="ty-type-badge" aria-hidden="true">•</span>
-                <span class="ty-type-name">Thyroid nodules</span>
-                <span class="ty-type-desc">Generally benign, but may be cancerous in some cases</span>
-              </div>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/thyroid.jpg" alt="A woman gently touching the front of her neck at the thyroid" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Hyperthyroidism -->
-        <section class="ty-section" id="ty-hyper" aria-labelledby="ty-hyper-title">
-          <h3 class="ty-h3" id="ty-hyper-title">Hyperthyroidism</h3>
-          <div class="ty-row">
-            <div class="ty-copy">
-              <p>Hyperthyroidism describes an overactive thyroid that results in the overproduction of the thyroid hormones T3 and T4. This is often the result of the development of Graves’ disease, an autoimmune disease in which antibodies produced stimulate the thyroid to secrete excessive quantities of hormones.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="ty-panel" aria-labelledby="ty-hyper-symptoms">
-              <h4 class="ty-panel-title" id="ty-hyper-symptoms">Symptoms may include</h4>
-              <ul class="ty-tags">
-                <li>Heart palpitations</li>
-                <li>Excessive sweating</li>
-                <li>Diarrhea</li>
-                <li>Weight loss</li>
-                <li>Increased appetite</li>
-                <li>Muscle weakness</li>
-                <li>Abnormal sensitivity to heat</li>
-                <li>Thyroid goiter (swollen thyroid gland)</li>
-                <li>Protruding eyes (exophthalmos)</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Hypothyroidism -->
-        <section class="ty-section" id="ty-hypo" aria-labelledby="ty-hypo-title">
-          <h3 class="ty-h3" id="ty-hypo-title">Hypothyroidism</h3>
-          <div class="ty-row">
-            <div class="ty-copy">
-              <p>Hypothyroidism is the underproduction of the thyroid hormones T3 and T4.</p>
-              <h4 class="ty-h4">Possible causes</h4>
-              <ul class="ty-list">
-                <li>Congenital thyroid abnormalities</li>
-                <li>Autoimmune diseases such as Hashimoto’s thyroiditis</li>
-                <li>Iodine deficiency</li>
-                <li>The thyroid having been completely removed from the body during surgery, which is often undergone to treat hyperthyroidism and thyroid cancer</li>
-              </ul>
-            </div>
-            <aside class="ty-panel" aria-labelledby="ty-hypo-symptoms">
-              <h4 class="ty-panel-title" id="ty-hypo-symptoms">Common symptoms</h4>
-              <ul class="ty-tags">
-                <li>Weight gain</li>
-                <li>Tiredness</li>
-                <li>Baldness</li>
-                <li>Intolerance to cold</li>
-                <li>Bradycardia</li>
-              </ul>
-              <p class="ty-panel-note"><strong>Bradycardia:</strong> a resting heart rate of less than 60 beats per minute, which may result in cardiac arrest.</p>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note from the original page -->
-        <aside class="ty-note" aria-label="Note">
-          <span class="ty-note-icon"><svg class="icon" aria-hidden="true"><use href="#t-allergy"/></svg></span>
-          <p>It should be noted that seasonal allergies may trigger episodes of hyper- or hypothyroidism.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="ty-cta" aria-labelledby="ty-cta-title">
-          <div class="ty-cta-text">
-            <h3 class="ty-cta-title" id="ty-cta-title">Have a question about your thyroid health?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

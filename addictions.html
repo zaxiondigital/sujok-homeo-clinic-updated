@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="addictions.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -263,138 +264,36 @@
       </nav>
 
       <!-- ========== Article: Addictions ==========
-        Health-topic template: the hero, Health Topics menu and layout come from homeopathy.css;
-        only this <article> and the menu's active item change from page to page.
-        Text: the Addictions page on sujokhomeoclinic.com (supplied by the client), regrouped
-        under headings with small grammar fixes. One change, flagged to the client:
-        - "Substance dependence … can be eased and treated via counseling and homeopathic
-          remedies" is softened below (no treatment claim), as on the other topic pages.
-        No photo: no suitable image in assets/ yet.
-      -->
-      <article class="hp-article ad-article" aria-labelledby="ad-title">
-
-        <!-- Introduction + at a glance -->
-        <section class="ad-intro">
-          <div class="ad-intro-text">
-            <p class="eyebrow">Behavioural Health</p>
-            <h2 class="ad-title" id="ad-title">Addictions</h2>
-            <p class="ad-lead">Substance abuse, sometimes known as drug abuse, is a user’s compulsive and repetitive use of a controlled substance, or substances, in order to function normally. This usage is neither supervised nor approved by a medical professional.</p>
+          Text: the Addictions page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/addictions.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
+            <p class="eyebrow">Homeopathy</p>
+            <h2 class="ta-title" id="ta-title">Addictions</h2>
+            <p>Substance abuse, sometimes known as drug abuse, is a user’s compulsive and repetitive use of a controlled substance, or substances, in order to function normally. This usage is neither supervised nor approved by a medical professional.</p>
+            <p>Substance abuse is not limited to mood-altering or psycho-active drugs alone. Substances used outside of states rules and policies, such as steroids used for physical performance enhancement in certain sports, it is still considered abuse.</p>
+            <p>Likewise, use of illicit drugs such as narcotics, stimulants, depressants or sedatives, and hallucinogens are classified as substance abuse.</p>
+            <p>Substance abuse often induces problems surrounding impulse control and impulsive behavior. When substances become unavailable to the user, he or she often experiences substance withdrawal.</p>
+            <p>Substance dependence, be it drug, alcohol or smoking related, can be eased and treated via counseling and homeopathic remedies.</p>
           </div>
-          <aside class="ad-panel" aria-labelledby="ad-glance-title">
-            <h3 class="ad-panel-title" id="ad-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-              Substance abuse is
-            </h3>
-            <ul class="ad-checks">
-              <li>Compulsive and repetitive use of a controlled substance</li>
-              <li>Use in order to function normally</li>
-              <li>Neither supervised nor approved by a medical professional</li>
-            </ul>
-          </aside>
-        </section>
 
-        <!-- Overview cards (jump links to the sections below) -->
-        <section class="ad-section" aria-labelledby="ad-overview-title">
-          <h3 class="ad-h3" id="ad-overview-title">Understanding Substance Abuse</h3>
-          <ul class="ad-types">
-            <li>
-              <a class="ad-type" href="#ad-scope">
-                <span class="ad-type-badge" aria-hidden="true">01</span>
-                <span class="ad-type-name">Beyond Mood-Altering Drugs</span>
-                <span class="ad-type-desc">Substances used outside the rules</span>
-                <svg class="icon icon-sm ad-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="ad-type" href="#ad-illicit">
-                <span class="ad-type-badge" aria-hidden="true">02</span>
-                <span class="ad-type-name">Illicit Drugs</span>
-                <span class="ad-type-desc">Narcotics, stimulants and more</span>
-                <svg class="icon icon-sm ad-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="ad-type" href="#ad-effects">
-                <span class="ad-type-badge" aria-hidden="true">03</span>
-                <span class="ad-type-name">Effects and Withdrawal</span>
-                <span class="ad-type-desc">Impulse control and withdrawal</span>
-                <svg class="icon icon-sm ad-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/addictions.jpg" alt="A hand pushing away a glass of whiskey and a pack of cigarettes, with a glass of water in front" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <!-- Beyond mood-altering drugs -->
-        <section class="ad-section" id="ad-scope" aria-labelledby="ad-scope-title">
-          <h3 class="ad-h3" id="ad-scope-title">Beyond Mood-Altering Drugs</h3>
-          <div class="ad-row">
-            <div class="ad-copy">
-              <p>Substance abuse is not limited to mood-altering or psycho-active drugs alone. Substances used outside of state rules and policies are still considered abuse.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="ad-panel" aria-labelledby="ad-example-title">
-              <h4 class="ad-panel-title" id="ad-example-title">For example</h4>
-              <ul class="ad-checks">
-                <li>Steroids used for physical performance enhancement in certain sports</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Illicit drugs -->
-        <section class="ad-section" id="ad-illicit" aria-labelledby="ad-illicit-title">
-          <h3 class="ad-h3" id="ad-illicit-title">Illicit Drugs</h3>
-          <div class="ad-row">
-            <div class="ad-copy">
-              <p>Likewise, use of illicit drugs such as narcotics, stimulants, depressants or sedatives, and hallucinogens is classified as substance abuse.</p>
-            </div>
-            <aside class="ad-panel" aria-labelledby="ad-drugs-title">
-              <h4 class="ad-panel-title" id="ad-drugs-title">Illicit drugs include</h4>
-              <ul class="ad-tags">
-                <li>Narcotics</li>
-                <li>Stimulants</li>
-                <li>Depressants or sedatives</li>
-                <li>Hallucinogens</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Effects and withdrawal -->
-        <section class="ad-section" id="ad-effects" aria-labelledby="ad-effects-title">
-          <h3 class="ad-h3" id="ad-effects-title">Effects and Withdrawal</h3>
-          <div class="ad-row">
-            <div class="ad-copy">
-              <p>Substance abuse often induces problems surrounding impulse control and impulsive behavior. When substances become unavailable to the user, he or she often experiences substance withdrawal.</p>
-            </div>
-            <aside class="ad-panel" aria-labelledby="ad-induces-title">
-              <h4 class="ad-panel-title" id="ad-induces-title">Substance abuse often leads to</h4>
-              <ol class="ad-steps">
-                <li>Problems surrounding impulse control</li>
-                <li>Impulsive behavior</li>
-                <li>Substance withdrawal when substances become unavailable</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <!-- Closing note (softened from the supplied copy, see the comment at the top) -->
-        <aside class="ad-note" aria-label="Support">
-          <span class="ad-note-icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <p>Support for substance dependence, be it drug, alcohol or smoking related, may include counselling and homeopathic remedies.</p>
-        </aside>
-
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="ad-cta" aria-labelledby="ad-cta-title">
-          <div class="ad-cta-text">
-            <h3 class="ad-cta-title" id="ad-cta-title">Looking for support with an addiction?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style-v3.css">
   <link rel="stylesheet" href="homeopathy.css">
   <link rel="stylesheet" href="pain-topics.css">
+  <link rel="stylesheet" href="topic-article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -279,118 +280,41 @@
       </nav>
 
       <!-- ========== Article: Sujok Clinic ==========
-        Pain Relief topic template: hero, Pain Relief menu and layout as on pain-management.html;
-        styles in pain-topics.css. Text: the Sujok Clinic page on sujokhomeoclinic.com (supplied by
-        the client), regrouped under headings. One change, flagged to the client:
-        - "Is it effective? Yes, If you had tried clapping your hands as a therapy, You will feel it."
-          is softened.
-        The client asked for an image under the "Is it effective?" wording; it was not received yet.
-        Its slot is marked below.
-      -->
-      <article class="hp-article pt-article" aria-labelledby="pt-title">
-
-        <section class="pt-intro">
-          <div class="pt-intro-text">
+          Text: the Sujok Clinic page on sujokhomeoclinic.com, word for word apart from spelling fixes.
+          Styles in topic-article.css: text on the left, image on the right.
+          Image: assets/images/topics/sujok-clinic.jpg (generated with Higgsfield).
+        -->
+        <article class="hp-article ta-article" aria-labelledby="ta-title">
+          <div class="ta-text">
             <p class="eyebrow">Pain Relief</p>
-            <h2 class="pt-title" id="pt-title">Sujok Clinic</h2>
-            <p class="pt-lead">“SuJok” is a combination of two Korean words: “Su” means hands and “Jok” means feet. SuJok means treating on the hands and feet.</p>
-            <p class="pt-copy">SuJok acupuncture is a physical and metaphysical natural therapy of healing without drugs.</p>
+            <h2 class="ta-title" id="ta-title">Sujok Clinic</h2>
+            <p>"SuJok" is a combination of two words. In Korean ’Su’ means hands and ’Jok’ means feet. Thus, SuJok actually means treating on hands and feet.</p>
+            <p>SuJok Acupuncture is a Physical &amp; Metaphysical, Natural Therapy of healing without drugs.</p>
+            <p>Acupuncture and Acupressure is done in mostly all parts of the body.</p>
+            <p>But SuJok focuses only on Hand and Feet as per its name origin.</p>
+            <h3 class="ta-h3">How does it work?</h3>
+            <p>Stimulating the particular points helps to increase the energy flow to the particular organ and keep the organ healthy.</p>
+            <h3 class="ta-h3">Is it effective?</h3>
+            <p>Yes, if you have tried clapping your hands as a therapy, you will feel it.</p>
+            <!-- IMAGE SLOT (in the text): the client's image for this section goes here -->
+            <img class="ta-inline-img" src="assets/images/topics/sujok-clinic-clapping.jpg" alt="Two hands clapping together in warm sunlight" width="900" height="504" loading="lazy">
           </div>
-          <aside class="pt-panel" aria-labelledby="pt-glance-title">
-            <h3 class="pt-panel-title" id="pt-glance-title">
-              <span class="icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-hand-sprout"/></svg></span>
-              What SuJok means
-            </h3>
-            <ul class="pt-checks">
-              <li><strong>Su:</strong> hands</li>
-              <li><strong>Jok:</strong> feet</li>
-            </ul>
-          </aside>
-        </section>
 
-        <section class="pt-section" aria-labelledby="pt-overview-title">
-          <h3 class="pt-h3" id="pt-overview-title">Understanding SuJok</h3>
-          <ul class="pt-types">
-            <li>
-              <a class="pt-type" href="#pt-focus">
-                <span class="pt-type-badge" aria-hidden="true">01</span>
-                <span class="pt-type-name">Hands and Feet</span>
-                <span class="pt-type-desc">Where SuJok focuses</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-how">
-                <span class="pt-type-badge" aria-hidden="true">02</span>
-                <span class="pt-type-name">How It Works</span>
-                <span class="pt-type-desc">Stimulating particular points</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-            <li>
-              <a class="pt-type" href="#pt-feel">
-                <span class="pt-type-badge" aria-hidden="true">03</span>
-                <span class="pt-type-name">Is It Effective?</span>
-                <span class="pt-type-desc">Feeling it for yourself</span>
-                <svg class="icon icon-sm pt-type-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <figure class="ta-media">
+            <img src="assets/images/topics/sujok-clinic.jpg" alt="A palm with Su Jok acupressure seeds, a spiral massage ring and a massage ball" width="900" height="1195" loading="lazy">
+          </figure>
 
-        <section class="pt-section" id="pt-focus" aria-labelledby="pt-focus-title">
-          <h3 class="pt-h3" id="pt-focus-title">Hands and Feet</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>Acupuncture and acupressure are done on almost all parts of the body. SuJok, as its name suggests, focuses only on the hands and feet.</p>
+          <section class="ta-cta" aria-labelledby="ta-cta-title">
+            <div>
+              <h3 class="ta-cta-title" id="ta-cta-title">Book a consultation</h3>
+              <p>Call the clinic at <a href="tel:+16478562516">647-856-2516</a> or book online.</p>
             </div>
-            <aside class="pt-panel" aria-labelledby="pt-compare-title">
-              <h4 class="pt-panel-title" id="pt-compare-title">Where treatment is given</h4>
-              <ul class="pt-checks">
-                <li><strong>Acupuncture and acupressure:</strong> almost all parts of the body</li>
-                <li><strong>SuJok:</strong> the hands and feet only</li>
-              </ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-how" aria-labelledby="pt-how-title">
-          <h3 class="pt-h3" id="pt-how-title">How Does It Work?</h3>
-          <div class="pt-row">
-            <div class="pt-copy">
-              <p>Stimulating particular points helps to increase the energy flow to a particular organ and keep that organ healthy.</p>
-            </div>
-            <aside class="pt-panel" aria-labelledby="pt-how-steps">
-              <h4 class="pt-panel-title" id="pt-how-steps">The idea behind SuJok</h4>
-              <ol class="pt-steps">
-                <li>Particular points on the hands or feet are stimulated</li>
-                <li>This increases the energy flow to a particular organ</li>
-                <li>Helping to keep that organ healthy</li>
-              </ol>
-            </aside>
-          </div>
-        </section>
-
-        <section class="pt-section" id="pt-feel" aria-labelledby="pt-feel-title">
-          <h3 class="pt-h3" id="pt-feel-title">Is It Effective?</h3>
-          <div class="pt-copy">
-            <p>If you have ever tried clapping your hands as a therapy, you will have felt how stimulating the hands can affect the whole body.</p>
-          </div>
-          <!-- IMAGE SLOT: the client's Sujok image goes here, e.g.
-               <figure class="pt-figure"><img src="assets/images/sujok/…" alt="…" width="…" height="…" loading="lazy"></figure> -->
-        </section>
-        <!-- Booking prompt: links to the existing booking form on the homepage -->
-        <section class="pt-cta" aria-labelledby="pt-cta-title">
-          <div class="pt-cta-text">
-            <h3 class="pt-cta-title" id="pt-cta-title">Interested in SuJok therapy?</h3>
-            <p>Book a consultation or call the clinic at <a href="tel:+16478562516">647-856-2516</a>.</p>
-          </div>
-          <a class="btn btn-primary" href="index.html#booking">
-            <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
-            Book a Consultation
-          </a>
-        </section>
-      </article>
+            <a class="btn btn-primary" href="index.html#booking">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Book a Consultation
+            </a>
+          </section>
+        </article>
     </div>
   </main>
 
