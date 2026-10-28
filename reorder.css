@@ -1,0 +1,97 @@
+/* =========================================================
+   Sujok Homeo Clinic — Re-order Form (design preview)
+   Loaded after style-v3.css. The header, footer and buttons come from style-v3.css unchanged;
+   every rule here is scoped to .ro-page.
+   ========================================================= */
+
+.ro-page {
+  --ro-tint: #eef5ec;          /* soft green panels (same as the topic pages) */
+  --ro-field: #cfdccb;
+  --ro-radius: 18px;
+}
+
+/* ---------- Heading ---------- */
+.ro-head { padding: clamp(28px, 4vw, 52px) 0; background: #fafcf8; border-bottom: 1px solid var(--line); }
+.ro-head .eyebrow { margin-bottom: 10px; }
+.ro-title { font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; color: var(--ink-900); }
+.ro-lead { margin-top: 8px; color: var(--ink-500); }
+
+/* ---------- Layout ---------- */
+.ro-section { padding-block: clamp(28px, 4vw, 48px) var(--band-pad-y); }
+.ro-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: clamp(20px, 3vw, 40px); align-items: start; }
+/* a short form reads better narrower: heading and form share one width so their left edges line up */
+.ro-head .container, .ro-layout { max-width: 1080px; }
+
+.ro-card {
+  padding: clamp(22px, 3vw, 36px); background: #ffffff; border: 1px solid var(--line); border-radius: var(--ro-radius);
+  box-shadow: 0 10px 30px rgba(23, 61, 43, .06);
+}
+.ro-card[hidden] { display: none; }
+
+/* ---------- Form ---------- */
+.ro-group { margin: 0 0 24px; padding: 0; border: 0; }
+.ro-legend { margin-bottom: 12px; padding: 0; font-size: .82rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-green); }
+
+.ro-supply { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ro-opt { position: relative; cursor: pointer; }
+.ro-opt input { position: absolute; opacity: 0; }
+.ro-opt-box {
+  display: grid; justify-items: center; gap: 2px; padding: 16px 8px;
+  border: 2px solid var(--line); border-radius: 14px; background: #ffffff; transition: border-color .2s, background .2s;
+}
+.ro-opt-box strong { font-family: var(--font-serif); font-size: 2rem; line-height: 1; color: var(--ink-900); }
+.ro-opt-box span { font-size: .92rem; color: var(--ink-500); }
+.ro-opt:hover .ro-opt-box { border-color: var(--ro-field); }
+.ro-opt input:checked + .ro-opt-box { border-color: var(--green-800); background: var(--ro-tint); }
+.ro-opt input:checked + .ro-opt-box strong { color: var(--green-800); }
+.ro-opt input:focus-visible + .ro-opt-box { box-shadow: 0 0 0 3px rgba(13, 90, 53, .2); }
+.ro-supply.is-invalid .ro-opt-box { border-color: #e2b5ac; }
+
+.ro-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 16px; }
+.ro-field { display: grid; gap: 6px; }
+.ro-field--full { grid-column: 1 / -1; }
+.ro-label { font-size: .9rem; font-weight: 600; color: var(--ink-700); }
+.ro-label small { font-weight: 400; color: var(--ink-500); }
+.ro-input {
+  width: 100%; min-height: 46px; padding: 10px 14px;
+  background: #ffffff; border: 1px solid var(--ro-field); border-radius: 12px; font: inherit; color: var(--ink-900);
+}
+textarea.ro-input { resize: vertical; }
+.ro-input:focus { outline: 0; border-color: var(--green-800); box-shadow: 0 0 0 3px rgba(13, 90, 53, .12); }
+.ro-input[aria-invalid="true"] { border-color: #a23b2a; box-shadow: 0 0 0 3px rgba(162, 59, 42, .1); }
+
+.ro-msg { margin: 0 0 16px; padding: 12px 16px; border-radius: 12px; background: #fbeeeb; font-size: .95rem; color: #8c2f20; }
+.ro-msg[hidden] { display: none; }
+.ro-submit { justify-content: center; width: 100%; min-height: 50px; }
+
+/* ---------- Sent ---------- */
+.ro-done { text-align: center; }
+.ro-done:focus { outline: 0; }
+.ro-done-icon { display: inline-grid; place-items: center; width: 64px; height: 64px; margin-bottom: 14px; border-radius: 50%; background: var(--ro-tint); color: var(--green-800); }
+.ro-done-icon .icon { width: 28px; height: 28px; }
+.ro-done-title { margin-bottom: 10px; font-size: clamp(1.6rem, 2.6vw, 2.1rem); color: var(--ink-900); }
+.ro-done p { max-width: 46ch; margin: 0 auto; line-height: 1.7; color: var(--ink-700); }
+.ro-preview { margin-top: 8px !important; font-size: .9rem; color: var(--ink-500) !important; }
+.ro-done-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
+.ro-btn-outline { background: #ffffff; border: 1.5px solid var(--green-800); color: var(--green-800); box-shadow: none; }
+.ro-btn-outline:hover { background: var(--green-50); }
+
+/* ---------- Side notes ---------- */
+.ro-side { display: grid; gap: 12px; }
+.ro-note { display: flex; gap: 14px; padding: 18px; background: var(--ro-tint); border-radius: 16px; }
+.ro-note-icon { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #ffffff; color: var(--green-800); }
+.ro-note-icon .icon { width: 20px; height: 20px; }
+.ro-note-title { margin-bottom: 4px; font-family: var(--font-sans); font-size: 1rem; font-weight: 700; color: var(--ink-900); }
+.ro-note p { font-size: .92rem; line-height: 1.6; color: var(--ink-700); }
+.ro-note a { font-weight: 600; color: var(--green-800); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .ro-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .ro-grid { grid-template-columns: minmax(0, 1fr); }
+  .ro-supply { gap: 8px; }
+  .ro-opt-box { padding: 12px 4px; }
+  .ro-done-btns .btn { width: 100%; justify-content: center; }
+}

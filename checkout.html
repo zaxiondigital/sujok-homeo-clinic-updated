@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Sujok Homeo Clinic, Brampton</title>
+  <meta name="description" content="Review your cart and choose pickup or delivery for your Sujok Homeo Clinic order.">
+  <link rel="icon" href="assets/images/sujok-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-v3.css">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Icon sprite (stroke icons, inherit currentColor) -->
+  <svg width="0" height="0" class="visually-hidden" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21 7H6"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"/></symbol>
+      <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+      <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5Z"/></symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15"/><path d="M5 19 13 11"/></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6M15 14.3c3.2-.6 6 1.6 6 5.2"/></symbol>
+      <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12C12 8 9 5 4 5c0 4.5 3 7 8 7Z"/><path d="M12 12c0-3.5 2.6-6 7.5-6 0 4-2.6 6-7.5 6Z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6.3-8 11-8 11Z"/></symbol>
+      <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M2 9.5 12 5l10 4.5-10 4.5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5M22 9.5V15"/></symbol>
+      <symbol id="i-hand-sprout" viewBox="0 0 24 24"><path d="M12 13V8"/><path d="M12 8c0-2.5-1.8-4-4.5-4 0 2.5 1.8 4 4.5 4ZM12 9c0-2.5 1.8-4 4.5-4 0 2.5-1.8 4-4.5 4Z"/><path d="M3 15c2.5 0 4 1 5.5 2H13a1.5 1.5 0 0 0 0-3h-2.5M3 20h10l7.5-4.5a1.6 1.6 0 0 0-2-2.5L14 15"/></symbol>
+      <symbol id="i-family" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><circle cx="6" cy="11" r="2"/><circle cx="18" cy="11" r="2"/><path d="M9 10.5c0-1.7 1.3-3 3-3s3 1.3 3 3M3 21v-3.5C3 15.6 4.3 14 6 14s3 1.6 3 3.5V21M15 21v-3.5c0-1.9 1.3-3.5 3-3.5s3 1.6 3 3.5V21"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="9.3" r="2"/><path d="M8.5 14.5c.5-1.6 1.8-2.6 3.5-2.6s3 1 3.5 2.6"/></symbol>
+      <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 19c-2.5-2-3.5-4.5-3.5-7S10 6.5 12 5c2 1.5 3.5 4.5 3.5 7S14.5 17 12 19Z"/><path d="M12 19c-4 0-7-2.5-8-6.5 2.5-.2 4.5.3 5.6 1.2M12 19c4 0 7-2.5 8-6.5-2.5-.2-4.5.3-5.6 1.2"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-4.5a2 2 0 0 1 4 0V20"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2.2 1.4a11 11 0 0 0 4.8 4.8L14 12l4 1.5V17a2 2 0 0 1-2 2A13 13 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M4.5 19.5 6 16a8 8 0 1 1 3 2.9Z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8Z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+      <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11M11 10V4a1.5 1.5 0 0 1 3 0v7M14 10.5V5.5a1.5 1.5 0 0 1 3 0V13"/><path d="M17 11.5a1.5 1.5 0 0 1 3 0V15a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-2.7l-2.6-4a1.5 1.5 0 0 1 2.4-1.8L8 15"/><path d="M11.5 17.5c.8-1.3 2.3-1.3 3 0"/></symbol>
+      <symbol id="i-spine" viewBox="0 0 24 24"><path d="M12 2v20"/><rect x="8.5" y="3.5" width="7" height="3" rx="1.5"/><rect x="8" y="8" width="8" height="3" rx="1.5"/><rect x="8" y="12.5" width="8" height="3" rx="1.5"/><rect x="8.5" y="17" width="7" height="3" rx="1.5"/></symbol>
+      <symbol id="i-kids" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.2"/><circle cx="12" cy="5.5" r="2.2"/><circle cx="18" cy="7" r="2.2"/><path d="M2.5 16.5c0-2.5 1.6-4.5 3.5-4.5s3.5 2 3.5 4.5M8.5 14.5c0-3 1.6-5 3.5-5s3.5 2 3.5 5M14.5 16.5c0-2.5 1.6-4.5 3.5-4.5s3.5 2 3.5 4.5"/><path d="M5 20h14"/></symbol>
+      <symbol id="i-mortar" viewBox="0 0 24 24"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M9 20.5h6M14 11l5.5-7.5"/><circle cx="19.8" cy="3.8" r="1.4"/></symbol>
+      <symbol id="i-hand-heart" viewBox="0 0 24 24"><path d="M12 10.5S8.5 8.4 8.5 6a2 2 0 0 1 3.5-1.3A2 2 0 0 1 15.5 6c0 2.4-3.5 4.5-3.5 4.5Z"/><path d="M3 15c2.5 0 4 1 5.5 2H13a1.5 1.5 0 0 0 0-3h-2.5M3 20h10l7.5-4.5a1.6 1.6 0 0 0-2-2.5L14 15"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+      <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+      <symbol id="i-volume-off" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 6 6M22 9l-6 6"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ========== Header ========== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sujok Homeo Clinic — home">
+        <img src="assets/images/sujok-logo.png" alt="Sujok Homeo Clinic" width="221" height="167">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        <span class="visually-hidden">Open menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about-sujok.html">About</a></li>
+          <li class="has-dropdown has-split">
+            <a class="nav-link" href="homeopathy.html">Homeopathy</a>
+            <button class="dropdown-toggle nav-caret" type="button" aria-expanded="false" aria-controls="menu-homeopathy">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              <span class="visually-hidden">Homeopathy topics</span>
+            </button>
+            <ul class="dropdown dropdown--cols" id="menu-homeopathy">
+              <li><a href="constipation.html">Constipation</a></li>
+              <li><a href="arthritis.html">Arthritis</a></li>
+              <li><a href="thyroid.html">Thyroid</a></li>
+              <li><a href="mental-health.html">Mental Health</a></li>
+              <li><a href="allergies.html">Allergies</a></li>
+              <li><a href="headaches.html">Headaches</a></li>
+              <li><a href="addictions.html">Addictions</a></li>
+              <li><a href="blood-pressure.html">Blood Pressure</a></li>
+              <li><a href="female-disorders.html">Female Disorders</a></li>
+              <li><a href="sleep-disorders.html">Sleep Disorders</a></li>
+              <li><a href="male-disorders.html">Male Disorders</a></li>
+              <li><a href="breathing-disorders.html">Breathing Disorders</a></li>
+              <li><a href="kidney-disorders.html">Kidney Disorders</a></li>
+              <li><a href="skin-disorders.html">Skin Disorders</a></li>
+              <li><a href="diarrhea.html">Diarrhea</a></li>
+              <li><a href="digestive-diseases.html">Digestive Diseases</a></li>
+              <li><a href="gout.html">Gout</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown has-split">
+            <a class="nav-link" href="kids-health.html">Kids Health</a>
+            <button class="dropdown-toggle nav-caret" type="button" aria-expanded="false" aria-controls="menu-kids-health">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              <span class="visually-hidden">Kids Health topics</span>
+            </button>
+            <ul class="dropdown dropdown--cols" id="menu-kids-health">
+              <li><a href="kids-asthma.html">Asthma and Respiratory Disorders</a></li>
+              <li><a href="kids-attention-disorders.html">Attention Disorders</a></li>
+              <li><a href="kids-eczema.html">Eczema</a></li>
+              <li><a href="kids-anaemia.html">Anaemia</a></li>
+              <li><a href="kids-allergies.html">Allergies</a></li>
+              <li><a href="kids-loss-of-appetite.html">Loss of Appetite</a></li>
+              <li><a href="kids-bed-wetting.html">Bed Wetting</a></li>
+              <li><a href="kids-tonsillitis.html">Tonsillitis</a></li>
+              <li><a href="kids-adenoids.html">Adenoids</a></li>
+              <li><a href="kids-recurrent-infections.html">Recurrent Infections</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown has-split">
+            <a class="nav-link" href="pain-management.html">Pain Relief</a>
+            <button class="dropdown-toggle nav-caret" type="button" aria-expanded="false" aria-controls="menu-pain-relief">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              <span class="visually-hidden">Pain Relief topics</span>
+            </button>
+            <ul class="dropdown dropdown--cols" id="menu-pain-relief">
+              <li><a href="pain-gout.html">Gout</a></li>
+              <li><a href="back-pain.html">Back Pain</a></li>
+              <li><a href="pain-arthritis.html">Arthritis</a></li>
+              <li><a href="fibromyalgia.html">Fibromyalgia</a></li>
+              <li><a href="pain-headaches.html">Headaches</a></li>
+              <li><a href="numbness.html">Numbness</a></li>
+              <li><a href="undiagnosed-pains.html">Undiagnosed Pains</a></li>
+              <li><a href="acupuncture.html">Acupuncture</a></li>
+              <li><a href="laser-therapy.html">Laser Therapy</a></li>
+              <li><a href="sujok-clinic.html">Sujok Clinic</a></li>
+              <li><a href="chiropractic.html">Chiropractic</a></li>
+              <li><a href="physiotherapy.html">Physiotherapy</a></li>
+              <li><a href="frozen-shoulder.html">Frozen Shoulder</a></li>
+              <li><a href="spondylosis.html">Spondylosis</a></li>
+              <li><a href="sciatica.html">Sciatica</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="http://www.homeoint.org/books/boericmm/" target="_blank" rel="noopener noreferrer">Materia Medica<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a class="nav-link" href="team.html">Team</a></li>
+          <li class="has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="shop-menu">
+              Shop
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+            </button>
+            <ul class="dropdown" id="shop-menu">
+              <li><a href="shop.html">Order Online</a></li>
+              <li><a href="reorder.html">Re-order Form</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn" type="button" aria-label="Search">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          </button>
+          <!-- TODO: link the cart icon to the cart -->
+          <a class="nav-login" href="account.html">
+            <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+            <span>Login</span>
+          </a>
+          <a class="icon-btn cart-link" href="#" aria-label="Cart, 0 items">
+            <svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg>
+            <span class="cart-count" aria-hidden="true">0</span>
+          </a>
+          <a class="btn btn-primary btn-sm" href="index.html#booking">Book a Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="co-page">
+
+    <!-- ========== Page heading + order steps (same four steps as the live checkout) ========== -->
+    <section class="co-head" aria-labelledby="co-title">
+      <div class="container">
+        <a class="co-back" href="shop.html">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-left"/></svg>
+          Continue shopping
+        </a>
+        <h1 class="co-title" id="co-title">Checkout</h1>
+
+        <ol class="co-steps" id="co-steps" aria-label="Checkout progress">
+          <li class="co-step" data-step="1">
+            <span class="co-step-dot"><svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg></span>
+            <span class="co-step-label">My Cart</span>
+          </li>
+          <li class="co-step" data-step="2">
+            <span class="co-step-dot"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+            <span class="co-step-label">Order Delivery</span>
+          </li>
+          <li class="co-step" data-step="3">
+            <span class="co-step-dot"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span>
+            <span class="co-step-label">Secure Payment</span>
+          </li>
+          <li class="co-step" data-step="4">
+            <span class="co-step-dot"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <span class="co-step-label">Status</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="co-section">
+      <div class="container co-layout">
+
+        <!-- ===== Left column: one panel per step ===== -->
+        <div class="co-main">
+
+          <!-- Step 1: My Cart -->
+          <section class="co-panel" id="co-step-1" aria-labelledby="co-cart-title">
+            <div class="co-panel-head">
+              <h2 class="co-panel-title" id="co-cart-title">My Cart</h2>
+              <p class="co-panel-meta" id="co-cart-meta"></p>
+            </div>
+            <ul class="co-items" id="co-items"></ul>
+          </section>
+
+          <!-- Step 2: Order Delivery -->
+          <form class="co-panel" id="co-step-2" aria-labelledby="co-ship-title" method="post" action="#" novalidate hidden>
+            <div class="co-panel-head">
+              <h2 class="co-panel-title" id="co-ship-title">Order Delivery</h2>
+              <button class="co-link" type="button" data-go="1">Edit cart</button>
+            </div>
+
+            <fieldset class="co-group">
+              <legend class="co-legend">Order type</legend>
+              <div class="co-types">
+                <label class="co-type">
+                  <input type="radio" name="order_type" value="Pickup" checked>
+                  <span class="co-type-box">
+                    <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                    <span><strong>Pickup</strong><small>145 Clarence Street, Unit 26, Brampton</small></span>
+                  </span>
+                </label>
+                <label class="co-type">
+                  <input type="radio" name="order_type" value="Delivery">
+                  <span class="co-type-box">
+                    <svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>
+                    <span><strong>Delivery</strong><small>Shipped to your address</small></span>
+                  </span>
+                </label>
+              </div>
+              <p class="co-hint" id="co-type-hint" hidden>Pickup is only available for orders in Canada.</p>
+              <label class="co-field co-field--half">
+                <span class="co-label">Preferred date</span>
+                <input class="co-input" type="date" name="date" id="co-date" required>
+              </label>
+            </fieldset>
+
+            <fieldset class="co-group">
+              <legend class="co-legend">Contact details</legend>
+              <div class="co-grid">
+                <label class="co-field co-field--full">
+                  <span class="co-label">Name</span>
+                  <input class="co-input" type="text" name="name" autocomplete="name" placeholder="Your name" required>
+                </label>
+                <label class="co-field">
+                  <span class="co-label">E-mail</span>
+                  <input class="co-input" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                </label>
+                <label class="co-field">
+                  <span class="co-label">Phone</span>
+                  <input class="co-input" type="tel" name="phone" autocomplete="tel" placeholder="xxx-xxx-xxxx" required>
+                </label>
+                <label class="co-field">
+                  <span class="co-label">Client ID</span>
+                  <input class="co-input" type="text" name="client_id" placeholder="Client ID">
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="co-group">
+              <legend class="co-legend">Address</legend>
+              <div class="co-grid">
+                <label class="co-field">
+                  <span class="co-label">Country</span>
+                  <select class="co-input" name="country" id="co-country" required>
+                    <option value="">Select country</option>
+                    <option value="CA">Canada</option>
+                    <option value="US">United States</option>
+                  </select>
+                </label>
+                <label class="co-field" id="co-region-field">
+                  <span class="co-label" id="co-region-label">Province</span>
+                  <select class="co-input" name="province" id="co-province" required>
+                    <option value="">Select province</option>
+                    <option>Alberta</option>
+                    <option>British Columbia</option>
+                    <option>Manitoba</option>
+                    <option>New Brunswick</option>
+                    <option>Newfoundland and Labrador</option>
+                    <option>Northwest Territories</option>
+                    <option>Nova Scotia</option>
+                    <option>Nunavut</option>
+                    <option>Ontario</option>
+                    <option>Prince Edward Island</option>
+                    <option>Quebec</option>
+                    <option>Saskatchewan</option>
+                    <option>Yukon</option>
+                  </select>
+                  <input class="co-input" type="text" name="state" id="co-state" placeholder="State" hidden>
+                </label>
+                <label class="co-field co-field--full co-addr">
+                  <span class="co-label">Street address</span>
+                  <input class="co-input" type="text" name="street" autocomplete="street-address" placeholder="Street and unit number">
+                </label>
+                <label class="co-field co-addr">
+                  <span class="co-label">City</span>
+                  <input class="co-input" type="text" name="city" autocomplete="address-level2" placeholder="City">
+                </label>
+                <label class="co-field co-addr">
+                  <span class="co-label" id="co-postal-label">Postal code</span>
+                  <input class="co-input" type="text" name="postal" autocomplete="postal-code" placeholder="A1A 1A1">
+                </label>
+                <label class="co-field co-field--full">
+                  <span class="co-label">Comments <small>(optional)</small></span>
+                  <textarea class="co-input" name="comments" rows="3" placeholder="Anything we should know about your order"></textarea>
+                </label>
+              </div>
+            </fieldset>
+
+            <label class="co-check">
+              <input type="checkbox" name="terms" required>
+              <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms and Conditions</a> and the no return or exchange policy on homeopathic products.</span>
+            </label>
+
+            <p class="co-error" id="co-error" role="alert" hidden></p>
+
+            <div class="co-actions">
+              <button class="btn btn-primary" type="submit" name="as" value="guest">Checkout as Guest</button>
+              <!-- Opens the sign-in page (account.html); checkout.js keeps the cart and typed details -->
+              <button class="btn co-btn-outline" type="submit" name="as" value="user">
+                <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+                Checkout as User
+              </button>
+            </div>
+          </form>
+
+          <!-- Step 3: Secure Payment (design preview: no payment is taken) -->
+          <section class="co-panel co-pay" id="co-step-3" aria-labelledby="co-pay-title" hidden>
+            <span class="co-pay-icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span>
+            <h2 class="co-panel-title" id="co-pay-title">Secure Payment</h2>
+            <p>On the live store this step opens PayPal, where the customer pays by PayPal or card. This preview is not connected to a store, so no order is placed and no payment is taken.</p>
+            <ul class="co-cards" aria-label="Accepted payments on the live store">
+              <li>PayPal</li><li>Visa</li><li>Mastercard</li><li>American Express</li><li>Discover</li>
+            </ul>
+            <button class="co-link" type="button" data-go="2">Back to delivery details</button>
+          </section>
+        </div>
+
+        <!-- ===== Right column: order summary ===== -->
+        <aside class="co-summary" aria-labelledby="co-sum-title">
+          <h2 class="co-sum-title" id="co-sum-title">Order Summary</h2>
+
+          <ul class="co-sum-items" id="co-sum-items" hidden></ul>
+
+          <dl class="co-totals">
+            <div><dt>Subtotal</dt><dd id="co-subtotal">$0.00</dd></div>
+            <div class="co-after" hidden><dt>Coupon discount</dt><dd id="co-discount">$0.00</dd></div>
+            <div class="co-after" hidden><dt>Taxes</dt><dd id="co-tax">By province</dd></div>
+            <div class="co-after" hidden><dt>Shipping</dt><dd id="co-ship">$0.00</dd></div>
+            <div class="co-total"><dt>Total</dt><dd id="co-total">$0.00</dd></div>
+          </dl>
+
+          <form class="co-coupon co-after" id="co-coupon" method="post" action="#" hidden>
+            <label class="visually-hidden" for="co-coupon-code">Coupon code</label>
+            <input class="co-input" type="text" id="co-coupon-code" placeholder="Coupon code">
+            <button class="btn co-btn-outline btn-sm" type="submit">Apply</button>
+          </form>
+
+          <p class="co-min" id="co-min" hidden></p>
+
+          <button class="btn btn-primary co-next" type="button" id="co-next">
+            Proceed to Checkout
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+
+          <ul class="co-trust">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Secure payments by PayPal</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>All prices are in CAD$</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>No return or exchange on homeopathic products</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="co-toast" id="co-toast" role="status" aria-live="polite"></div>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo" href="#top" aria-label="Sujok Homeo Clinic — back to top">
+          <img src="assets/images/sujok-logo.png" alt="Sujok Homeo Clinic" width="221" height="167" loading="lazy">
+        </a>
+        <p>Homeopathic and chiropractic care in Brampton, Ontario.</p>
+        <!-- TODO: add the clinic's social profile URLs -->
+        <ul class="social-list">
+          <li><a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="#" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="footer-clinic">
+        <h2 class="footer-heading" id="footer-clinic">Clinic</h2>
+        <ul>
+          <li><a href="about-sujok.html">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="team.html">Our Practitioners</a></li>
+          <li><a href="#contact">Location</a></li>
+          <li><a href="index.html#booking">Book a Consultation</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" id="footer-resources" aria-labelledby="footer-resources-title">
+        <h2 class="footer-heading" id="footer-resources-title">Resources</h2>
+        <ul>
+          <li><a href="homeopathy.html">Homeopathy</a></li>
+          <li><a href="kids-health.html">Kids Health</a></li>
+          <li><a href="pain-management.html">Pain Management</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="insurance.html">Insurance</a></li>
+          <li><a href="http://www.homeoint.org/books/boericmm/" target="_blank" rel="noopener noreferrer">Materia Medica <svg class="icon icon-xs" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="footer-store">
+        <h2 class="footer-heading" id="footer-store">Online Store</h2>
+        <ul>
+          <li><a href="shop.html">Order Online</a></li>
+          <li><a href="reorder.html">Re-order Form</a></li>
+          <li><a href="account.html">Login</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col" id="contact">
+        <h2 class="footer-heading">Contact</h2>
+        <address>
+          <ul class="contact-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>145 Clarence Street, Unit 26<br>Brampton, Ontario L6W 1T2</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+16478562516">647-856-2516</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@sujokhomeoclinic.com">info@sujokhomeoclinic.com</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon–Sun, 10:00 AM – 6:00 PM</span></li>
+          </ul>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year">2026</span> Sujok Homeo Clinic. All rights reserved.</p>
+        <ul class="legal-links">
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="about-sujok.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>

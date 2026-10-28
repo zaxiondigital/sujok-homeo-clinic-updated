@@ -1,0 +1,112 @@
+/* =========================================================
+   Sujok Homeo Clinic — Account: sign in, create account, forgot password (design preview)
+   Loaded after style-v3.css. The header, footer and buttons come from style-v3.css unchanged;
+   every rule here is scoped to .ac-page.
+   ========================================================= */
+
+.ac-page {
+  --ac-tint: #eef5ec;          /* soft green panels (same as the topic pages) */
+  --ac-field: #cfdccb;
+  background: #fafcf8;
+}
+
+.ac-section { padding-block: clamp(32px, 5vw, 72px); }
+
+.ac-card {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  max-width: 1040px; margin-inline: auto; overflow: hidden;
+  background: #ffffff; border: 1px solid var(--line); border-radius: 24px;
+  box-shadow: 0 18px 48px rgba(23, 61, 43, .08);
+}
+
+/* ---------- Left: photo + perks ---------- */
+.ac-side { position: relative; display: flex; align-items: flex-end; min-height: 100%; background: var(--green-900); }
+.ac-side-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; }
+.ac-side::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 74, 44, 0) 30%, rgba(10, 74, 44, .92) 78%); }
+.ac-side-body { position: relative; z-index: 1; padding: clamp(24px, 3vw, 40px); color: #ffffff; }
+.ac-side-kicker { font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #cfe8c4; }
+.ac-side-title { margin: 8px 0 18px; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.2; color: #ffffff; }
+.ac-perks { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.ac-perks li { display: flex; align-items: center; gap: 12px; font-size: .98rem; color: rgba(255, 255, 255, .92); }
+.ac-perks .icon {
+  flex: none; width: 34px; height: 34px; padding: 8px; border-radius: 50%;
+  background: rgba(255, 255, 255, .14); color: #ffffff; stroke-width: 1.8;
+}
+
+/* ---------- Right: forms ---------- */
+.ac-main { padding: clamp(28px, 4vw, 52px); }
+.ac-title { font-size: clamp(1.9rem, 3vw, 2.5rem); line-height: 1.15; color: var(--ink-900); }
+.ac-lead { margin-top: 8px; color: var(--ink-500); }
+
+.ac-tabs { display: grid; grid-template-columns: 1fr 1fr; margin: 26px 0 24px; padding: 4px; background: var(--green-50); border-radius: 14px; }
+.ac-tabs[hidden] { display: none; }
+.ac-tab {
+  height: 44px; background: none; border: 0; border-radius: 10px;
+  font: inherit; font-weight: 600; color: var(--ink-500); cursor: pointer; transition: background .2s, color .2s;
+}
+.ac-tab:hover { color: var(--green-800); }
+.ac-tab[aria-selected="true"] { background: #ffffff; color: var(--green-800); box-shadow: 0 1px 4px rgba(20, 32, 58, .12); }
+
+.ac-form { display: grid; gap: 16px; }
+.ac-form[hidden] { display: none; }
+#ac-forgot { margin-top: 26px; }
+.ac-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ac-field { display: grid; gap: 6px; }
+.ac-label { font-size: .9rem; font-weight: 600; color: var(--ink-700); }
+.ac-label-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.ac-input {
+  width: 100%; min-height: 48px; padding: 10px 14px;
+  background: #ffffff; border: 1px solid var(--ac-field); border-radius: 12px;
+  font: inherit; color: var(--ink-900);
+}
+.ac-input:focus { outline: 0; border-color: var(--green-800); box-shadow: 0 0 0 3px rgba(13, 90, 53, .12); }
+.ac-input[aria-invalid="true"] { border-color: #a23b2a; box-shadow: 0 0 0 3px rgba(162, 59, 42, .1); }
+
+.ac-pw { position: relative; display: block; }
+.ac-pw .ac-input { padding-right: 72px; }
+.ac-eye {
+  position: absolute; top: 50%; right: 8px; transform: translateY(-50%);
+  padding: 6px 10px; background: none; border: 0; border-radius: 8px;
+  font: inherit; font-size: .85rem; font-weight: 600; color: var(--green-800); cursor: pointer;
+}
+.ac-eye:hover { background: var(--green-50); }
+
+.ac-rules { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 4px 0 0; padding: 0; list-style: none; font-size: .85rem; color: var(--ink-500); }
+.ac-rules li { display: flex; align-items: center; gap: 6px; }
+.ac-rules li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--line); transition: background .2s; }
+.ac-rules li.is-met { color: var(--green-800); }
+.ac-rules li.is-met::before { background: var(--btn-fill); }
+
+.ac-check { display: flex; align-items: flex-start; gap: 10px; font-size: .95rem; line-height: 1.5; color: var(--ink-700); cursor: pointer; }
+.ac-check input { flex: none; width: 18px; height: 18px; margin-top: 3px; accent-color: var(--green-800); }
+.ac-check a { font-weight: 600; color: var(--green-800); }
+
+.ac-msg { margin: 0; padding: 12px 16px; border-radius: 12px; background: #fbeeeb; font-size: .95rem; color: #8c2f20; }
+.ac-msg[hidden] { display: none; }
+.ac-submit { justify-content: center; width: 100%; min-height: 50px; }
+.ac-submit[hidden] { display: none; }
+
+.ac-link { font-weight: 600; color: var(--green-800); text-decoration: underline; text-underline-offset: 3px; }
+.ac-back { display: inline-flex; align-items: center; gap: 4px; text-decoration: none; }
+.ac-switch { text-align: center; font-size: .95rem; color: var(--ink-500); }
+
+.ac-sent { padding: 22px; text-align: center; background: var(--ac-tint); border-radius: 16px; color: var(--ink-700); }
+.ac-sent[hidden] { display: none; }
+.ac-sent p + p { margin-top: 6px; font-size: .95rem; line-height: 1.6; }
+.ac-sent strong { font-size: 1.1rem; color: var(--ink-900); }
+.ac-sent-icon { display: inline-grid; place-items: center; width: 52px; height: 52px; margin-bottom: 10px; border-radius: 50%; background: #ffffff; color: var(--green-800); }
+.ac-sent-email { font-weight: 600; word-break: break-all; }
+
+.ac-help { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); text-align: center; font-size: .92rem; color: var(--ink-500); }
+.ac-help a { font-weight: 600; color: var(--green-800); white-space: nowrap; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .ac-card { grid-template-columns: minmax(0, 1fr); }
+  .ac-side { order: 1; min-height: 300px; }   /* phones: the form comes first, the perks under it */
+  .ac-side::after { background: linear-gradient(180deg, rgba(10, 74, 44, .15) 0%, rgba(10, 74, 44, .92) 70%); }
+  .ac-side-img { object-position: 50% 35%; }
+}
+@media (max-width: 480px) {
+  .ac-grid { grid-template-columns: minmax(0, 1fr); }
+}
