@@ -39,7 +39,8 @@
   }
 
   /* ---------- State ---------- */
-  const state = { cat: data.cats[0], letter: 'A', query: '' };
+  // all = true while showing results from every category (a search from the header search bar)
+  const state = { cat: data.cats[0], letter: 'A', query: '', all: false };
   let cart = [];
   try { cart = JSON.parse(localStorage.getItem('sh-cart')) || []; } catch (e) { cart = []; }
   const saveCart = () => { try { localStorage.setItem('sh-cart', JSON.stringify(cart)); } catch (e) { /* preview only */ } };
@@ -61,6 +62,8 @@
 
   function renderCategory() {
     const c = state.cat;
+    state.all = false;
+    if (location.search) history.replaceState(null, '', location.pathname);
     els.cats.querySelectorAll('.sh-cat').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.cat === c.id)));
     els.title.textContent = c.name;
     els.count.textContent = c.items.length + ' products';
@@ -105,24 +108,43 @@
   let searchTimer;
   els.search.addEventListener('input', () => {
     clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => { state.query = els.search.value.trim().toLowerCase(); renderList(); }, 150);
+    searchTimer = setTimeout(() => {
+      state.query = els.search.value.trim().toLowerCase();
+      // clearing an all-products search goes back to the category view
+      if (state.all && !state.query) renderCategory(); else renderList();
+    }, 150);
   });
+
+  // shop.html?q=… (from the header search bar): search every category
+  function renderSearchAll(q) {
+    state.all = true;
+    state.query = q.toLowerCase();
+    els.search.value = q;
+    els.cats.querySelectorAll('.sh-cat').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    els.title.textContent = 'Search results';
+    els.count.textContent = 'All products';
+    els.intro.innerHTML = '';
+    els.letters.hidden = true;
+    els.search.placeholder = 'Search all products';
+    renderList();
+  }
 
   /* ---------- Product rows ---------- */
   function visibleItems() {
+    const match = ({ it }) => (it[0] + ' ' + it[1]).toLowerCase().includes(state.query);
+    if (state.all) return data.cats.flatMap((c) => c.items.map((it, n) => ({ c, it, n }))).filter(match);
     const c = state.cat;
-    const all = c.items.map((it, n) => ({ it, n }));
-    if (state.query) return all.filter(({ it }) => (it[0] + ' ' + it[1]).toLowerCase().includes(state.query));
+    const all = c.items.map((it, n) => ({ c, it, n }));
+    if (state.query) return all.filter(match);
     if (els.letters.hidden) return all;
     return all.filter(({ it }) => it[0][0].toUpperCase() === state.letter);
   }
 
   function renderList() {
-    const c = state.cat;
     els.letters.querySelectorAll('.sh-letter').forEach((b) => b.setAttribute('aria-pressed', String(!state.query && b.dataset.letter === state.letter)));
     const rows = visibleItems();
 
-    if (state.query) els.status.textContent = rows.length + ' result' + (rows.length === 1 ? '' : 's') + ' for “' + els.search.value.trim() + '”';
+    if (state.query) els.status.textContent = rows.length + ' result' + (rows.length === 1 ? '' : 's') + ' for “' + els.search.value.trim() + '”' + (state.all ? ' in all products' : '');
     else if (!els.letters.hidden) els.status.textContent = rows.length + ' products starting with ' + state.letter;
     else els.status.textContent = '';
 
@@ -130,7 +152,7 @@
       els.list.innerHTML = '<li class="sh-empty">No products found. If you don\'t see a remedy listed, <a href="tel:+16478562516">contact us</a>.</li>';
       return;
     }
-    els.list.innerHTML = rows.map(({ it, n }) => itemHtml(c, it, n)).join('');
+    els.list.innerHTML = rows.map(({ c, it, n }) => itemHtml(c, it, n)).join('');
   }
 
   function itemHtml(c, it, n) {
@@ -157,6 +179,7 @@
         '<span class="sh-item-mark" aria-hidden="true">' + esc(mark) + '</span>' +
         '<div><h3 class="sh-item-name">' + esc(name) + '</h3>' +
           (tag && c.id !== 'cs' ? '<span class="sh-item-abbr">' + esc(tag) + '</span>' : '') +
+          (state.all ? '<span class="sh-item-cat">' + esc(c.name) + '</span>' : '') +
           (details ? '<div><button class="sh-info-btn" type="button" aria-expanded="false" aria-controls="sh-d-' + key + '">' + (DETAIL_LABEL[c.id] || 'Details') + '</button></div>' : '') +
         '</div>' +
       '</div>' +
@@ -269,6 +292,7 @@
     els.subtotal.textContent = money(total);
     els.min.textContent = cart.length && total < MIN_ORDER ? 'Add ' + money(MIN_ORDER - total) + ' more to reach the $20.00 minimum order.' : '';
     els.checkout.disabled = !cart.length || total < MIN_ORDER;
+    $('sh-continue').classList.toggle('is-primary', els.checkout.disabled);
   }
 
   els.cartList.addEventListener('click', (e) => {
@@ -314,6 +338,7 @@
     toastTimer = setTimeout(() => els.toast.classList.remove('is-shown'), 2400);
   }
 
-  renderCategory();
+  const q = (new URLSearchParams(location.search).get('q') || '').trim();
+  if (q) renderSearchAll(q); else renderCategory();
   renderCart();
 })();

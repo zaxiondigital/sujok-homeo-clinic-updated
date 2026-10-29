@@ -313,6 +313,22 @@ h1, h2, h3 { margin: 0; font-family: var(--font-serif); font-weight: 400; color:
   font-size: .68rem; font-weight: 700;
 }
 
+/* Header search bar (opened by the search icon; added by store-header.js) */
+.site-search { padding: 14px 0 18px; border-top: 1px solid var(--line); background: var(--white); }
+.site-search[hidden] { display: none; }
+.site-search-form { display: flex; align-items: center; gap: 10px; }
+.site-search-field {
+  flex: 1; display: flex; align-items: center; gap: 10px; min-width: 0; padding: 0 16px;
+  background: var(--white); border: 1px solid #cfdccb; border-radius: var(--pill);
+}
+.site-search-field:focus-within { border-color: var(--green-800); box-shadow: 0 0 0 3px rgba(13, 90, 53, .12); }
+.site-search-field .icon { flex: none; color: var(--ink-500); }
+.site-search-field input { flex: 1; min-width: 0; height: 48px; border: 0; outline: 0; background: none; font: inherit; color: var(--ink-900); }
+.site-search-form .btn { flex: none; }
+@media (max-width: 560px) {
+  .site-search-form .btn-text { display: none; }   /* phones: icon-only Search button */
+}
+
 .nav-toggle {
   display: none; margin-left: auto;
   width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 12px; background: var(--white);
@@ -476,9 +492,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-serif); font-weight: 400; color:
 
 /* Shared: text link on white, and links waiting for a verified URL */
 .v2-text-link { font-size: var(--fs-link); color: var(--text-green); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
-.v2-pending-link {               /* green label, not a link, until its destination URL is confirmed */
-  margin-top: 26px; font-size: var(--fs-link); font-weight: 500; color: var(--text-green); cursor: default;
-}
+.v2-panel-link { align-self: flex-start; margin-top: 26px; font-size: var(--fs-link); }   /* "Learn More About …" under each service */
 .v2-center-row { justify-content: center; margin-top: 36px; }
 .v2-btn-pill { border-radius: var(--pill); }
 .v2-plain-link { color: var(--ink-900); font-weight: 500; }

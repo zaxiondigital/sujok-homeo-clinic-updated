@@ -96,6 +96,12 @@
 .ac-sent strong { font-size: 1.1rem; color: var(--ink-900); }
 .ac-sent-icon { display: inline-grid; place-items: center; width: 52px; height: 52px; margin-bottom: 10px; border-radius: 50%; background: #ffffff; color: var(--green-800); }
 .ac-sent-email { font-weight: 600; word-break: break-all; }
+.ac-sent:focus { outline: 0; }
+.ac-sent-btn { margin-top: 14px !important; }
+.ac-preview { font-size: .88rem !important; color: var(--ink-500); }
+
+/* Reset password page: the form starts under the heading (no tabs) */
+.ac-top { margin-top: 26px; }
 
 .ac-help { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); text-align: center; font-size: .92rem; color: var(--ink-500); }
 .ac-help a { font-weight: 600; color: var(--green-800); white-space: nowrap; }

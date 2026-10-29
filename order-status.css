@@ -1,0 +1,78 @@
+/* =========================================================
+   Sujok Homeo Clinic — Order confirmation and Payment not completed (design preview)
+   Loaded after style-v3.css and checkout.css: the heading, step tracker, panels, summary and
+   toast come from checkout.css; this file adds the result card, details and next steps.
+   ========================================================= */
+
+/* ---------- Result card ---------- */
+.os-result { text-align: center; }
+.os-badge {
+  display: inline-grid; place-items: center; width: 72px; height: 72px; margin-bottom: 14px; border-radius: 50%;
+  background: var(--btn-fill); color: var(--btn-label);
+}
+.os-badge svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.os-badge--warn { background: #fff1d6; color: #8a5a00; }
+.os-result-title { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.2; color: var(--ink-900); }
+.os-result-text { max-width: 50ch; margin: 10px auto 0; line-height: 1.7; color: var(--ink-700); }
+.os-order-no {
+  display: inline-block; margin-top: 16px; padding: 8px 16px; border-radius: 999px;
+  background: var(--co-tint); font-weight: 700; color: var(--green-800);
+}
+.os-preview { margin-top: 10px; font-size: .88rem; color: var(--ink-500); }
+.os-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
+.os-actions .co-link { align-self: center; }
+
+/* ---------- What happens next ---------- */
+.os-next { margin-top: 18px; }
+.os-page .co-legend { font-family: var(--font-sans); }   /* section labels are headings here, which default to the serif */
+.os-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: os; }
+.os-steps li {
+  position: relative; padding: 18px 16px 16px; background: #fafcf8; border: 1px solid var(--line); border-radius: 14px;
+  counter-increment: os;
+}
+.os-steps li::before {
+  content: counter(os); display: grid; place-items: center; width: 30px; height: 30px; margin-bottom: 10px; border-radius: 50%;
+  background: #ffffff; border: 1.5px solid var(--btn-fill); font-size: .85rem; font-weight: 700; color: var(--green-800);
+}
+.os-steps strong { display: block; margin-bottom: 4px; color: var(--ink-900); }
+.os-steps p { font-size: .92rem; line-height: 1.55; color: var(--ink-500); }
+
+/* Reasons list (payment not completed) */
+.os-reasons { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.os-reasons li { display: flex; gap: 10px; line-height: 1.55; color: var(--ink-700); }
+.os-reasons li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 9px; border-radius: 50%; background: var(--btn-fill); }
+
+/* ---------- Order details ---------- */
+.os-details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.os-box { padding: 16px 18px; background: #fafcf8; border: 1px solid var(--line); border-radius: 14px; }
+.os-box h3 { margin-bottom: 6px; font-family: var(--font-sans); }
+.os-box p { line-height: 1.6; color: var(--ink-700); overflow-wrap: anywhere; }
+
+.os-items { margin: 8px 0 0; padding: 0; list-style: none; }
+.os-items li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.os-item-name { font-weight: 600; color: var(--ink-900); }
+.os-item-opt { font-size: .9rem; color: var(--ink-500); }
+.os-item-amt { font-weight: 600; color: var(--ink-900); text-align: right; }
+
+/* Help card under the summary */
+.os-help { display: grid; gap: 4px; margin-top: 16px; padding: 18px; background: var(--co-tint); border-radius: 16px; font-size: .92rem; line-height: 1.6; color: var(--ink-700); }
+.os-help strong { color: var(--ink-900); }
+.os-help a { font-weight: 600; color: var(--green-800); }
+
+/* Steps tracker: payment step that didn't complete */
+.co-step.is-warn .co-step-dot { background: #fff1d6; border-color: #f0c46b; color: #8a5a00; }
+.co-step.is-warn .co-step-label { font-weight: 600; color: var(--ink-900); }
+
+/* ---------- Print: just the order ---------- */
+@media print {
+  .site-header, .site-footer, .co-back, .os-actions, .os-help, .skip-link { display: none !important; }
+  .co-head, .co-section { padding: 0; background: none; border: 0; }
+  .co-layout { display: block; }
+  .co-panel, .co-summary { box-shadow: none; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .os-steps, .os-details { grid-template-columns: minmax(0, 1fr); }
+  .os-actions .btn { width: 100%; justify-content: center; }
+}

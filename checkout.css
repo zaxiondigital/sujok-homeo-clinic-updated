@@ -121,13 +121,27 @@ select.co-input {
 .co-btn-outline { background: #ffffff; border: 1.5px solid var(--green-800); color: var(--green-800); box-shadow: none; }
 .co-btn-outline:hover { background: var(--co-tint); }
 
-/* ---------- Step 3: payment notice ---------- */
-.co-pay { text-align: center; }
-.co-pay-icon { display: inline-grid; place-items: center; width: 64px; height: 64px; margin-bottom: 14px; border-radius: 50%; background: var(--co-tint); color: var(--green-800); }
-.co-pay-icon .icon { width: 28px; height: 28px; }
-.co-pay p { max-width: 52ch; margin: 10px auto 0; line-height: 1.7; color: var(--ink-500); }
-.co-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 20px 0; padding: 0; list-style: none; }
-.co-cards li { padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: .85rem; font-weight: 600; color: var(--ink-700); }
+/* ---------- Step 3: review and pay ---------- */
+.co-review { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.co-review-box { padding: 16px 18px; background: #fafcf8; border: 1px solid var(--line); border-radius: 14px; }
+.co-review-box .co-legend { margin-bottom: 6px; font-family: var(--font-sans); }
+.co-review-box p { line-height: 1.6; color: var(--ink-700); overflow-wrap: anywhere; }
+
+.co-pay { margin-top: 20px; padding: clamp(20px, 3vw, 28px); text-align: center; background: var(--co-tint); border-radius: 16px; }
+.co-pay-icon { display: inline-grid; place-items: center; width: 56px; height: 56px; margin-bottom: 10px; border-radius: 50%; background: #ffffff; color: var(--green-800); }
+.co-pay-icon .icon { width: 26px; height: 26px; }
+.co-pay-text { max-width: 46ch; margin: 0 auto 16px; line-height: 1.6; color: var(--ink-700); }
+/* PayPal's own button colours (gold with navy text), as PayPal asks */
+.co-paypal {
+  justify-content: center; width: min(100%, 360px); min-height: 52px;
+  background: #ffc439; color: #111a3a; box-shadow: none; font-size: 1.02rem;
+}
+.co-paypal:hover { background: #f2ba36; }
+.co-paypal strong { font-style: italic; font-weight: 800; color: #003087; }
+.co-preview-note { margin-top: 4px; font-size: .88rem; color: var(--ink-500); }
+.co-preview-note a { font-weight: 600; color: var(--green-800); }
+.co-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 16px 0; padding: 0; list-style: none; }
+.co-cards li { padding: 6px 12px; background: #ffffff; border: 1px solid var(--line); border-radius: 8px; font-size: .85rem; font-weight: 600; color: var(--ink-700); }
 
 /* ---------- Order summary ---------- */
 .co-summary {
@@ -182,7 +196,7 @@ select.co-input {
   .co-mark { width: 40px; height: 40px; font-size: 1rem; }
   .co-item .co-qty { grid-column: 2; justify-self: start; }
   .co-line { grid-column: 3; grid-row: 1; }
-  .co-grid, .co-types { grid-template-columns: minmax(0, 1fr); }
+  .co-grid, .co-types, .co-review { grid-template-columns: minmax(0, 1fr); }
   .co-field--half { max-width: none; }
   .co-actions .btn { width: 100%; justify-content: center; }
 }

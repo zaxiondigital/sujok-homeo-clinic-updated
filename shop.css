@@ -115,6 +115,7 @@
 }
 .sh-item-name { font-family: var(--font-sans); font-size: 1.08rem; font-weight: 600; line-height: 1.3; color: var(--ink-900); }
 .sh-item-abbr { display: inline-block; margin-top: 4px; padding: 2px 9px; border-radius: 6px; background: var(--green-50); font-size: .78rem; font-weight: 600; letter-spacing: .04em; color: var(--green-800); }
+.sh-item-cat { display: inline-block; margin: 4px 0 0 6px; font-size: .82rem; color: var(--ink-500); }
 .sh-item-from { margin-top: 4px; font-size: .88rem; color: var(--ink-500); }
 .sh-info-btn { margin-top: 6px; padding: 0; background: none; border: 0; font: inherit; font-size: .88rem; font-weight: 600; color: var(--green-800); cursor: pointer; }
 .sh-item-desc { grid-column: 1 / -1; margin: 0; padding: 14px 16px; background: var(--sh-tint); border-radius: 12px; font-size: .92rem; line-height: 1.6; color: var(--ink-700); }
@@ -179,7 +180,14 @@
 .sh-cart-note { margin: 0; font-size: .88rem; color: var(--ink-500); }
 .sh-checkout { justify-content: center; width: 100%; }
 .sh-checkout:disabled { opacity: .5; cursor: not-allowed; }
-.sh-continue { padding: 8px; background: none; border: 0; font: inherit; font-weight: 600; color: var(--green-800); cursor: pointer; }
+.sh-continue {
+  min-height: 48px; padding: 10px 16px; background: #ffffff; border: 1.5px solid var(--green-800); border-radius: 999px;
+  font: inherit; font-weight: 600; color: var(--green-800); cursor: pointer; transition: background .2s, color .2s;
+}
+.sh-continue:hover { background: var(--green-50); }
+/* when checkout isn't available yet (empty cart or under the minimum), continuing to shop is the next step */
+.sh-continue.is-primary { background: var(--green-800); color: #ffffff; }
+.sh-continue.is-primary:hover { background: var(--green-900); }
 
 /* Toast */
 .sh-toast {

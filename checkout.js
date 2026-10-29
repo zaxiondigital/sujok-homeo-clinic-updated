@@ -12,6 +12,7 @@
 
   const $ = (id) => document.getElementById(id);
   const money = (n) => '$' + n.toFixed(2);
+  const fmtDate = (iso) => (iso ? new Date(iso + 'T12:00:00').toLocaleDateString('en-CA', { weekday: 'long', month: 'long', day: 'numeric' }) : '');
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
   let cart = [];
@@ -90,6 +91,17 @@
     $('co-ship').textContent = type === 'Pickup' ? 'Free (pickup)' : (country ? money(ship) : 'Select country');
     $('co-tax').textContent = 'By province, at payment';
     $('co-total').textContent = money(subtotal + ship);
+
+    // Step 3: recap of what was entered in step 2
+    const f = form.elements;
+    const region = f.country.value === 'US' ? f.state.value.trim() : f.province.value;
+    $('co-rev-contact').innerHTML = [f.name.value, f.email.value, f.phone.value].filter((v) => v.trim()).map(esc).join('<br>');
+    $('co-rev-way-title').textContent = type;
+    $('co-rev-way').innerHTML = (type === 'Pickup'
+      ? ['145 Clarence Street, Unit 26', 'Brampton, Ontario L6W 1T2']
+      : [f.street.value, ([f.city.value, region].filter(Boolean).join(', ') + ' ' + f.postal.value.toUpperCase()).trim()]
+    ).map(esc).join('<br>') + '<br>Preferred date: ' + esc(fmtDate(f.date.value));
+    $('co-pay-amount').textContent = money(subtotal + ship);
 
     const short = cart.length && subtotal < MIN_ORDER;
     $('co-min').hidden = !short;
@@ -189,6 +201,7 @@
       const el = form.elements[name];
       if (!el) return;
       if (el instanceof RadioNodeList) el.forEach((r) => { r.checked = r.value === value; });
+      else if (el.type === 'checkbox') el.checked = value === true;
       else el.value = value;
     });
   } catch (e) { /* nothing saved */ }
@@ -197,11 +210,41 @@
   function saveDetails() {
     const data = {};
     [...form.elements].forEach((el) => {
-      if (!el.name || el.name === 'terms' || el.name === 'as' || (el.type === 'radio' && !el.checked)) return;
-      data[el.name] = el.value;
+      if (!el.name || el.name === 'as' || (el.type === 'radio' && !el.checked)) return;
+      data[el.name] = el.type === 'checkbox' ? el.checked : el.value;
     });
     try { sessionStorage.setItem(SAVED, JSON.stringify(data)); } catch (e) { /* preview only */ }
   }
+
+  /* ---------- Step 3: pay ----------
+     On the live store this hands over to PayPal, which returns to order-confirmation.html when
+     paid or payment-failed.html when cancelled. The preview saves the order for the confirmation
+     page to show, empties the cart and goes straight to the confirmation. */
+  $('co-pay-btn').addEventListener('click', () => {
+    const f = form.elements;
+    const type = f.order_type.value;
+    const subtotal = cart.reduce((s, l) => s + l.qty * l.price, 0);
+    const ship = shippingFor(type, f.country.value, f.province.value);
+    const order = {
+      no: 'P' + String(Date.now()).slice(-6),
+      placed: new Date().toISOString(),
+      items: cart,
+      subtotal, ship, total: subtotal + ship,
+      type, date: f.date.value,
+      name: f.name.value.trim(), email: f.email.value.trim(), phone: f.phone.value.trim(),
+      address: type === 'Pickup' ? null : {
+        street: f.street.value.trim(), city: f.city.value.trim(),
+        region: f.country.value === 'US' ? f.state.value.trim() : f.province.value,
+        postal: f.postal.value.trim().toUpperCase(), country: f.country.value
+      }
+    };
+    try {
+      sessionStorage.setItem('co-order', JSON.stringify(order));
+      sessionStorage.removeItem('co-details');   // the next order starts with an empty form
+      localStorage.removeItem('sh-cart');
+    } catch (e) { /* preview only */ }
+    window.location.href = 'order-confirmation.html';
+  });
 
   $('co-coupon').addEventListener('submit', (e) => {
     e.preventDefault();
